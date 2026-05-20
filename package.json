@@ -2,23 +2,23 @@
   "name": "saa-2025",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
   },
-  "dependencies": {
-    "next": "16.2.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+  "scripts": {
+    "dev": "dotenv -e .env -- turbo dev",
+    "build": "dotenv -e .env -- turbo build",
+    "lint": "turbo lint",
+    "type-check": "turbo type-check",
+    "test": "dotenv -e .env -- turbo test",
+    "test:e2e": "dotenv -e .env -- turbo test:e2e",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\" --ignore-path .gitignore"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.6",
-    "typescript": "^5"
-  }
+    "dotenv-cli": "^8.0.0",
+    "turbo": "^2.0.0",
+    "prettier": "^3.0.0"
+  },
+  "packageManager": "pnpm@9.15.0"
 }

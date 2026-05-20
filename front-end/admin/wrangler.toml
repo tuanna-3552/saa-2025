@@ -1,0 +1,8 @@
+name = "saa-admin"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[vars]
+# Non-secret environment variables (add secrets via Cloudflare dashboard)
+NEXT_PUBLIC_APP_ENV = "production"

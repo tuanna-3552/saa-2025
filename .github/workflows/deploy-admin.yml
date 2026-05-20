@@ -1,0 +1,55 @@
+name: Deploy Admin
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "front-end/admin/**"
+      - "front-end/shared-ui/**"
+      - "pnpm-workspace.yaml"
+      - "turbo.json"
+      - "package.json"
+
+concurrency:
+  group: deploy-admin-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Build & Deploy Admin to Cloudflare Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build shared-ui
+        run: pnpm turbo build --filter=@saa/shared-ui
+
+      - name: Build admin (Next.js)
+        run: pnpm turbo build --filter=@saa/admin
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+
+      - name: Transform for Cloudflare Pages
+        run: npx @cloudflare/next-on-pages
+        working-directory: front-end/admin
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy .vercel/output/static --project-name=saa-admin --branch=main
+          workingDirectory: front-end/admin

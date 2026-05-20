@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /d d:\\\\repo\\\\saa-2025)",
+      "Bash(Get-ChildItem -Recurse -Depth 3 -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(ConvertTo-Json -Depth 10)",
+      "Bash(git -C \"d:\\\\repo\\\\saa-2025\" log --oneline -10)",
+      "Bash(git -C \"d:\\\\repo\\\\saa-2025\" remote -v)",
+      "Bash(Remove-Item -Recurse -Force src, public, .next, node_modules, next.config.ts, eslint.config.mjs, next-env.d.ts, package-lock.json -ErrorAction SilentlyContinue)",
+      "Bash(Write-Host \"Cleanup done\")",
+      "Bash(git -C \"d:/repo/saa-2025\" rm --cached \"front-end/admin/.env.example\" \"front-end/landing-page/.env.example\")",
+      "Bash(curl -s \"https://hub.docker.com/v2/repositories/supabase/studio/tags?page_size=5&ordering=last_updated\")",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(t['name']\\) for t in data.get\\('results',[]\\)]\")",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:hub.docker.com)",
+      "Bash(docker compose *)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm turbo *)"
+    ]
+  }
+}
