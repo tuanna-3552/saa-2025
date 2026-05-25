@@ -79,5 +79,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output --project-name=saa-admin --branch=main
+          command: pages deploy .vercel/output/static --project-name=saa-admin --branch=main
           workingDirectory: front-end/admin
