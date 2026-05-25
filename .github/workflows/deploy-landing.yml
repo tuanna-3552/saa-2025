@@ -9,6 +9,7 @@ on:
       - "pnpm-workspace.yaml"
       - "turbo.json"
       - "package.json"
+  workflow_dispatch:
 
 concurrency:
   group: deploy-landing-${{ github.ref }}
