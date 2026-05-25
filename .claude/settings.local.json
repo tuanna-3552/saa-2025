@@ -41,7 +41,13 @@
       "Bash(gh run *)",
       "Bash(pnpm exec *)",
       "Bash(echo \"exit: $?\")",
-      "Bash(git check-ignore *)"
+      "Bash(git check-ignore *)",
+      "Bash(curl -s \"https://saa-admin-35f.pages.dev/\")",
+      "Bash(curl -s \"https://2dd23486.saa-admin-35f.pages.dev/\")",
+      "Bash(curl -sv \"https://2dd23486.saa-admin-35f.pages.dev/\")",
+      "Bash(curl -sv \"https://2dd23486.saa-admin-35f.pages.dev/login\")",
+      "Bash(curl -sv \"https://23968d4d.saa-admin-35f.pages.dev/\")",
+      "Bash(curl -s \"https://23968d4d.saa-admin-35f.pages.dev/\")"
     ]
   }
 }
