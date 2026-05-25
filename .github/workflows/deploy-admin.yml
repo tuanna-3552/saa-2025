@@ -37,10 +37,7 @@ jobs:
         run: pnpm turbo build --filter=@saa/shared-ui
 
       - name: Build admin for Cloudflare Pages
-        run: |
-          mkdir -p .vercel
-          printf '{"projectId":"_","orgId":"_"}' > .vercel/project.json
-          npx @cloudflare/next-on-pages
+        run: npx @cloudflare/next-on-pages
         working-directory: front-end/admin
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
