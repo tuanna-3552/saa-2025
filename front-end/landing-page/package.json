@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 3000",
-    "build": "next build --no-turbopack",
+    "build": "next build",
+    "postbuild": "mkdir -p front-end/landing-page && cp -r .next front-end/landing-page/",
     "start": "next start --port 3000",
     "lint": "eslint src/",
     "type-check": "tsc --noEmit",
