@@ -37,7 +37,10 @@ jobs:
         run: pnpm turbo build --filter=@saa/shared-ui
 
       - name: Build admin for Cloudflare Pages
-        run: npx @cloudflare/next-on-pages
+        run: |
+          printf "NEXT_PUBLIC_SUPABASE_URL=%s\nNEXT_PUBLIC_SUPABASE_ANON_KEY=%s\n" \
+            "$NEXT_PUBLIC_SUPABASE_URL" "$NEXT_PUBLIC_SUPABASE_ANON_KEY" > .env
+          npx @cloudflare/next-on-pages
         working-directory: front-end/admin
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
