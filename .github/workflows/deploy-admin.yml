@@ -38,13 +38,26 @@ jobs:
 
       - name: Build admin for Cloudflare Pages
         run: |
-          printf "NEXT_PUBLIC_SUPABASE_URL=%s\nNEXT_PUBLIC_SUPABASE_ANON_KEY=%s\n" \
-            "$NEXT_PUBLIC_SUPABASE_URL" "$NEXT_PUBLIC_SUPABASE_ANON_KEY" > .env
+          printf "NEXT_PUBLIC_SUPABASE_URL=%s\nNEXT_PUBLIC_SUPABASE_ANON_KEY=%s\n" "$NEXT_PUBLIC_SUPABASE_URL" "$NEXT_PUBLIC_SUPABASE_ANON_KEY" > .env.production.local
+          printf "NEXT_PUBLIC_SUPABASE_URL=%s\nNEXT_PUBLIC_SUPABASE_ANON_KEY=%s\n" "$NEXT_PUBLIC_SUPABASE_URL" "$NEXT_PUBLIC_SUPABASE_ANON_KEY" > ../../.env.production.local
           npx @cloudflare/next-on-pages
         working-directory: front-end/admin
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+
+      - name: Verify env vars baked into bundle
+        working-directory: front-end/admin
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        run: |
+          count=$(grep -rl "$NEXT_PUBLIC_SUPABASE_URL" .vercel/output/ 2>/dev/null | wc -l)
+          if [ "$count" -gt 0 ]; then
+            echo "✅ Supabase URL found in $count bundle file(s)"
+          else
+            echo "❌ Supabase URL NOT found in bundle — env vars were not baked"
+            exit 1
+          fi
 
       - name: Create Cloudflare Pages project (if not exists)
         run: |
