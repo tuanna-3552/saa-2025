@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: "SAA Awards 2025",
   },
   description: "Sun Asterisk Award System — Celebrating excellence and innovation.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://saa.sun-asterisk.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://saa.sun-asterisk.com"),
   openGraph: {
     type: "website",
     locale: "vi_VN",
