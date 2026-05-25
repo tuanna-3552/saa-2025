@@ -39,7 +39,9 @@
       "Bash(curl -s -X POST http://127.0.0.1:54321/auth/v1/token?grant_type=password -H 'apikey: sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH' -H 'Content-Type: application/json' -d '{\"email\":\"admin1@saa.local\",\"password\":\"password123\"}')",
       "PowerShell(New-Item -ItemType Directory -Path \"d:\\\\repo\\\\saa-2025\\\\front-end\\\\admin\\\\public\" -Force)",
       "Bash(gh run *)",
-      "Bash(pnpm exec *)"
+      "Bash(pnpm exec *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git check-ignore *)"
     ]
   }
 }
