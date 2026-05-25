@@ -9,6 +9,7 @@ on:
       - "pnpm-workspace.yaml"
       - "turbo.json"
       - "package.json"
+      - ".github/workflows/**"
   workflow_dispatch:
 
 concurrency:
