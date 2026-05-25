@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --port 3000",
     "build": "next build",
-    "postbuild": "mkdir -p front-end/landing-page && cp -r .next front-end/landing-page/",
+    "postbuild": "node -e \"const fs = require('fs'); fs.mkdirSync('front-end/landing-page', { recursive: true }); fs.cpSync('.next', 'front-end/landing-page/.next', { recursive: true });\"",
     "start": "next start --port 3000",
     "lint": "eslint src/",
     "type-check": "tsc --noEmit",
