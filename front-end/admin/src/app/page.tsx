@@ -1,9 +1,5 @@
-"use client";
+import { redirect } from "next/navigation";
 
-export default function AdminHomePage() {
-  return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-2xl font-bold">SAA Admin</h1>
-    </main>
-  );
+export default function HomePage() {
+  redirect("/dashboard");
 }

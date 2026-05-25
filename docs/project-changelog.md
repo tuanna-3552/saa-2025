@@ -6,7 +6,40 @@
 
 ---
 
-## 2026-05-25
+## 2026-05-25 — Admin Auth + Dashboard (Phase 3, partial)
+
+### Added — Admin Authentication
+
+- Supabase Auth email/password login at `/login` with admin-role guard
+- `AuthProvider` context + `useAuth()` hook for session management across admin shell
+- `(admin)/layout.tsx` route group: checks `profile.role === "admin"`, redirects to `/login` if not authorized, shows full-page spinner while loading
+- Login form styled with dark admin theme (Shadcn UI components: Card, Input, Label, Button, Alert)
+- TailwindCSS v4 properly configured: migrated from `@tailwind` (v3 compat) to `@import "tailwindcss"` + `@theme inline` + `@tailwindcss/postcss`
+- Shadcn UI components added: Button, Input, Label, Card, Alert, Popover, Calendar, DropdownMenu
+
+### Added — Admin Dashboard (Overview)
+
+- `/dashboard` page: per-department stats table matching MoMorph Figma spec (node `620:7712`)
+- Columns: No, Unit, Total members, Total sent kudos, Total received kudos, Total users with kudos, Total received secret box
+- Stats aggregated client-side from 4 parallel Supabase queries (departments, profiles, nominations, votes)
+- Interactive date range picker (Radix Popover + react-day-picker): Today shortcut + Apply button
+- Export button (UI only, no-op)
+
+### Added — Admin Shell
+
+- `AdminHeader`: sticky dark header with logo slot (`public/logo.svg`), nav tabs, bell/language/account
+- Active nav item: gold text glow (`text-shadow`) + gold underline bar with box-shadow glow (Figma spec)
+- Account button: 40×40px, radius 4px (Figma spec), opens DropdownMenu with user name/role + Sign out
+- Bell and Language buttons: placeholder, no-op
+
+### Fixed — Supabase Local Dev
+
+- `auth.users` seed rows had NULL `confirmation_token`, `recovery_token`, `email_change`, etc. — GoTrue threw "Database error querying schema" (500). Fixed by setting these varchar columns to `''` in seed.sql and in the live DB.
+- Updated `NEXT_PUBLIC_SUPABASE_ANON_KEY` to new `sb_publishable_*` format from Supabase CLI v2+
+
+---
+
+## 2026-05-25 — Database Structure (Phase 2)
 
 ### Added — Database Structure (Phase 2)
 

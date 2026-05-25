@@ -36,19 +36,22 @@
 
 ---
 
-## Phase 3 — Admin UI 🔲 Not Started
+## Phase 3 — Admin UI 🔄 In Progress
 
-| Task | Status |
-|------|--------|
-| Auth setup (Supabase Auth + admin guard) | 🔲 |
-| Dashboard page (stats, recent activity) | 🔲 |
-| Employee management CRUD | 🔲 |
-| Department management CRUD | 🔲 |
-| Season management | 🔲 |
-| Award categories management | 🔲 |
-| Nomination review (approve/reject) | 🔲 |
-| Voting management (open/close periods) | 🔲 |
-| Results announcement | 🔲 |
+| Task | Status | Notes |
+|------|--------|-------|
+| Auth setup (Supabase Auth + admin guard) | ✅ Done | Email/password login, role guard, session persistence |
+| Dashboard — Overview page | ✅ Done | Per-department stats table (MoMorph spec), date range picker, admin header |
+| Admin shell (header, layout) | ✅ Done | Logo, nav glow, bell/language/account dropdown |
+| Employee management CRUD | 🔲 | |
+| Department management CRUD | 🔲 | |
+| Season management | 🔲 | |
+| Award categories management | 🔲 | |
+| Nomination review (approve/reject) | 🔲 | |
+| Voting management (open/close periods) | 🔲 | |
+| Results announcement | 🔲 | |
+
+**Plan:** [260525-1528-admin-pages-auth-dashboard](../plans/260525-1528-admin-pages-auth-dashboard/plan.md)
 
 ---
 
