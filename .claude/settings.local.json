@@ -17,7 +17,10 @@
       "WebFetch(domain:hub.docker.com)",
       "Bash(docker compose *)",
       "Bash(pnpm install *)",
-      "Bash(pnpm turbo *)"
+      "Bash(pnpm turbo *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
