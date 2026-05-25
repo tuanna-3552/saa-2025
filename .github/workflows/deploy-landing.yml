@@ -45,6 +45,10 @@ jobs:
       - name: Transform for Cloudflare Pages
         run: npx @cloudflare/next-on-pages
         working-directory: front-end/landing-page
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
 
       - name: Create Cloudflare Pages project (if not exists)
         run: |
