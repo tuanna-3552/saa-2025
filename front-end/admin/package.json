@@ -5,11 +5,10 @@
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
-    "postbuild": "node -e \"const fs = require('fs'); fs.mkdirSync('front-end/admin', { recursive: true }); fs.cpSync('.next', 'front-end/admin/.next', { recursive: true });\"",
     "start": "next start --port 3001",
     "lint": "eslint src/",
     "type-check": "tsc --noEmit",
-    "pages:build": "npx @cloudflare/next-on-pages",
+    "pages:build": "next-on-pages",
     "pages:preview": "wrangler pages dev",
     "pages:deploy": "wrangler pages deploy"
   },

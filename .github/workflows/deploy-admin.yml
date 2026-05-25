@@ -23,19 +23,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Debug secrets check
-        run: |
-          if [ -z "${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}" ]; then
-            echo "WARNING: NEXT_PUBLIC_SUPABASE_URL secret is EMPTY in GitHub!"
-          else
-            echo "SUCCESS: NEXT_PUBLIC_SUPABASE_URL secret is configured."
-          fi
-          if [ -z "${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}" ]; then
-            echo "WARNING: NEXT_PUBLIC_SUPABASE_ANON_KEY secret is EMPTY in GitHub!"
-          else
-            echo "SUCCESS: NEXT_PUBLIC_SUPABASE_ANON_KEY secret is configured."
-          fi
-
       - uses: pnpm/action-setup@v4
 
       - uses: actions/setup-node@v4
@@ -46,26 +33,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Create .env file for build
-        run: |
-          # Write to sub-project root
-          echo "NEXT_PUBLIC_SUPABASE_URL=${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}" > front-end/admin/.env
-          echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}" >> front-end/admin/.env
-          # Write to monorepo root
-          echo "NEXT_PUBLIC_SUPABASE_URL=${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}" > .env
-          echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}" >> .env
-
       - name: Build shared-ui
         run: pnpm turbo build --filter=@saa/shared-ui
 
-      - name: Build admin app (Next.js)
-        run: pnpm --filter=@saa/admin build
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
-
-      - name: Transform for Cloudflare Pages
-        run: npx @cloudflare/next-on-pages
+      - name: Build admin for Cloudflare Pages
+        run: pnpm run pages:build
         working-directory: front-end/admin
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
