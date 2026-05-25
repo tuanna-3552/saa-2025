@@ -46,16 +46,20 @@ jobs:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
 
-      - name: Verify env vars baked into bundle
+      - name: Verify env vars baked into client chunks
         working-directory: front-end/admin
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
         run: |
-          count=$(grep -rl "$NEXT_PUBLIC_SUPABASE_URL" .vercel/output/ 2>/dev/null | wc -l)
-          if [ "$count" -gt 0 ]; then
-            echo "✅ Supabase URL found in $count bundle file(s)"
+          echo "--- All files containing Supabase URL ---"
+          grep -rl "$NEXT_PUBLIC_SUPABASE_URL" .vercel/output/ 2>/dev/null || true
+          echo "--- Client chunks specifically ---"
+          client_count=$(grep -rl "$NEXT_PUBLIC_SUPABASE_URL" .vercel/output/static/_next/static/chunks/ 2>/dev/null | wc -l)
+          echo "Client chunks with URL: $client_count"
+          if [ "$client_count" -gt 0 ]; then
+            echo "✅ Supabase URL correctly baked into client JS chunks"
           else
-            echo "❌ Supabase URL NOT found in bundle — env vars were not baked"
+            echo "❌ Supabase URL NOT in client chunks — browser will see empty env vars"
             exit 1
           fi
 
