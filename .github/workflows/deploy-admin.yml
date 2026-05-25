@@ -42,7 +42,7 @@ jobs:
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
 
       - name: Transform for Cloudflare Pages
-        run: npx @cloudflare/next-on-pages --outdir .vercel/output
+        run: npx @cloudflare/next-on-pages
         working-directory: front-end/admin
 
       - name: Create Cloudflare Pages project (if not exists)
@@ -52,12 +52,11 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages project create saa-admin --production-branch=main
-          workingDirectory: front-end/admin
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output/static --project-name=saa-admin --branch=main
+          command: pages deploy .vercel/output --project-name=saa-admin --branch=main
           workingDirectory: front-end/admin
