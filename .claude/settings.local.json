@@ -20,7 +20,8 @@
       "Bash(pnpm turbo *)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(node \"d:/repo/saa-2025/.claude/scripts/set-active-plan.cjs\" \"260525-1453-database-structure-admin\")"
     ]
   }
 }

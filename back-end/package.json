@@ -9,6 +9,7 @@
     "db:push": "supabase db push",
     "db:diff": "supabase db diff",
     "db:status": "supabase status",
+    "db:types": "supabase gen types typescript --local --schema public > ../front-end/shared-ui/src/types/database.ts",
     "functions:serve": "supabase functions serve",
     "functions:deploy": "supabase functions deploy"
   },
