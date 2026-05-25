@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
-  // Required to compile TypeScript packages from the monorepo
   transpilePackages: ["@saa/shared-ui"],
-  // Cloudflare Pages deployment via @cloudflare/next-on-pages
-  // Individual routes add `export const runtime = 'edge'` for CF bindings
+  // Point Turbopack to monorepo root so it can resolve hoisted node_modules
+  turbopack: {
+    root: path.resolve(__dirname, "../.."),
+  },
 };
 
 export default nextConfig;
