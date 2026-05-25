@@ -35,12 +35,15 @@ jobs:
       - name: Build shared-ui
         run: pnpm turbo build --filter=@saa/shared-ui
 
-      - name: Transform and build for Cloudflare Pages
-        run: npx @cloudflare/next-on-pages
-        working-directory: front-end/admin
+      - name: Build admin app (Next.js)
+        run: pnpm --filter=@saa/admin build
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+
+      - name: Transform for Cloudflare Pages
+        run: npx @cloudflare/next-on-pages --outdir .vercel/output
+        working-directory: front-end/admin
 
       - name: Create Cloudflare Pages project (if not exists)
         uses: cloudflare/wrangler-action@v3
