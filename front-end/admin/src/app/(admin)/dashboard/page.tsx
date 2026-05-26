@@ -2,12 +2,22 @@
 
 import { useEffect, useState } from "react";
 import type { DateRange } from "react-day-picker";
+import { format } from "date-fns";
 import { supabase } from "@/lib/supabase";
 import {
   DepartmentStatsTable,
   type DepartmentStat,
 } from "@/components/dashboard/department-stats-table";
 import { DateRangePicker } from "@/components/dashboard/date-range-picker";
+
+function escapeCSV(val: string | number | undefined | null): string {
+  if (val === undefined || val === null) return "";
+  const s = String(val);
+  if (s.includes(",") || s.includes('"') || s.includes("\n") || s.includes("\r")) {
+    return `"${s.replace(/"/g, '""')}"`;
+  }
+  return s;
+}
 
 export default function DashboardPage() {
   const [stats, setStats] = useState<DepartmentStat[]>([]);
@@ -20,7 +30,32 @@ export default function DashboardPage() {
 
   useEffect(() => {
     async function fetchStats() {
+      setLoading(true);
+      setError(null);
       try {
+        let nominationQuery = supabase
+          .from("nominations")
+          .select("id, nominator_id, nominee_id")
+          .eq("status", "approved");
+
+        let voteQuery = supabase
+          .from("votes")
+          .select("id, nominee_id");
+
+        if (dateRange?.from) {
+          const fromDate = new Date(dateRange.from);
+          fromDate.setHours(0, 0, 0, 0);
+          nominationQuery = nominationQuery.gte("created_at", fromDate.toISOString());
+          voteQuery = voteQuery.gte("created_at", fromDate.toISOString());
+        }
+
+        if (dateRange?.to) {
+          const toDate = new Date(dateRange.to);
+          toDate.setHours(23, 59, 59, 999);
+          nominationQuery = nominationQuery.lte("created_at", toDate.toISOString());
+          voteQuery = voteQuery.lte("created_at", toDate.toISOString());
+        }
+
         const [
           deptResult,
           profileResult,
@@ -32,11 +67,8 @@ export default function DashboardPage() {
             .from("profiles")
             .select("id, department_id")
             .eq("is_active", true),
-          supabase
-            .from("nominations")
-            .select("id, nominator_id, nominee_id")
-            .eq("status", "approved"),
-          supabase.from("votes").select("id, nominee_id"),
+          nominationQuery,
+          voteQuery,
         ]);
 
         if (deptResult.error) throw deptResult.error;
@@ -97,7 +129,60 @@ export default function DashboardPage() {
     }
 
     fetchStats();
-  }, []);
+  }, [dateRange]);
+
+  const onExport = () => {
+    if (stats.length === 0) return;
+
+    const BOM = "\uFEFF";
+    const headers = [
+      "No",
+      "Unit",
+      "Total member",
+      "Total sent kudos",
+      "Total received kudos",
+      "Total user have at least kudos",
+      "Total received secret box"
+    ];
+
+    const rows = stats.map((row, index) => [
+      index + 1,
+      row.name,
+      row.totalMember,
+      row.totalSentKudos,
+      row.totalReceivedKudos,
+      row.totalUserWithKudos,
+      row.totalReceivedSecretBox
+    ]);
+
+    const csvContent =
+      BOM +
+      [
+        headers.join(","),
+        ...rows.map((r) => r.map(escapeCSV).join(",")),
+      ].join("\n");
+
+    const getExportFilename = () => {
+      if (dateRange?.from && dateRange?.to) {
+        return `overview_stats_${format(dateRange.from, "yyyyMMdd")}_to_${format(dateRange.to, "yyyyMMdd")}.csv`;
+      } else if (dateRange?.from) {
+        return `overview_stats_from_${format(dateRange.from, "yyyyMMdd")}.csv`;
+      } else if (dateRange?.to) {
+        return `overview_stats_to_${format(dateRange.to, "yyyyMMdd")}.csv`;
+      }
+      return "overview_stats_all.csv";
+    };
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", getExportFilename());
+    link.style.visibility = "hidden";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="flex flex-col gap-6 px-20 py-8">
@@ -116,7 +201,9 @@ export default function DashboardPage() {
           <DateRangePicker value={dateRange} onChange={setDateRange} />
           <button
             type="button"
-            className="flex h-10 items-center rounded px-6 font-medium text-base transition-opacity hover:opacity-90"
+            onClick={onExport}
+            disabled={loading || stats.length === 0}
+            className="flex h-10 items-center rounded px-6 font-medium text-base transition-opacity hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
             style={{
               backgroundColor: "var(--details-text-primary-1)",
               color: "var(--details-text-primary-2)",
