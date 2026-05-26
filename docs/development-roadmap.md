@@ -47,7 +47,7 @@
 | Department management CRUD | 🔲 | |
 | Season management | 🔲 | |
 | Award categories management | 🔲 | |
-| Nomination review (approve/reject) | 🔲 | |
+| Nomination review (approve/reject) | ✅ Done | List + detail pages, status filter, approve/reject mutations (MoMorph spec) |
 | Voting management (open/close periods) | 🔲 | |
 | Results announcement | 🔲 | |
 
