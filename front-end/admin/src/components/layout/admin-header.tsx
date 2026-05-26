@@ -18,7 +18,7 @@ import {
 const navItems = [
   { label: "Overview", href: "/dashboard" },
   { label: "Review content", href: "/nominations" },
-  { label: "Role", href: "/roles" },
+  { label: "User", href: "/users" },
   { label: "Settings", href: "/settings" },
 ];
 

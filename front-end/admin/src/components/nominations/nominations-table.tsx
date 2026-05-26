@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { SortIcon } from "@/components/ui/sort-icon";
 import { NominationTableRow } from "./nomination-row";
 import type { NominationRow } from "@/hooks/use-nominations";
 
@@ -20,28 +21,6 @@ interface NominationsTableProps {
   onHeartSortChange?: (sort: HeartSort) => void;
 }
 
-function SortIcon({ sort }: { sort: HeartSort }) {
-  if (sort === "desc") {
-    return (
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <polyline points="6 9 12 15 18 9" />
-      </svg>
-    );
-  }
-  if (sort === "asc") {
-    return (
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <polyline points="18 15 12 9 6 15" />
-      </svg>
-    );
-  }
-  return (
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <polyline points="6 9 12 3 18 9" />
-      <polyline points="6 15 12 21 18 15" />
-    </svg>
-  );
-}
 
 export function NominationsTable({
   nominations,
@@ -105,7 +84,7 @@ export function NominationsTable({
             style={heartSort ? { color: "var(--details-text-primary-1)" } : {}}
           >
             Heart
-            <SortIcon sort={heartSort} />
+            <SortIcon dir={heartSort} />
           </button>
         </HeaderCell>
         <HeaderCell width="w-[100px]">Status</HeaderCell>

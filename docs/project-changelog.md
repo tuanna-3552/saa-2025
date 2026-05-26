@@ -6,6 +6,31 @@
 
 ---
 
+## 2026-05-26 — Admin User Page & DB Upgrades (Phase 3, completed)
+
+### Added — Admin User Management Page
+- Created `/users` page showcasing a dense data table matching Figma specifications.
+- Filter bar with live filtering by Unit (Department), Level, and Role.
+- Live searching by name or email (case-insensitive).
+- Bi-directional sorting on numeric and date columns (Sent Kudos, Received Kudos, Total Hearts, Badges, Time to get 6 Badges).
+- Dynamic CSV Export functionality exporting formatted, exact user data matching current search/filter criteria.
+- Complete responsive support using container widths of `min-w-[1540px]` allowing smooth horizontal scrolling on smaller viewports.
+
+### Added — Database Schema Upgrades & Reseeding
+- Added `level` (INTEGER, default 1) and `last_logged_in` (TIMESTAMPTZ, nullable) columns to the `profiles` table schema in PostgreSQL migration (`20260525000000_initial_schema.sql`).
+- Updated local seed script `seed.sql` to populate realistic user levels and last login dates matching the mockup.
+- Regenerated monorepo TypeScript typings using Supabase CLI (`pnpm db:types`), ensuring 100% TS query safety for new properties.
+- Successfully reset and reseeded local postgres DB via `supabase db reset`.
+
+### Fixed & Redesigned — Table UI & Figma Icons
+- Changed `sent Kudos` and `Received Kudos` columns from percentage metrics to raw counts (`approved` nominations count), matching the Figma spec.
+- Added summation symbol `Σ` and static limit inside headers: `Σ sent Kudos (100)` and `Σ Received Kudos (100)`.
+- Restructured sort indicator icon (`SortIcon`) to draw vertically separated solid filled triangles (pointing up and down with a clean 4px gap), matching the Figma design exactly instead of overlapping chevrons.
+- Unified table and row cells to use identical custom pixel arbitrary widths (e.g. `w-[170px]`, `w-[210px]`), eliminating misalignments due to uncompiled standard tailwind spacing classes.
+- Standardized Vietnam display format (`dd/MM/yyyy HH:mm`) using `formatDateTime` for `last_logged_in` timestamps.
+
+---
+
 ## 2026-05-25 — Admin Auth + Dashboard (Phase 3, partial)
 
 ### Added — Admin Authentication

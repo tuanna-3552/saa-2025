@@ -47,6 +47,8 @@
 | department_id | uuid | FK → `departments(id)` ON DELETE SET NULL |
 | role | user_role | DEFAULT `employee` |
 | is_active | boolean | DEFAULT `true` |
+| level | integer | DEFAULT `1` |
+| last_logged_in | timestamptz | nullable |
 | created_at / updated_at | timestamptz | |
 
 #### `seasons`
@@ -180,16 +182,19 @@ open http://localhost:54323
 | `/` (dashboard) | `app/(admin)/page.tsx` | Overview: per-department stats, date range picker |
 | `/nominations` | `app/(admin)/nominations/page.tsx` | Nominations list with status filter (all/pending/approved/rejected) |
 | `/nominations/[id]` | `app/(admin)/nominations/[id]/page.tsx` | Nomination detail; approve/reject actions |
+| `/users` | `app/(admin)/users/page.tsx` | User management list with filters, search, sorting, and CSV export |
 
 ### Key Frontend Modules
 
 | Path | Purpose |
 |------|---------|
 | `components/nominations/` | Table, row, status badge, detail card, review actions, detail sections, status filter |
+| `components/users/` | Table, row, filter bar, action buttons |
 | `hooks/use-nominations.ts` | Fetch nominations list with status filter |
 | `hooks/use-nomination.ts` | Fetch single nomination detail |
+| `hooks/use-users.ts` | Fetch users list with aggregate calculations |
 | `lib/review-nomination.ts` | Supabase mutations: approve / reject |
-| `lib/format.ts` | Shared `formatDate` utility |
+| `lib/format.ts` | Shared `formatDate`, `formatDateTime`, `formatDateShort` utilities |
 
 ---
 

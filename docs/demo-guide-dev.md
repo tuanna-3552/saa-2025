@@ -125,9 +125,29 @@ The dashboard displays a **per-department stats table** with live data from the 
 | Nav Item | Route | Status |
 |----------|-------|--------|
 | Overview | `/dashboard` | ✅ Live |
-| Review content | `/nominations` | 🔲 Coming soon |
-| Role | `/roles` | 🔲 Coming soon |
+| Review content | `/nominations` | ✅ Live |
+| User | `/users` | ✅ Live |
 | Settings | `/settings` | 🔲 Coming soon |
+
+### 5.6 Review content — Nominations Review
+1. Click **Review content** in the header navigation or open **http://localhost:3001/nominations**.
+2. Filter nominations by status using the filter buttons (**All**, **Pending**, **Approved**, **Rejected**) at the top of the table.
+3. Click a nomination row to view its details (Sender, Receiver, Category, Reason, Hearts).
+4. Click **Approve** or **Reject** to perform the moderation workflow. The status updates in the DB and reflects instantly in the UI.
+
+### 5.7 User — User Management & DB Sync
+1. Click **User** in the header navigation or open **http://localhost:3001/users**.
+2. Inspect the user table. You will see columns populated with real DB seed data:
+   - **Level**: Active user levels (e.g. 3, 2, 4, 1) synchronized from PostgreSQL.
+   - **Σ sent Kudos (100)** / **Σ Received Kudos (100)**: Real counts of nominations sent/received by each user.
+   - **Last Logged In**: Login timestamps formatted beautifully in Vietnam timezone (`dd/MM/yyyy HH:mm`, e.g., `23/12/2025 10:00`).
+   - **SortIcon**: Vertically-aligned solid triangles matching Figma specifications.
+3. Use the filters:
+   - Select a department in the **Unit** dropdown to filter users by division.
+   - Select a tier in the **Level** dropdown.
+   - Select a rank in the **Role** dropdown.
+   - Type in the **Search** box to filter dynamically by name or email.
+4. Click the **Export** button at the top-right to download `users.csv`, containing formatted user records matching your current filter/search.
 
 ---
 

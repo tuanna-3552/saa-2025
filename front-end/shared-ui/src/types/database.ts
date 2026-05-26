@@ -164,6 +164,8 @@ export type Database = {
           full_name: string
           id: string
           is_active: boolean
+          last_logged_in: string | null
+          level: number
           role: Database["public"]["Enums"]["user_role"]
           updated_at: string
         }
@@ -175,6 +177,8 @@ export type Database = {
           full_name: string
           id: string
           is_active?: boolean
+          last_logged_in?: string | null
+          level?: number
           role?: Database["public"]["Enums"]["user_role"]
           updated_at?: string
         }
@@ -186,6 +190,8 @@ export type Database = {
           full_name?: string
           id?: string
           is_active?: boolean
+          last_logged_in?: string | null
+          level?: number
           role?: Database["public"]["Enums"]["user_role"]
           updated_at?: string
         }

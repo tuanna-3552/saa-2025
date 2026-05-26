@@ -51,6 +51,8 @@ CREATE TABLE public.profiles (
   department_id UUID        REFERENCES public.departments(id) ON DELETE SET NULL,
   role          public.user_role NOT NULL DEFAULT 'employee',
   is_active     BOOLEAN     NOT NULL DEFAULT TRUE,
+  level         INTEGER     NOT NULL DEFAULT 1,
+  last_logged_in TIMESTAMPTZ,
   created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   CONSTRAINT profiles_email_key UNIQUE (email)
