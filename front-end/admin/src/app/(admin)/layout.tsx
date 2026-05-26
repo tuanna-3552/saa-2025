@@ -40,11 +40,14 @@ export default function AdminLayout({
 
   return (
     <div
-      className="min-h-screen"
+      className="flex min-h-screen flex-col"
       style={{ backgroundColor: "var(--details-container-2)" }}
     >
       <AdminHeader />
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
+      <footer className="py-4 text-center text-sm" style={{ color: "var(--details-text-primary-1)" }}>
+        Bản quyền thuộc về Sun* © 2025
+      </footer>
     </div>
   );
 }

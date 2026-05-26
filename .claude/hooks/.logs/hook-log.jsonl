@@ -1,503 +1,3 @@
-{"ts":"2026-05-25T10:05:19.752Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T10:05:19.759Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:19.766Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:44.672Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:44.791Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":18,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:44.797Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:44.980Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":4,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:54.293Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":127,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:54.502Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":11,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:54.765Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/next.config.ts\""}
-{"ts":"2026-05-25T10:05:55.988Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":12,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:58.082Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":78,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:58.161Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:05:58.402Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T10:06:27.456Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:27.489Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:27.495Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:27.544Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:34.602Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/lib/supabase.ts\""}
-{"ts":"2026-05-25T10:06:34.609Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:34.622Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:34.987Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:35.713Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:35.732Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:35.744Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T10:06:38.480Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:38.486Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:38.535Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:06:38.546Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:29.638Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:29.644Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:29.643Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:30.622Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:35.403Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:35.424Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:35.410Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T10:07:35.710Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:51.961Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:51.974Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:51.981Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":10,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:52.831Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:55.003Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app/(admin)/layout.tsx\""}
-{"ts":"2026-05-25T10:07:55.028Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:55.035Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:07:55.351Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:20.518Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:20.532Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:20.540Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app/(admin)/layout.tsx\""}
-{"ts":"2026-05-25T10:08:21.347Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"reminder-injected","dur":11,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:21.435Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:21.463Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:21.476Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:21.524Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:21.535Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:25.329Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:25.366Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app/(admin)/dashboard/page.tsx\""}
-{"ts":"2026-05-25T10:08:25.389Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:26.574Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:26.609Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:26.616Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:26.693Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:26.706Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:26.733Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:33.620Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:33.635Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin\""}
-{"ts":"2026-05-25T10:08:33.683Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":14,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:51.831Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:51.841Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:51.864Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":10,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:51.888Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:56.743Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T10:08:56.756Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:08:56.775Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:00.450Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:00.452Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:00.449Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:00.553Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:02.843Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T10:09:02.885Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":14,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:02.893Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:09.708Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:09.714Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:09.708Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:09.749Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T10:09:17.975Z","hook":"telemetry","event":"Stop","tool":"","target":"","note":"","dur":1292,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:52:14.778Z","hook":"telemetry","event":"SessionStart","tool":"","target":"","note":"","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:52:15.576Z","hook":"session-init","event":"SessionStart","tool":"","target":"","note":"startup","dur":1386,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:52:15.607Z","hook":"usage-quota-cache-refresh","event":"SessionStart","tool":"","target":"","note":"fetched","dur":1457,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:15.258Z","hook":"usage-quota-cache-refresh","event":"UserPromptSubmit","tool":"","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:15.261Z","hook":"telemetry","event":"UserPromptSubmit","tool":"","target":"","note":"","dur":0,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:15.446Z","hook":"dev-rules-reminder","event":"UserPromptSubmit","tool":"","target":"","note":"context-injected","dur":186,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:26.417Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:33.495Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:33.508Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:33.495Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:34.287Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:34.351Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:34.374Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":27,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:34.504Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:34.505Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:34.522Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:35.603Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:35.649Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:35.690Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:39.359Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/next.config.ts\""}
-{"ts":"2026-05-25T13:53:39.544Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:39.607Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":14,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:39.614Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":10,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:39.663Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:39.741Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T13:53:39.883Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/lib/supabase.ts\""}
-{"ts":"2026-05-25T13:53:39.964Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":14,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:39.994Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:40.428Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:40.461Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:53:40.578Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:13.299Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":14,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:13.446Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":20,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:13.475Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:13.729Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:13.749Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:13.794Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:14.540Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:14.695Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:15.256Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:15.259Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:15.278Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:38.218Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:38.296Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":11,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:38.735Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":4,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:38.855Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:44.436Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/wrangler.toml\""}
-{"ts":"2026-05-25T13:54:44.723Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":10,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:44.790Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":37,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:44.791Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":16,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:44.955Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/.env.local.example\""}
-{"ts":"2026-05-25T13:54:44.980Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":12,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:45.781Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:54:46.323Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":10,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:13.491Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:13.504Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:13.518Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:19.810Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:19.823Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:19.891Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:19.942Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:31.340Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:31.354Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:31.360Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:37.386Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:37.388Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:37.387Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:55:37.450Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:57:18.186Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:57:18.200Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:57:18.209Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:57:23.824Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:57:23.829Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:57:24.425Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"fetched","dur":603,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:57:24.661Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"fetched","dur":816,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:58:51.320Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:58:51.336Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/package.json\""}
-{"ts":"2026-05-25T13:58:51.343Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":14,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:58:51.729Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:58:51.743Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:58:51.808Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":19,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:58:51.936Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:58:54.053Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:58:57.030Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":".env.local","note":"approval-required","dur":5,"status":"block","exit":2,"error":""}
-{"ts":"2026-05-25T13:58:57.060Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/.env.local\""}
-{"ts":"2026-05-25T13:58:57.073Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:12.008Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":".env.local","note":"bash-sensitive-file","dur":12,"status":"warn","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:12.013Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:12.021Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:14.634Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:14.646Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:14.653Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:14.666Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:18.772Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:18.778Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":11,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:18.822Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":".env.local;","note":"bash-sensitive-file","dur":13,"status":"warn","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:23.650Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:23.663Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:23.683Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T13:59:23.687Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:06.741Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:06.747Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:06.754Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:09.386Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:09.392Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:09.436Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:09.391Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:13.278Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:13.292Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:13.304Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:17.805Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:17.809Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:17.831Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:00:17.860Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:01:56.763Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:01:56.780Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:01:56.784Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:02:01.471Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:02:01.480Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:02:01.522Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:02:01.552Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:03:57.479Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/next.config.ts\""}
-{"ts":"2026-05-25T14:03:57.492Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":17,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:03:57.529Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:03:57.937Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:03.722Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/next.config.ts\""}
-{"ts":"2026-05-25T14:04:03.732Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:03.744Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:04.548Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":12,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:04.618Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:04.633Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:04.649Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:05.126Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"fetched","dur":646,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:05.208Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"fetched","dur":547,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:14.426Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T14:04:14.458Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:14.483Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:15.103Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:15.162Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:15.188Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:15.219Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:15.246Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:15.278Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:39.488Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/package.json\""}
-{"ts":"2026-05-25T14:04:39.495Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:39.501Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:40.146Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":12,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:40.165Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:40.174Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:40.177Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:40.190Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:40.236Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:44.637Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:44.649Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T14:04:44.658Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:04:44.925Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:17.809Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:17.831Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T14:05:17.811Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:18.341Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":11,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:18.382Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:18.387Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:18.431Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:18.429Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:18.428Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:22.072Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T14:05:22.075Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:22.086Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:22.538Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:22.582Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/package.json\""}
-{"ts":"2026-05-25T14:05:22.598Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:22.604Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:22.938Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:28.295Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:28.299Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"front-end/admin/node_modules/@cloudflare/next-on-pages/package.json","note":"node_modules","dur":9,"status":"block","exit":2,"error":""}
-{"ts":"2026-05-25T14:05:28.311Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:31.770Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:31.778Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:05:31.784Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:06:26.307Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:06:26.315Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:06:26.334Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:06:26.369Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:06:48.334Z","hook":"telemetry","event":"Stop","tool":"","target":"","note":"","dur":690,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:10:36.079Z","hook":"telemetry","event":"UserPromptSubmit","tool":"","target":"","note":"","dur":0,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:10:36.305Z","hook":"dev-rules-reminder","event":"UserPromptSubmit","tool":"","target":"","note":"context-injected","dur":238,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:10:36.640Z","hook":"usage-quota-cache-refresh","event":"UserPromptSubmit","tool":"","target":"","note":"fetched","dur":571,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:32.185Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:32.187Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:32.190Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/package.json\""}
-{"ts":"2026-05-25T14:12:32.461Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:36.206Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/package.json\""}
-{"ts":"2026-05-25T14:12:36.214Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:36.224Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:36.834Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:36.870Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"reminder-injected","dur":12,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:36.885Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:36.892Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:36.917Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:36.929Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:42.610Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T14:12:42.629Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:42.612Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:45.543Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:45.544Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:45.549Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:45.548Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:48.466Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:48.508Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:48.511Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T14:12:54.210Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:54.217Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:54.211Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:54.264Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:59.085Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:59.089Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:12:59.086Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:18.896Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:18.919Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:18.944Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:18.978Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:25.405Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:25.412Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":15,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:25.510Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:47.754Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:47.785Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:47.794Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:47.833Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:51.741Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:51.745Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:51.769Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:57.530Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:57.552Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:57.571Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:13:57.572Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:18:11.335Z","hook":"telemetry","event":"UserPromptSubmit","tool":"","target":"","note":"","dur":0,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:18:11.551Z","hook":"dev-rules-reminder","event":"UserPromptSubmit","tool":"","target":"","note":"context-injected","dur":218,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:18:11.854Z","hook":"usage-quota-cache-refresh","event":"UserPromptSubmit","tool":"","target":"","note":"fetched","dur":521,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:24.686Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:24.703Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:24.707Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T14:19:24.965Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:29.799Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T14:19:29.818Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:29.820Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:30.403Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:30.418Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:30.444Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:30.407Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:30.466Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:30.422Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:37.043Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:37.049Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T14:19:37.052Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:43.277Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:43.288Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:43.294Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:43.302Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:47.877Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:47.954Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":12,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:19:48.026Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:45.965Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:45.985Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:45.985Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:46.006Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":13,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:49.984Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:50.087Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:50.108Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:54.001Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:54.024Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:54.055Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:54.083Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:58.223Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:58.237Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:20:58.284Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:21:04.665Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:21:04.687Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:21:04.666Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:21:04.739Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":10,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:31.662Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:31.681Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:31.693Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T14:23:32.231Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"reminder-injected","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:32.248Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:32.262Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:32.326Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:32.777Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"fetched","dur":530,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:32.799Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"fetched","dur":487,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:38.016Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:38.080Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:38.094Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T14:23:43.838Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:43.858Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:43.876Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:43.898Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:47.532Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:47.533Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:23:47.586Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:37.092Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:37.099Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:37.105Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:37.118Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:40.086Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:40.094Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:40.106Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:44.007Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:44.016Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:44.034Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:44.062Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:48.477Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:48.487Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":11,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:48.510Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:55.008Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:55.041Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:55.041Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:24:55.089Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:13.560Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/package.json\""}
-{"ts":"2026-05-25T14:25:13.573Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:13.578Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:13.858Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:18.517Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:18.530Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:18.534Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/package.json\""}
-{"ts":"2026-05-25T14:25:19.106Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:19.114Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:19.147Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":16,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:19.180Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:19.187Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:19.183Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:26.299Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:26.306Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":20,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:26.311Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T14:25:27.025Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:27.065Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:27.098Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:27.106Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:27.166Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:27.171Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:34.105Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T14:25:34.112Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:34.129Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:40.131Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:40.152Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:40.166Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:40.197Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:43.825Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:43.857Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:25:43.856Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:50.502Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:50.506Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:50.533Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:50.505Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:53.987Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:54.005Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:54.004Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:58.459Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:58.466Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:58.481Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:26:58.512Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:27:11.082Z","hook":"telemetry","event":"Stop","tool":"","target":"","note":"","dur":1313,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:34:49.183Z","hook":"telemetry","event":"UserPromptSubmit","tool":"","target":"","note":"","dur":0,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:34:49.451Z","hook":"dev-rules-reminder","event":"UserPromptSubmit","tool":"","target":"","note":"context-injected","dur":272,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:34:49.700Z","hook":"usage-quota-cache-refresh","event":"UserPromptSubmit","tool":"","target":"","note":"fetched","dur":521,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:03.868Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:03.880Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:03.879Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:10.258Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:10.265Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:10.275Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:10.325Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:44.397Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:44.403Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:44.403Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:49.109Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:49.115Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:49.121Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:49.151Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:52.851Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:52.857Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:52.875Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:57.180Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:57.188Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:57.213Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:36:57.224Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:30.113Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:30.115Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/wrangler.toml\""}
-{"ts":"2026-05-25T14:37:30.130Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:30.408Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:34.874Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:34.887Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/wrangler.toml\""}
-{"ts":"2026-05-25T14:37:34.876Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:35.503Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:35.516Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:35.507Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"reminder-injected","dur":12,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:35.507Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:35.557Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:35.504Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:42.870Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/.github/workflows/deploy-admin.yml\""}
-{"ts":"2026-05-25T14:37:42.888Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:42.912Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:43.591Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:43.675Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:43.724Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":16,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:43.729Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:43.726Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:43.770Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:49.528Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
-{"ts":"2026-05-25T14:37:49.535Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":".env","note":"bash-sensitive-file","dur":12,"status":"warn","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:49.579Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":5,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:55.642Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:55.684Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:55.690Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
-{"ts":"2026-05-25T14:37:55.706Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":2,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:38:01.942Z","hook":"scout-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
-{"ts":"2026-05-25T14:38:01.953Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
 {"ts":"2026-05-25T14:38:01.969Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
 {"ts":"2026-05-25T14:39:05.706Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
 {"ts":"2026-05-25T14:39:05.717Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
@@ -860,3 +360,261 @@
 {"ts":"2026-05-25T15:30:51.226Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":14,"status":"ok","exit":0,"error":""}
 {"ts":"2026-05-25T15:30:51.239Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
 {"ts":"2026-05-25T15:31:02.762Z","hook":"telemetry","event":"Stop","tool":"","target":"","note":"","dur":924,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:39:44.065Z","hook":"session-init","event":"SessionStart","tool":"","target":"","note":"startup","dur":978,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:02.467Z","hook":"dev-rules-reminder","event":"UserPromptSubmit","tool":"","target":"","note":"context-injected","dur":352,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:02.990Z","hook":"usage-quota-cache-refresh","event":"UserPromptSubmit","tool":"","target":"","note":"fetched","dur":875,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:07.825Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:14.717Z","hook":"scout-block","event":"PreToolUse","tool":"Grep","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:14.790Z","hook":"privacy-block","event":"PreToolUse","tool":"Grep","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:14.804Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:15.495Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":3,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:18.830Z","hook":"privacy-block","event":"PreToolUse","tool":"Grep","target":"","note":"","dur":13,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:18.844Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:18.937Z","hook":"scout-block","event":"PreToolUse","tool":"Grep","target":"","note":"","dur":12,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:19.149Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:19.157Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:19.162Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":10,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:19.709Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:21.495Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:24.488Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:24.494Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app/(admin)/layout.tsx\""}
+{"ts":"2026-05-26T01:42:24.512Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":20,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:24.944Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:30.023Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app/(admin)/layout.tsx\""}
+{"ts":"2026-05-26T01:42:30.056Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":11,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:30.088Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:30.985Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:31.016Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:31.032Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:31.023Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:31.035Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":10,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:31.098Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:42:36.315Z","hook":"telemetry","event":"Stop","tool":"","target":"","note":"","dur":1117,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:26.774Z","hook":"dev-rules-reminder","event":"UserPromptSubmit","tool":"","target":"","note":"recently-injected","dur":9,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:27.486Z","hook":"usage-quota-cache-refresh","event":"UserPromptSubmit","tool":"","target":"","note":"fetched","dur":724,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:35.331Z","hook":"subagent-init","event":"SubagentStart","tool":"","target":"Explore","note":"context-injected","dur":388,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:38.432Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/**/*.{tsx,ts,jsx,js\""}
+{"ts":"2026-05-26T01:45:38.526Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:38.560Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:38.572Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":33,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:38.595Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin\""}
+{"ts":"2026-05-26T01:45:38.595Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":24,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:39.237Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:59.586Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src\""}
+{"ts":"2026-05-26T01:45:59.691Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":31,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:45:59.685Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:00.228Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src\""}
+{"ts":"2026-05-26T01:46:00.292Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:00.332Z","hook":"privacy-block","event":"PreToolUse","tool":"Grep","target":"","note":"","dur":21,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:01.235Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:05.918Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:05.949Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:05.929Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:05.952Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:09.152Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":8,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:09.292Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":72,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:09.324Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app\""}
+{"ts":"2026-05-26T01:46:09.810Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src\""}
+{"ts":"2026-05-26T01:46:09.908Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":26,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:10.035Z","hook":"privacy-block","event":"PreToolUse","tool":"Grep","target":"","note":"","dur":27,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:10.065Z","hook":"privacy-block","event":"PreToolUse","tool":"Grep","target":"","note":"","dur":25,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:10.090Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src\""}
+{"ts":"2026-05-26T01:46:10.107Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:11.062Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:11.116Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":17,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:21.565Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:21.572Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:21.566Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:24.603Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app/(admin)/dashboard/page.tsx\""}
+{"ts":"2026-05-26T01:46:24.619Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:24.716Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":74,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:25.319Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":41,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:25.355Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":52,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:25.361Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":17,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:25.402Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:25.510Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/components\""}
+{"ts":"2026-05-26T01:46:25.520Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/hooks\""}
+{"ts":"2026-05-26T01:46:25.876Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:30.072Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:30.077Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:30.095Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:30.176Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:30.376Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:30.386Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:30.387Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:30.456Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:34.256Z","hook":"telemetry","event":"SessionStart","tool":"","target":"","note":"","dur":1,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:34.469Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":17,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:34.711Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/components/dashboard/date-range-picker.tsx\""}
+{"ts":"2026-05-26T01:46:34.771Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":45,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:35.103Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":10,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:35.145Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":32,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:35.202Z","hook":"usage-quota-cache-refresh","event":"SessionStart","tool":"","target":"","note":"fetched","dur":2340,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:35.291Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/components/dashboard/department-stats-table.tsx\""}
+{"ts":"2026-05-26T01:46:35.372Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":67,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:35.402Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:35.460Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/lib/supabase.ts\""}
+{"ts":"2026-05-26T01:46:35.772Z","hook":"session-init","event":"SessionStart","tool":"","target":"","note":"startup","dur":3000,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:36.356Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:36.508Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:36.618Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:39.471Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
+{"ts":"2026-05-26T01:46:39.489Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:39.518Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":10,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:40.126Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":10,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:40.132Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/hooks/use-auth.ts\""}
+{"ts":"2026-05-26T01:46:40.155Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:40.352Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:40.390Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":13,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:40.435Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/lib\""}
+{"ts":"2026-05-26T01:46:40.763Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:44.072Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":3,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:44.109Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:44.132Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":3,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:44.157Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:45.623Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:45.624Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:45.670Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:45.648Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:48.376Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:48.394Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/contexts/auth-context.tsx\""}
+{"ts":"2026-05-26T01:46:48.400Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/shared-ui/src/types/database.ts\""}
+{"ts":"2026-05-26T01:46:48.458Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":49,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:48.546Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":14,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:48.583Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:49.540Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:49.619Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":27,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:49.780Z","hook":"usage-quota-cache-refresh","event":"UserPromptSubmit","tool":"","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:49.876Z","hook":"telemetry","event":"UserPromptSubmit","tool":"","target":"","note":"","dur":0,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:50.073Z","hook":"dev-rules-reminder","event":"UserPromptSubmit","tool":"","target":"","note":"context-injected","dur":250,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:52.230Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":2,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:52.252Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":12,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:52.270Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/shared-ui/src/types/database.ts\""}
+{"ts":"2026-05-26T01:46:52.646Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:53.552Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src\""}
+{"ts":"2026-05-26T01:46:53.584Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":22,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:53.617Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:55.623Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:55.648Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":27,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:55.658Z","hook":"privacy-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":24,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:55.662Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:55.726Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:55.796Z","hook":"scout-block","event":"PreToolUse","tool":"Glob","target":"","note":"","dur":11,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:57.403Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:57.405Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:58.842Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:58.845Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":4,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:58.845Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:58.904Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:59.455Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:59.459Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/lib/utils.ts\""}
+{"ts":"2026-05-26T01:46:59.480Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:46:59.846Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:00.418Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/components/auth/login-form.tsx\""}
+{"ts":"2026-05-26T01:47:00.439Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:00.422Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:00.836Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:03.329Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:03.362Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:03.375Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":18,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:03.400Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/shared-ui/src/index.ts\""}
+{"ts":"2026-05-26T01:47:03.416Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/shared-ui/src\""}
+{"ts":"2026-05-26T01:47:03.421Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":20,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:03.982Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:05.710Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/components/auth/login-form.tsx\""}
+{"ts":"2026-05-26T01:47:05.738Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:05.741Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:13.259Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:13.257Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:13.259Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:13.302Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:13.310Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":19,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:13.315Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:13.326Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:13.372Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:15.548Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":35,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:15.564Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app/layout.tsx\""}
+{"ts":"2026-05-26T01:47:15.657Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:16.413Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:16.440Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app/(admin)/layout.tsx\""}
+{"ts":"2026-05-26T01:47:16.442Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":26,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:16.497Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:16.566Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin\""}
+{"ts":"2026-05-26T01:47:16.569Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":15,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:16.623Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":10,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:17.211Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:17.216Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/components/auth/login-form.tsx\""}
+{"ts":"2026-05-26T01:47:17.211Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:17.252Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":18,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:18.205Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":19,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:18.218Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:18.261Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:18.344Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:18.388Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:18.399Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:21.769Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:21.771Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:21.815Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:21.854Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:24.847Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":22,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:24.914Z","hook":"privacy-block","event":"PreToolUse","tool":"Edit","target":"","note":"","dur":39,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:24.948Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/components/auth/login-form.tsx\""}
+{"ts":"2026-05-26T01:47:24.965Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:24.954Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/package.json\""}
+{"ts":"2026-05-26T01:47:25.096Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:25.109Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":27,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:25.126Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":22,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:25.177Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/components/layout/admin-header.tsx\""}
+{"ts":"2026-05-26T01:47:26.900Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:26.910Z","hook":"plan-format-kanban","event":"PostToolUse","tool":"Edit","target":"","note":"non-plan-file","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:26.904Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Edit","target":"","note":"throttled","dur":3,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:26.961Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:26.997Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":19,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:27.019Z","hook":"post-edit-simplify-reminder","event":"PostToolUse","tool":"Edit","target":"","note":"tracked-edit","dur":13,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:27.219Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:27.325Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":14,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:32.381Z","hook":"telemetry","event":"Stop","tool":"","target":"","note":"","dur":838,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:33.700Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/package.json\""}
+{"ts":"2026-05-26T01:47:33.742Z","hook":"privacy-block","event":"PreToolUse","tool":"Read","target":"","note":"","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:33.751Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":3,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:34.509Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":20,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:34.607Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app\""}
+{"ts":"2026-05-26T01:47:34.623Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:34.831Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":9,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:34.847Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/components/dashboard\""}
+{"ts":"2026-05-26T01:47:34.870Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":31,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:34.971Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:39.979Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":11,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:39.966Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:40.034Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:40.054Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":17,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:40.147Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:40.185Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:40.192Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:40.191Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:42.679Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":29,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:42.692Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":5,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:42.690Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end/admin/src/app/(admin\""}
+{"ts":"2026-05-26T01:47:42.955Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":8,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:42.993Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:42.996Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
+{"ts":"2026-05-26T01:47:47.729Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:47.779Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:47.779Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:47.797Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:50.065Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:50.081Z","hook":"telemetry","event":"PostToolUse","tool":"","target":"","note":"","dur":6,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:50.097Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:50.080Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:53.835Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:53.936Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025\""}
+{"ts":"2026-05-26T01:47:54.029Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":22,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:54.091Z","hook":"privacy-block","event":"PreToolUse","tool":"Bash","target":"","note":"","dur":7,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:47:54.144Z","hook":"scout-block","event":"PreToolUse","tool":"","target":"","note":"","dur":0,"status":"crash","exit":0,"error":"path should be a `path.relative()`d string, but got \"d:/repo/saa-2025/front-end\""}
+{"ts":"2026-05-26T01:47:54.148Z","hook":"skill-dedup","event":"SessionStart","tool":"","target":"","note":"dedup-complete","dur":4,"status":"ok","exit":0,"error":""}
+{"ts":"2026-05-26T01:48:06.160Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:48:06.168Z","hook":"task-completed-handler","event":"TaskCompleted","tool":"","target":"","note":"missing-team-name","dur":0,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:48:06.183Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:48:06.218Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":1,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:48:06.228Z","hook":"usage-context-awareness","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
+{"ts":"2026-05-26T01:48:06.260Z","hook":"usage-quota-cache-refresh","event":"PostToolUse","tool":"Bash","target":"","note":"throttled","dur":2,"status":"skip","exit":0,"error":""}
