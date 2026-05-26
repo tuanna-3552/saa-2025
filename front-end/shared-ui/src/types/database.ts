@@ -272,8 +272,6 @@ export type Database = {
           created_at: string
           id: string
           name: string
-          nomination_end: string | null
-          nomination_start: string | null
           status: Database["public"]["Enums"]["season_status"]
           updated_at: string
           voting_end: string | null
@@ -284,8 +282,6 @@ export type Database = {
           created_at?: string
           id?: string
           name: string
-          nomination_end?: string | null
-          nomination_start?: string | null
           status?: Database["public"]["Enums"]["season_status"]
           updated_at?: string
           voting_end?: string | null
@@ -296,8 +292,6 @@ export type Database = {
           created_at?: string
           id?: string
           name?: string
-          nomination_end?: string | null
-          nomination_start?: string | null
           status?: Database["public"]["Enums"]["season_status"]
           updated_at?: string
           voting_end?: string | null
@@ -374,7 +368,7 @@ export type Database = {
     }
     Enums: {
       nomination_status: "pending" | "approved" | "rejected"
-      season_status: "draft" | "nomination" | "voting" | "closed" | "announced"
+      season_status: "draft" | "voting" | "closed" | "announced"
       user_role: "admin" | "employee"
     }
     CompositeTypes: {
@@ -504,7 +498,7 @@ export const Constants = {
   public: {
     Enums: {
       nomination_status: ["pending", "approved", "rejected"],
-      season_status: ["draft", "nomination", "voting", "closed", "announced"],
+      season_status: ["draft", "voting", "closed", "announced"],
       user_role: ["admin", "employee"],
     },
   },

@@ -88,7 +88,7 @@ The dashboard shows a real-time **per-department stats table** sourced from the 
 | Overview | ✅ Live | Department stats dashboard |
 | Review content | ✅ Live | Approve or reject nominations |
 | User | ✅ Live | User list, filters, search, sorting, and CSV export |
-| Settings | 🔲 Coming soon | System configuration |
+| Settings | ✅ Live | System configuration |
 
 ---
 
@@ -111,6 +111,21 @@ The dashboard shows a real-time **per-department stats table** sourced from the 
    - Select a rank in the **Role** dropdown.
    - Type in the **Search** box to filter dynamically by name or email.
 4. Click the **Export** button at the top-right to download `users.csv`, containing formatted user records matching your current filter/search.
+
+### 8. Settings — Campaign Management
+1. Click **Settings** in the header navigation.
+2. Inspect the campaigns table showing: ID, Campaign Name, Voting time timeframe, and Actions.
+   - **Table Alignment**: Fits structural spacing and styling identical to the User page list.
+3. **Add Campaign**:
+   - Click the gold **Add Campaign** button.
+   - In the clean Centered Modal, type a Name, select the Start & End Dates, then click **Add Campaign** (Year is auto-extracted from Start Date, Status is managed).
+4. **Edit Campaign**:
+   - Click the Actions button on a campaign row (circular bordered icon with three horizontal dots matching figma).
+   - In the dropdown actions menu, hover on **Edit** (triggers an elegant gold background and glow text shadow).
+   - Change the name or dates, and click **Save Changes**.
+5. **Delete Campaign**:
+   - Click the Actions button and hover/select **Delete** (shares the same glowing amber selection style as Edit).
+   - Verify the custom deletion warning modal shows left-aligned description and target name highlighted in gold, with symmetrical **Delete** (red) and **Cancel** buttons. Confirm to delete.
 
 ---
 

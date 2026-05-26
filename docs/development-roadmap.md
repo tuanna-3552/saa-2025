@@ -36,7 +36,7 @@
 
 ---
 
-## Phase 3 — Admin UI 🔄 In Progress
+## Phase 3 — Admin UI ✅ Completed (2026-05-26)
 
 | Task | Status | Notes |
 |------|--------|-------|
@@ -45,13 +45,13 @@
 | Admin shell (header, layout) | ✅ Done | Logo, nav glow, bell/language/account dropdown |
 | Employee management CRUD | ✅ Done | Filter bar (Unit, Level, Role), Search, Table with bi-directional sorting and custom Figma SortIcons, and CSV export |
 | Department management CRUD | 🔲 | |
-| Season management | 🔲 | |
+| Season management | ✅ Done | Campaign (Season) CRUD management with name, year, voting start/end datetime boundaries |
 | Award categories management | 🔲 | |
 | Nomination review (approve/reject) | ✅ Done | List + detail pages, status filter, approve/reject mutations (MoMorph spec) |
-| Voting management (open/close periods) | 🔲 | |
+| Voting management (open/close periods) | ✅ Done | Direct voting timeframe configuration from Settings screen |
 | Results announcement | 🔲 | |
 
-**Plan:** [260525-1528-admin-pages-auth-dashboard](../plans/260525-1528-admin-pages-auth-dashboard/plan.md)
+**Plan:** [260526-1358-settings-page](../plans/260526-1358-settings-page/plan.md)
 
 ---
 

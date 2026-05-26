@@ -7,7 +7,7 @@ CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 -- ============================================================
 
 CREATE TYPE public.user_role AS ENUM ('admin', 'employee');
-CREATE TYPE public.season_status AS ENUM ('draft', 'nomination', 'voting', 'closed', 'announced');
+CREATE TYPE public.season_status AS ENUM ('draft', 'voting', 'closed', 'announced');
 CREATE TYPE public.nomination_status AS ENUM ('pending', 'approved', 'rejected');
 
 -- ============================================================
@@ -70,8 +70,6 @@ CREATE TABLE public.seasons (
   id               UUID               PRIMARY KEY DEFAULT gen_random_uuid(),
   name             TEXT               NOT NULL,
   year             INTEGER            NOT NULL,
-  nomination_start TIMESTAMPTZ,
-  nomination_end   TIMESTAMPTZ,
   voting_start     TIMESTAMPTZ,
   voting_end       TIMESTAMPTZ,
   status           public.season_status NOT NULL DEFAULT 'draft',

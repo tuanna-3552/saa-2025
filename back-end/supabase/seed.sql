@@ -48,13 +48,12 @@ INSERT INTO public.profiles (id, full_name, email, department_id, role, level, l
 ON CONFLICT (id) DO NOTHING;
 
 -- Season 2025
-INSERT INTO public.seasons (id, name, year, nomination_start, nomination_end, voting_start, voting_end, status) VALUES
+INSERT INTO public.seasons (id, name, year, voting_start, voting_end, status) VALUES
   (
     '5a000000-0000-0000-0000-000000000001',
     'SAA 2025', 2025,
-    '2025-11-01 00:00:00+07', '2025-11-15 23:59:59+07',
     '2025-11-20 00:00:00+07', '2025-11-30 23:59:59+07',
-    'nomination'
+    'voting'
   )
 ON CONFLICT (id) DO NOTHING;
 

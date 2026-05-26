@@ -24,7 +24,7 @@
 | Enum | Values |
 |------|--------|
 | `user_role` | `admin`, `employee` |
-| `season_status` | `draft`, `nomination`, `voting`, `closed`, `announced` |
+| `season_status` | `draft`, `voting`, `closed`, `announced` |
 | `nomination_status` | `pending`, `approved`, `rejected` |
 
 ### Tables
@@ -57,7 +57,6 @@
 | id | uuid PK | |
 | name | text | e.g. "SAA 2025" |
 | year | integer | |
-| nomination_start / nomination_end | timestamptz | nullable |
 | voting_start / voting_end | timestamptz | nullable |
 | status | season_status | DEFAULT `draft` |
 | created_at / updated_at | timestamptz | |

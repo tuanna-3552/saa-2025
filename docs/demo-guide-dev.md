@@ -127,7 +127,7 @@ The dashboard displays a **per-department stats table** with live data from the 
 | Overview | `/dashboard` | ✅ Live |
 | Review content | `/nominations` | ✅ Live |
 | User | `/users` | ✅ Live |
-| Settings | `/settings` | 🔲 Coming soon |
+| Settings | `/settings` | ✅ Live |
 
 ### 5.6 Review content — Nominations Review
 1. Click **Review content** in the header navigation or open **http://localhost:3001/nominations**.
@@ -148,6 +148,21 @@ The dashboard displays a **per-department stats table** with live data from the 
    - Select a rank in the **Role** dropdown.
    - Type in the **Search** box to filter dynamically by name or email.
 4. Click the **Export** button at the top-right to download `users.csv`, containing formatted user records matching your current filter/search.
+
+### 5.8 Settings — Campaign Management
+1. Click **Settings** in the header navigation or open **http://localhost:3001/settings**.
+2. Inspect the campaigns table showing: ID, Campaign Name, Voting time timeframe, and Actions.
+   - **Table Alignment**: Fits structural spacing and styling identical to the User page list.
+3. **Add Campaign**:
+   - Click the gold **Add Campaign** button.
+   - In the clean Centered Modal, type a Name, select the Start & End Dates, then click **Add Campaign** (Year is auto-extracted from Start Date, Status is managed).
+4. **Edit Campaign**:
+   - Click the Actions button on a campaign row (circular bordered icon with three horizontal dots matching figma).
+   - In the dropdown actions menu, hover on **Edit** (triggers an elegant gold background and glow text shadow).
+   - Change the name or dates, and click **Save Changes**.
+5. **Delete Campaign**:
+   - Click the Actions button and hover/select **Delete** (shares the same glowing amber selection style as Edit).
+   - Verify the custom deletion warning modal shows left-aligned description and target name highlighted in gold, with symmetrical **Delete** (red) and **Cancel** buttons. Confirm to delete.
 
 ---
 
