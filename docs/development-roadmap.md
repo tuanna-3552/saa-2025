@@ -55,11 +55,11 @@
 
 ---
 
-## Phase 4 — Landing Page 🔲 Not Started
+## Phase 4 — Landing Page 🔶 In Progress (2026-05-26)
 
 | Task | Status |
 |------|--------|
-| Public home page | 🔲 |
+| Public home page (Prelaunch Countdown) | ✅ Done |
 | Nomination form (authenticated employees) | 🔲 |
 | Voting page (authenticated employees) | 🔲 |
 | Results page | 🔲 |

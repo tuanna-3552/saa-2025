@@ -171,6 +171,22 @@ open http://localhost:54323
 
 ---
 
+## Landing Page — Implemented Screens
+
+`front-end/landing-page` (SSR, port 3000)
+
+| Route | File | Description |
+|-------|------|-------------|
+| `/` | `app/page.tsx` | Prelaunch countdown page — full-screen countdown to `NEXT_PUBLIC_EVENT_DATE` |
+
+### Key Frontend Modules
+
+| Path | Purpose |
+|------|---------|
+| `components/countdown-timer.tsx` | Client countdown timer (Days/Hours/Minutes), redirects to `redirectTo` prop on expiry |
+
+---
+
 ## Admin Panel — Implemented Pages
 
 `front-end/admin` (CSR, port 3001)

@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Montserrat, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
+
+const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
+const shareTechMono = Share_Tech_Mono({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-digital",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +28,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="vi">
-      <body>{children}</body>
+      <body className={`${montserrat.variable} ${shareTechMono.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
