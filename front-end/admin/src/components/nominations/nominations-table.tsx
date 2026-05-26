@@ -2,34 +2,45 @@
 
 import { cn } from "@/lib/utils";
 import { NominationTableRow } from "./nomination-row";
+import type { NominationRow } from "@/hooks/use-nominations";
 
-export interface NominationRow {
-  id: string;
-  nominee: { full_name: string; avatar_url: string | null } | null;
-  nominator: { full_name: string } | null;
-  category: { name: string } | null;
-  season: { name: string } | null;
-  reason: string | null;
-  status: "pending" | "approved" | "rejected";
-  created_at: string;
-}
+export type { NominationRow };
+export type HeartSort = "asc" | "desc" | null;
 
-const columns = [
-  { key: "no", label: "No", width: "w-[60px]" },
-  { key: "nominee", label: "Nominee", width: "w-[180px]" },
-  { key: "nominator", label: "Nominator", width: "w-[160px]" },
-  { key: "category", label: "Category", width: "w-[140px]" },
-  { key: "season", label: "Season", width: "w-[140px]" },
-  { key: "reason", label: "Reason", width: "flex-1 min-w-[200px]" },
-  { key: "status", label: "Status", width: "w-[110px]" },
-  { key: "created_at", label: "Created at", width: "w-[140px]" },
-];
+const FONT = { fontFamily: "var(--font-montserrat)" };
 
 interface NominationsTableProps {
   nominations: NominationRow[];
   loading: boolean;
   error: string | null;
   onRowClick: (id: string) => void;
+  onAction: (id: string, action: "approved" | "rejected") => Promise<void>;
+  searchQuery?: string;
+  heartSort?: HeartSort;
+  onHeartSortChange?: (sort: HeartSort) => void;
+}
+
+function SortIcon({ sort }: { sort: HeartSort }) {
+  if (sort === "desc") {
+    return (
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    );
+  }
+  if (sort === "asc") {
+    return (
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    );
+  }
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <polyline points="6 9 12 3 18 9" />
+      <polyline points="6 15 12 21 18 15" />
+    </svg>
+  );
 }
 
 export function NominationsTable({
@@ -37,15 +48,16 @@ export function NominationsTable({
   loading,
   error,
   onRowClick,
+  onAction,
+  searchQuery = "",
+  heartSort = null,
+  onHeartSortChange,
 }: NominationsTableProps) {
   if (loading) {
     return (
       <div
         className="flex h-48 items-center justify-center text-sm"
-        style={{
-          color: "rgba(255,255,255,0.6)",
-          fontFamily: "var(--font-montserrat)",
-        }}
+        style={{ color: "rgba(255,255,255,0.6)", ...FONT }}
       >
         Loading...
       </div>
@@ -60,7 +72,7 @@ export function NominationsTable({
           backgroundColor: "rgba(212,39,29,0.15)",
           color: "var(--details-error)",
           border: "1px solid var(--details-error)",
-          fontFamily: "var(--font-montserrat)",
+          ...FONT,
         }}
       >
         {error}
@@ -68,55 +80,73 @@ export function NominationsTable({
     );
   }
 
+  function cycleHeartSort() {
+    if (!onHeartSortChange) return;
+    onHeartSortChange(heartSort === null ? "desc" : heartSort === "desc" ? "asc" : null);
+  }
+
   return (
-    <div className="w-full overflow-x-auto">
-      <div className="min-w-max">
-        {/* Header */}
-        <div
-          className="flex items-center"
-          style={{ backgroundColor: "var(--details-container)" }}
-        >
-          {columns.map((col) => (
-            <div
-              key={col.key}
-              className={cn(
-                "flex h-12 shrink-0 items-center border-b px-3",
-                "text-sm font-medium tracking-[0.1px] text-white",
-                col.width
-              )}
-              style={{
-                borderColor: "var(--details-divider)",
-                fontFamily: "var(--font-montserrat)",
-              }}
-            >
-              {col.label}
-            </div>
-          ))}
-        </div>
-
-        {/* Rows */}
-        {nominations.map((row, index) => (
-          <NominationTableRow
-            key={row.id}
-            row={row}
-            index={index}
-            onClick={onRowClick}
-          />
-        ))}
-
-        {nominations.length === 0 && (
-          <div
-            className="flex h-16 items-center justify-center text-sm"
-            style={{
-              backgroundColor: "var(--details-container-2)",
-              color: "rgba(255,255,255,0.6)",
-              fontFamily: "var(--font-montserrat)",
-            }}
+    <div className="w-full">
+      {/* Header */}
+      <div className="flex items-center" style={{ backgroundColor: "var(--details-container)" }}>
+        <HeaderCell width="w-[60px]">ID</HeaderCell>
+        <HeaderCell width="w-[150px]">Sender</HeaderCell>
+        <HeaderCell width="w-[160px]">Receiver</HeaderCell>
+        <HeaderCell width="flex-1 min-w-[200px]">Content</HeaderCell>
+        <HeaderCell width="w-[180px]">Hashtag</HeaderCell>
+        <HeaderCell width="w-[100px]">
+          <button
+            type="button"
+            onClick={cycleHeartSort}
+            className={cn(
+              "flex items-center gap-1 transition-colors",
+              heartSort ? "text-white" : "text-white hover:text-white/80"
+            )}
+            style={heartSort ? { color: "var(--details-text-primary-1)" } : {}}
           >
-            No nominations found
-          </div>
-        )}
+            Heart
+            <SortIcon sort={heartSort} />
+          </button>
+        </HeaderCell>
+        <HeaderCell width="w-[100px]">Status</HeaderCell>
+        <HeaderCell width="w-[120px]">Actions</HeaderCell>
       </div>
+
+      {/* Rows */}
+      {nominations.map((row, index) => (
+        <NominationTableRow
+          key={row.id}
+          row={row}
+          index={index}
+          onClick={onRowClick}
+          onAction={onAction}
+          searchQuery={searchQuery}
+        />
+      ))}
+
+      {nominations.length === 0 && (
+        <div
+          className="flex h-16 items-center justify-center text-sm"
+          style={{ backgroundColor: "var(--details-container-2)", color: "rgba(255,255,255,0.6)", ...FONT }}
+        >
+          No nominations found
+        </div>
+      )}
+    </div>
+  );
+}
+
+function HeaderCell({ width, children }: { width: string; children: React.ReactNode }) {
+  return (
+    <div
+      className={cn(
+        "flex h-12 shrink-0 items-center border-b px-3",
+        "text-sm font-medium tracking-[0.1px] text-white",
+        width
+      )}
+      style={{ borderColor: "var(--details-divider)", fontFamily: "var(--font-montserrat)" }}
+    >
+      {children}
     </div>
   );
 }

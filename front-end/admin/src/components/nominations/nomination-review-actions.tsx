@@ -37,10 +37,8 @@ export function NominationReviewActions({
   }
 
   return (
-    // mm:review-actions-row
     <div className="flex items-center gap-4">
-      {/* Approve button */}
-      {/* mm:btn-approve */}
+      {/* Make Public */}
       <button
         type="button"
         disabled={busy !== null}
@@ -56,15 +54,14 @@ export function NominationReviewActions({
         {busy === "approved" ? (
           <span className="flex items-center gap-2">
             <span className="h-4 w-4 animate-spin rounded-full border-2 border-t-transparent" style={{ borderColor: "var(--details-text-primary-2)", borderTopColor: "transparent" }} />
-            Approving…
+            Processing…
           </span>
         ) : (
-          "Approve"
+          "Make Public"
         )}
       </button>
 
-      {/* Reject button */}
-      {/* mm:btn-reject */}
+      {/* Mark as Spam */}
       <button
         type="button"
         disabled={busy !== null}
@@ -80,10 +77,10 @@ export function NominationReviewActions({
         {busy === "rejected" ? (
           <span className="flex items-center gap-2">
             <span className="h-4 w-4 animate-spin rounded-full border-2 border-t-transparent" style={{ borderColor: "var(--details-error)", borderTopColor: "transparent" }} />
-            Rejecting…
+            Processing…
           </span>
         ) : (
-          "Reject"
+          "Mark as Spam"
         )}
       </button>
     </div>

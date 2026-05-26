@@ -170,6 +170,29 @@ open http://localhost:54323
 
 ---
 
+## Admin Panel — Implemented Pages
+
+`front-end/admin` (CSR, port 3001)
+
+| Route | File | Description |
+|-------|------|-------------|
+| `/login` | `app/(auth)/login/page.tsx` | Email/password login, redirects to dashboard |
+| `/` (dashboard) | `app/(admin)/page.tsx` | Overview: per-department stats, date range picker |
+| `/nominations` | `app/(admin)/nominations/page.tsx` | Nominations list with status filter (all/pending/approved/rejected) |
+| `/nominations/[id]` | `app/(admin)/nominations/[id]/page.tsx` | Nomination detail; approve/reject actions |
+
+### Key Frontend Modules
+
+| Path | Purpose |
+|------|---------|
+| `components/nominations/` | Table, row, status badge, detail card, review actions, detail sections, status filter |
+| `hooks/use-nominations.ts` | Fetch nominations list with status filter |
+| `hooks/use-nomination.ts` | Fetch single nomination detail |
+| `lib/review-nomination.ts` | Supabase mutations: approve / reject |
+| `lib/format.ts` | Shared `formatDate` utility |
+
+---
+
 ## Migration Files
 
 | File | Description |

@@ -14,25 +14,25 @@ const STATUS_CONFIG: Record<
   { label: string; bg: string; color: string; border: string; dotColor: string }
 > = {
   pending: {
-    label: "Pending",
-    bg: "rgba(255,234,158,0.10)",
-    color: "#FFEA9E",
-    border: "rgba(255,234,158,0.30)",
-    dotColor: "#FFEA9E",
+    label: "Mới tạo",
+    bg: "rgba(150,150,150,0.10)",
+    color: "#9CA3AF",
+    border: "rgba(150,150,150,0.30)",
+    dotColor: "#9CA3AF",
   },
   approved: {
-    label: "Approved",
-    bg: "rgba(34,197,94,0.10)",
-    color: "#4ADE80",
-    border: "rgba(34,197,94,0.30)",
-    dotColor: "#4ADE80",
+    label: "Public",
+    bg: "rgba(59,130,246,0.12)",
+    color: "#60A5FA",
+    border: "rgba(59,130,246,0.35)",
+    dotColor: "#60A5FA",
   },
   rejected: {
-    label: "Rejected",
-    bg: "rgba(212,39,29,0.12)",
-    color: "#F87171",
-    border: "rgba(212,39,29,0.30)",
-    dotColor: "#F87171",
+    label: "Spam",
+    bg: "rgba(234,179,8,0.12)",
+    color: "#FCD34D",
+    border: "rgba(234,179,8,0.35)",
+    dotColor: "#FCD34D",
   },
 };
 
@@ -55,7 +55,6 @@ export function NominationStatusBadge({
         fontFamily: "var(--font-montserrat)",
       }}
     >
-      {/* status dot */}
       <span
         className="inline-block h-1.5 w-1.5 shrink-0 rounded-full"
         style={{ backgroundColor: cfg.dotColor }}
