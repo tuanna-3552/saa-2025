@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-05-26 — Prelaunch Countdown Page — Landing Page
+
+### Added — Landing Page
+
+- Implemented full-screen countdown Prelaunch page matching Figma design (`front-end/landing-page/src/app/page.tsx`)
+- `CountdownTimer` component shows Days/Hours/Minutes; redirects to configurable `redirectTo` prop on expiry (`front-end/landing-page/src/components/countdown-timer.tsx`)
+- Background: colorful abstract art overlay with dark gradient, flipped vertically per design
+- Fonts: Montserrat Bold (labels) + Share Tech Mono (digits) via `next/font/google`, added to `app/layout.tsx`
+- Target date driven by `NEXT_PUBLIC_EVENT_DATE` env var (`next.config.ts`)
+
+### Fixed — Landing Page
+
+- Pre-existing CJS/ESM plugin import bug in `front-end/landing-page/eslint.config.mjs`
+
+---
+
 ## 2026-05-26 — Admin User Page & DB Upgrades (Phase 3, completed)
 
 ### Added — Admin User Management Page

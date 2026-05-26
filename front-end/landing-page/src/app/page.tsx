@@ -5,30 +5,62 @@ import CountdownTimer from "@/components/countdown-timer";
 export default function HomePage() {
   const targetDate = process.env.NEXT_PUBLIC_EVENT_DATE ?? "";
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#00101a]">
-      {/* Background art — flipped vertically per Figma design */}
-      <div className="absolute inset-0 -scale-y-100 rotate-180 opacity-50">
+    <main
+      style={{
+        position: "fixed",
+        inset: 0,
+        backgroundColor: "#00101a",
+        overflow: "hidden",
+      }}
+    >
+      {/* Background art — flipped (scaleY + rotate = horizontal mirror) per Figma */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          opacity: 0.5,
+          transform: "scaleY(-1) rotate(180deg)",
+        }}
+      >
         <img
           src="/images/prelaunch-bg.png"
           alt=""
-          className="h-full w-full object-cover"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>
 
       {/* Dark gradient overlay */}
       <div
-        className="absolute inset-0"
         style={{
+          position: "absolute",
+          inset: 0,
           background:
             "linear-gradient(13.3deg, rgb(0,16,26) 15.5%, rgba(0,18,29,0.46) 52.1%, rgba(0,19,32,0) 63.4%)",
         }}
       />
 
       {/* Countdown content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center gap-6">
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 10,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "24px",
+        }}
+      >
         <p
-          className="text-[36px] font-bold leading-12 text-white"
-          style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+          style={{
+            fontFamily: "var(--font-montserrat), sans-serif",
+            fontSize: "36px",
+            fontWeight: 700,
+            lineHeight: "48px",
+            color: "white",
+            margin: 0,
+          }}
         >
           Sự kiện sẽ bắt đầu sau
         </p>
