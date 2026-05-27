@@ -31,6 +31,33 @@ jobs:
       - name: Type-check
         run: pnpm turbo type-check
 
+      - name: Run Unit Tests
+        run: pnpm test
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Start Supabase Local Stack
+        run: |
+          cd back-end
+          supabase start
+          supabase db reset
+
+      - name: Install Playwright Browsers
+        run: pnpm --filter @saa/admin exec playwright install chromium --with-deps
+
+      - name: Run E2E Tests
+        run: pnpm test:e2e
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: http://127.0.0.1:54321
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRFA0NiK7W9oHQFQkj6RxRb4Oj3mP7WiXd3I2T2HJk0
+          E2E_ADMIN_EMAIL: admin1@saa.local
+          E2E_ADMIN_PASSWORD: password123
+          E2E_USER_EMAIL: emp1@saa.local
+          E2E_USER_PASSWORD: password123
+
       - name: Build
         run: pnpm turbo build
         env:

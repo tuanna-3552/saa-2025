@@ -117,6 +117,14 @@ pnpm turbo dev --filter=@saa/landing-page
 pnpm turbo build --filter=@saa/admin
 ```
 
+## Testing
+
+The project includes comprehensive test suites for the Admin Portal:
+- **Unit & Component Tests** (Jest & React Testing Library): Business logic, React contexts, and interactive UI components.
+- **End-to-End Tests** (Playwright): Critical user journeys (authentication, route guards, navigation).
+
+For setup details, prerequisites (such as starting local Supabase stack for E2E tests), and developer guidelines, see the complete [Testing Guide](docs/testing-guide.md).
+
 ## Environment Variables
 
 | Variable | Used in | Description |
