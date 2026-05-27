@@ -1,3 +1,5 @@
+"use client";
+
 import CountdownTimer from "@/components/countdown-timer";
 
 // Award ceremony date — driven by NEXT_PUBLIC_EVENT_DATE env var; falls back to Figma design value

@@ -1,3 +1,5 @@
+"use client";
+
 export interface AwardCardProps {
   /** Award background image path */
   bgImage: string;
