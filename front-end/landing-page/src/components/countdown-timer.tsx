@@ -92,16 +92,19 @@ function UnitGroup({ value, label }: { value: number; label: string }) {
 
 export default function CountdownTimer({ targetDate, redirectTo = "/" }: CountdownTimerProps) {
   const router = useRouter();
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => calcTimeLeft(targetDate));
+  // Initialize to zeros — real value is computed client-side only to avoid SSR/client Date.now() mismatch
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0 });
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  // Track last minute to skip re-renders when the displayed value hasn't changed
   const lastMinuteRef = useRef<number>(-1);
 
   useEffect(() => {
-    // Reset tracker on prop change to avoid stale-ref skip on first tick
     lastMinuteRef.current = -1;
 
-    // If date is invalid or already expired on mount, show zeros — no redirect
+    // Set initial value immediately on mount
+    const initial = calcTimeLeft(targetDate);
+    setTimeLeft(initial);
+    lastMinuteRef.current = initial.minutes;
+
     const targetMs = isValidDate(targetDate) ? new Date(targetDate).getTime() : 0;
     if (!targetMs || targetMs <= Date.now()) return;
 
