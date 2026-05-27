@@ -47,3 +47,7 @@ yarn-error.log*
 .mcp.json
 
 /.claude/hooks/.logs/hook-log.jsonl
+# Playwright auth state
+front-end/admin/tests/e2e/.auth/
+front-end/admin/test-results/
+front-end/admin/playwright-report/
