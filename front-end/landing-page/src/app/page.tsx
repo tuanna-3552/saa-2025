@@ -1,6 +1,7 @@
 export const runtime = "edge";
 
 import CountdownTimer from "@/components/countdown-timer";
+import AutoRedirect from "@/components/auto-redirect";
 
 export default function HomePage() {
   const targetDate = process.env.NEXT_PUBLIC_EVENT_DATE ?? "";
@@ -65,6 +66,7 @@ export default function HomePage() {
           Sự kiện sẽ bắt đầu sau
         </p>
         <CountdownTimer targetDate={targetDate} />
+        <AutoRedirect to="/login" delayMs={3000} />
       </div>
     </main>
   );
