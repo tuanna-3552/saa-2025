@@ -6,6 +6,17 @@
 
 ---
 
+## 2026-05-27 — Login Page — Landing Page
+
+### Added — Landing Page Auth
+
+- `/login` route with "Sign in with Google" button (`front-end/landing-page/src/app/login/page.tsx`, `src/components/auth/login-form.tsx`)
+- Supabase client helper for landing page (`src/lib/supabase.ts`)
+- `/api/auth/dev-login` edge route handler: dev-only stub that signs in via `supabase.auth.signInWithPassword` using `DEV_USER_EMAIL` / `DEV_USER_PASSWORD` env vars; returns 404 in production
+- Post-login redirect target: `/home`
+
+---
+
 ## 2026-05-26 — Prelaunch Countdown Page — Landing Page
 
 ### Added — Landing Page

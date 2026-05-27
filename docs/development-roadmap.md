@@ -60,6 +60,7 @@
 | Task | Status |
 |------|--------|
 | Public home page (Prelaunch Countdown) | ✅ Done |
+| Login page (Google OAuth UI + dev stub) | ✅ Done |
 | Nomination form (authenticated employees) | 🔲 |
 | Voting page (authenticated employees) | 🔲 |
 | Results page | 🔲 |
