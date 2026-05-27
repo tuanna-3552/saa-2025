@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Montserrat, Share_Tech_Mono } from "next/font/google";
+import { Montserrat, Montserrat_Alternates, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
+const montserratAlternates = Montserrat_Alternates({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-montserrat-alternates",
+});
 const shareTechMono = Share_Tech_Mono({
   weight: "400",
   subsets: ["latin"],
@@ -28,7 +33,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="vi">
-      <body className={`${montserrat.variable} ${shareTechMono.variable}`} suppressHydrationWarning>
+      <body
+        className={`${montserrat.variable} ${montserratAlternates.variable} ${shareTechMono.variable}`}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>
