@@ -40,16 +40,6 @@ export default function KudosSection() {
             }}
           />
 
-          {/* Dark overlay for readability */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(15,15,15,0.55)",
-              borderRadius: "16px",
-            }}
-          />
-
           {/* Content layout — left content + right logo */}
           <div
             style={{
@@ -168,80 +158,18 @@ export default function KudosSection() {
                 >
                   Chi tiết
                 </span>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="rgba(0,16,26,1)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.49945 18.3104L5.68945 15.5004L12.0595 9.12043H7.10945V5.69043H18.3095V16.8904H14.8895V11.9404L8.49945 18.3104Z" fill="rgba(0,16,26,1)"/>
                 </svg>
               </a>
             </div>
 
-            {/* Right: MM_MEDIA_Logo/Kudos — 364×72 */}
-            <div
-              style={{
-                flexShrink: 0,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "8px",
-              }}
-            >
-              {/* KUDOS text styled logo — rendered as stylized text matching design */}
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "16px",
-                }}
-              >
-                {/* Sun* mark — abstract circular icon */}
-                <div
-                  style={{
-                    width: "80px",
-                    height: "65px",
-                    flexShrink: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <svg
-                    width="80"
-                    height="65"
-                    viewBox="0 0 80 65"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="40" cy="32" r="28" stroke="#DBD1C1" strokeWidth="2.5" fill="none" />
-                    <circle cx="40" cy="32" r="18" fill="#DBD1C1" fillOpacity="0.2" />
-                    <path d="M40 10 L40 54 M18 32 L62 32" stroke="#DBD1C1" strokeWidth="2" />
-                    <path d="M22 16 L58 48 M22 48 L58 16" stroke="#DBD1C1" strokeWidth="1.5" />
-                  </svg>
-                </div>
-                {/* KUDOS wordmark */}
-                <span
-                  style={{
-                    fontFamily: "var(--font-montserrat), sans-serif",
-                    fontSize: "72px",
-                    fontWeight: 700,
-                    lineHeight: "1",
-                    letterSpacing: "-0.13em",
-                    color: "rgba(219,209,193,1)",
-                  }}
-                >
-                  KUDOS
-                </span>
-              </div>
-            </div>
+            {/* Right: MM_MEDIA_Logo/Kudos — 364×74 */}
+            <img
+              src="/home/kudos.png"
+              alt="Sun* Kudos"
+              style={{ width: "364px", height: "74px", flexShrink: 0, objectFit: "contain" }}
+            />
           </div>
         </div>
       </div>

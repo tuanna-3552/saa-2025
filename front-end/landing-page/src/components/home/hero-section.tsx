@@ -15,7 +15,7 @@ export default function HeroSection() {
       style={{
         position: "relative",
         width: "100%",
-        minHeight: "100vh",
+        minHeight: "700px",
         overflow: "hidden",
         display: "flex",
         flexDirection: "column",
@@ -36,7 +36,7 @@ export default function HeroSection() {
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center top",
+            objectPosition: "center",
           }}
         />
       </div>
@@ -234,18 +234,8 @@ export default function HeroSection() {
                 ABOUT AWARDS
               </span>
               {/* Arrow icon */}
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(0,16,26,1)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.49945 18.3104L5.68945 15.5004L12.0595 9.12043H7.10945V5.69043H18.3095V16.8904H14.8895V11.9404L8.49945 18.3104Z" fill="rgba(0,16,26,1)"/>
               </svg>
             </a>
 
@@ -289,18 +279,8 @@ export default function HeroSection() {
                 ABOUT KUDOS
               </span>
               {/* Arrow icon */}
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(255,255,255,1)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.49945 18.3104L5.68945 15.5004L12.0595 9.12043H7.10945V5.69043H18.3095V16.8904H14.8895V11.9404L8.49945 18.3104Z" fill="rgba(255,255,255,1)"/>
               </svg>
             </a>
           </div>
