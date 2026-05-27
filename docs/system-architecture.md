@@ -178,12 +178,20 @@ open http://localhost:54323
 | Route | File | Description |
 |-------|------|-------------|
 | `/` | `app/page.tsx` | Prelaunch countdown page — full-screen countdown to `NEXT_PUBLIC_EVENT_DATE` |
+| `/login` | `app/login/page.tsx` | Sign-in page; dev stub via `/api/auth/dev-login`; redirects to `/home` |
+| `/home` | `app/home/page.tsx` | Homepage — 7-section authenticated landing (edge runtime) |
 
 ### Key Frontend Modules
 
 | Path | Purpose |
 |------|---------|
 | `components/countdown-timer.tsx` | Client countdown timer (Days/Hours/Minutes), redirects to `redirectTo` prop on expiry |
+| `components/home/` | Homepage sections: `hero-section`, `awards-section`, `award-card`, `kudos-section`, `root-further-content`, `widget-button` |
+| `components/layout/` | Shared `header`, `footer` used by `/home` |
+| `components/auth/user-menu.tsx` | Session-aware header user menu; fetches profile role from Supabase |
+| `components/auth/account-menu.tsx` | Role-based dropdown (employee vs admin); admin URL from `NEXT_PUBLIC_ADMIN_URL` |
+| `components/auth/notification-badge.tsx` | Bell badge; count stubbed at 0 |
+| `components/auth/language-toggle.tsx` | VN/EN visual toggle (no i18n wired) |
 
 ---
 
@@ -210,6 +218,23 @@ open http://localhost:54323
 | `hooks/use-users.ts` | Fetch users list with aggregate calculations |
 | `lib/review-nomination.ts` | Supabase mutations: approve / reject |
 | `lib/format.ts` | Shared `formatDate`, `formatDateTime`, `formatDateShort` utilities |
+
+---
+
+## Testing Infrastructure
+
+The Admin Portal utilizes a robust, two-tiered testing stack to ensure business logic correctness and UX reliability:
+
+### 1. Unit & Component Testing
+- **Framework:** Jest 29 + `@swc/jest` for near-instant TypeScript transpilation.
+- **UI Validation:** React Testing Library 16 (fully compatible with React 19) + `@testing-library/jest-dom` for DOM assertions.
+- **Coverage Tool:** Native Jest coverage runner (outputs to `front-end/admin/coverage/`).
+- **Target Scope:** Pure utilities (e.g., helper format functions), complex hooks, and isolated UI components (e.g., LoginForm, NominationStatusBadge) and React Contexts (e.g., AuthContext).
+
+### 2. End-to-End (E2E) Testing
+- **Framework:** Playwright (`@playwright/test`) running in Chromium.
+- **Authentication State:** Employs a dedicated Playwright `setup` project (`admin-auth.setup.ts`) to authenticate once using test admin credentials, cache the storage state in `tests/e2e/.auth/admin.json`, and inject it into subsequent tests to prevent redundant login flows.
+- **Integration Profile:** Executes against a live local Next.js development server (via Playwright `webServer` orchestration) wired into the active local Supabase stack.
 
 ---
 

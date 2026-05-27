@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-05-27 — Homepage — Landing Page
+
+### Added — Landing Page `/home`
+
+- Full homepage (`src/app/home/page.tsx`, edge runtime) with 7 sections: header, hero, root-further-content, awards (6 cards), kudos, widget button, footer
+- UI components: `header`, `footer`, `hero-section`, `root-further-content`, `awards-section`, `award-card`, `kudos-section`, `widget-button`
+- Auth-conditional header: bell + language toggle (VN/EN visual) + account menu shown when authenticated
+- `user-menu`: Supabase client-side session + profile fetch for role-based rendering
+- `account-menu`: employee vs admin role distinction; admin URL driven by `NEXT_PUBLIC_ADMIN_URL`
+- `notification-badge`: stub — count hardcoded to 0 pending notifications table
+- `language-toggle`: visual VN/EN switch (no i18n wired yet)
+- Event date driven by `NEXT_PUBLIC_EVENT_DATE` env var (shared with prelaunch page)
+- 12 image assets downloaded from Figma → `public/home/`
+- Jest + `@swc/jest` + `@testing-library/react` test infrastructure added to `front-end/landing-page`
+- 29 unit tests covering homepage components; all passing
+
+---
+
 ## 2026-05-27 — Login Page — Landing Page
 
 ### Added — Landing Page Auth

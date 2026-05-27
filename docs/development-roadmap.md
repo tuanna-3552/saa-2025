@@ -61,20 +61,23 @@
 |------|--------|
 | Public home page (Prelaunch Countdown) | ✅ Done |
 | Login page (Google OAuth UI + dev stub) | ✅ Done |
+| Homepage (`/home`) — 7-section authenticated landing | ✅ Done (2026-05-27) |
 | Nomination form (authenticated employees) | 🔲 |
 | Voting page (authenticated employees) | 🔲 |
 | Results page | 🔲 |
 
 ---
 
-## Phase 5 — Testing & QA 🔲 Not Started
+## Phase 5 — Testing & QA 🔶 In Progress (2026-05-27)
 
-| Task | Status |
-|------|--------|
-| Unit tests (business logic, hooks) | 🔲 |
-| E2E tests (critical flows) | 🔲 |
-| RLS policy verification | 🔲 |
-| Performance review | 🔲 |
+| Task | Status | Notes |
+|------|--------|-------|
+| Unit tests (business logic, hooks) | 🔶 In Progress | ✅ Completed for Admin Portal; ✅ Landing Page homepage (29 tests); 🔲 remaining routes |
+| E2E tests (critical flows) | 🔶 In Progress | ✅ Completed for Admin Portal; 🔲 Landing Page pending |
+| RLS policy verification | 🔲 Not Started | |
+| Performance review | 🔲 Not Started | |
+
+**Plan:** [260527-1308-admin-unit-e2e-tests](../plans/260527-1308-admin-unit-e2e-tests/plan.md)
 
 ---
 
