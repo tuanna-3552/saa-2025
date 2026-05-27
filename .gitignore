@@ -43,3 +43,7 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+.mcp.json
+
+/.claude/hooks/.logs/hook-log.jsonl
