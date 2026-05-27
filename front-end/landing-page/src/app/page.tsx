@@ -24,7 +24,7 @@ export default function HomePage() {
         }}
       >
         <img
-          src="/images/prelaunch-bg.png"
+          src="/images/prelaunch-bg.webp"
           alt=""
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
