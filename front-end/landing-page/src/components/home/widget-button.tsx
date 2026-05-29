@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import TheLePannel from "./the-le-panel";
 
 function PenIcon({ fill = "rgba(0,16,26,1)" }: { fill?: string }) {
   return (
@@ -33,9 +34,11 @@ const BTN_BASE: React.CSSProperties = {
 
 export default function WidgetButton() {
   const [panelOpen, setPanelOpen] = useState(false);
+  const [theLePanelOpen, setTheLePanelOpen] = useState(false);
 
   return (
     <>
+      {theLePanelOpen && <TheLePannel onClose={() => setTheLePanelOpen(false)} />}
       {/* Expanded state: vertical stack — Thể lệ (A) / Viết KUDOS (B) / red × circle (C) */}
       {panelOpen && (
         <div
@@ -55,6 +58,7 @@ export default function WidgetButton() {
             type="button"
             aria-label="Thể lệ"
             style={{ ...BTN_BASE, width: "149px" }}
+            onClick={() => { setTheLePanelOpen(true); setPanelOpen(false); }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 4px 12px rgba(0,0,0,0.25)"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "none"; }}
           >
@@ -105,8 +109,8 @@ export default function WidgetButton() {
         </div>
       )}
 
-      {/* Collapsed pill (A section) — shown when panel is closed */}
-      {!panelOpen && (
+      {/* Collapsed pill (A section) — shown when panel is closed and theLe panel is closed */}
+      {!panelOpen && !theLePanelOpen && (
         <div
           style={{
             position: "fixed",
