@@ -8,67 +8,39 @@ export interface AwardInfoCardProps {
   unit: string;
   value: string;
   valueNote: string;
-  /** Path to 336×336px trophy image. Empty string → styled placeholder rendered instead. */
-  image: string;
+  /** Award name overlay image — combined with /home/award-bg.png, same as home AwardCard */
+  nameImage: string;
+  nameImageWidth: number;
+  nameImageHeight: number;
 }
 
-function TargetIcon() {
+// MM_MEDIA_Target — circular target with navigation cursor inside
+function TargetIcon({ color = "currentColor" }: { color?: string }) {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
-      <circle cx="10" cy="10" r="8" stroke="#FFEA9E" strokeWidth="1.5" />
-      <circle cx="10" cy="10" r="4" stroke="#FFEA9E" strokeWidth="1.5" />
-      <circle cx="10" cy="10" r="1.5" fill="#FFEA9E" />
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
+      <circle cx="12" cy="12" r="9" stroke={color} strokeWidth="1.5" />
+      <path d="M8.5 15.5L12 8.5L16 11L12 12.5L8.5 15.5Z" fill={color} />
     </svg>
   );
 }
 
+// MM_MEDIA_Diamond — gem/diamond shape
 function DiamondIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
-      <path d="M10 2L18 8L10 18L2 8L10 2Z" stroke="#FFEA9E" strokeWidth="1.5" strokeLinejoin="round" />
-      <line x1="2" y1="8" x2="18" y2="8" stroke="#FFEA9E" strokeWidth="1.5" />
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
+      <path d="M12 3L20.5 10L12 21L3.5 10L12 3Z" stroke="#FFEA9E" strokeWidth="1.5" strokeLinejoin="round" />
+      <line x1="3.5" y1="10" x2="20.5" y2="10" stroke="#FFEA9E" strokeWidth="1.5" />
     </svg>
   );
 }
 
+// MM_MEDIA_License — medal/badge shape
 function LicenseIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
-      <circle cx="10" cy="8" r="5" stroke="#FFEA9E" strokeWidth="1.5" />
-      <path d="M7 13L5 19L10 17L15 19L13 13" stroke="#FFEA9E" strokeWidth="1.5" strokeLinejoin="round" />
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
+      <circle cx="12" cy="9" r="5.25" stroke="#FFEA9E" strokeWidth="1.5" />
+      <path d="M8.5 13.5L7 21L12 18.5L17 21L15.5 13.5" stroke="#FFEA9E" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
-  );
-}
-
-function AwardImagePlaceholder({ label }: { label: string }) {
-  return (
-    <div
-      style={{
-        width: 336,
-        height: 336,
-        borderRadius: "16px",
-        backgroundColor: "#091620",
-        border: "1px solid rgba(255,234,158,0.3)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexShrink: 0,
-      }}
-    >
-      <span
-        style={{
-          color: "#FFEA9E",
-          fontFamily: "var(--font-montserrat), sans-serif",
-          fontSize: "14px",
-          fontWeight: 700,
-          textAlign: "center",
-          padding: "16px",
-          lineHeight: "20px",
-        }}
-      >
-        {label}
-      </span>
-    </div>
   );
 }
 
@@ -80,17 +52,14 @@ export default function AwardInfoCard({
   unit,
   value,
   valueNote,
-  image,
+  nameImage,
+  nameImageWidth,
+  nameImageHeight,
 }: AwardInfoCardProps) {
   return (
     <section
       id={id}
-      style={{
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        gap: "0",
-      }}
+      style={{ width: "100%", display: "flex", flexDirection: "column" }}
     >
       {/* Top separator */}
       <div style={{ width: "100%", height: "1px", backgroundColor: "rgba(255,255,255,0.12)" }} />
@@ -105,30 +74,47 @@ export default function AwardInfoCard({
           padding: "64px 0",
         }}
       >
-        {/* Image — left side, always */}
-        {image ? (
+        {/* Trophy image — composite pattern identical to home AwardCard */}
+        <div
+          style={{
+            position: "relative",
+            width: 336,
+            height: 336,
+            borderRadius: "24px",
+            overflow: "hidden",
+            boxShadow: "0 4px 4px 0 rgba(0,0,0,0.25), 0 0 6px 0 #FAE287",
+            border: "0.955px solid #FFEA9E",
+            flexShrink: 0,
+            mixBlendMode: "screen",
+          }}
+        >
           <img
-            src={image}
-            alt={label}
-            width={336}
-            height={336}
-            style={{
-              width: 336,
-              height: 336,
-              objectFit: "contain",
-              flexShrink: 0,
-              borderRadius: "16px",
-            }}
+            src="/home/award-bg.png"
+            alt=""
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
           />
-        ) : (
-          <AwardImagePlaceholder label={label} />
-        )}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              src={nameImage}
+              alt={label}
+              style={{ width: nameImageWidth, height: nameImageHeight, objectFit: "contain" }}
+            />
+          </div>
+        </div>
 
         {/* Content — right side */}
-        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "0" }}>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
           {/* Title row */}
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
-            <TargetIcon />
+            <TargetIcon color="#FFEA9E" />
             <h3
               style={{
                 margin: 0,

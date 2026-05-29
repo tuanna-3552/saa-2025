@@ -6,7 +6,10 @@ export interface AwardItem {
   unit: string;
   value: string;
   valueNote: string;
-  image: string;
+  /** Award name image overlay (from /home/award-*-name.png). Combined with award-bg.png. */
+  nameImage: string;
+  nameImageWidth: number;
+  nameImageHeight: number;
 }
 
 export const AWARDS: AwardItem[] = [
@@ -19,8 +22,9 @@ export const AWARDS: AwardItem[] = [
     unit: "Đơn vị",
     value: "7.000.000 VNĐ",
     valueNote: "cho mỗi giải thưởng",
-    // TODO: Download actual trophy image from Figma node I313:8467;214:2525
-    image: "/awards/top-talent.png",
+    nameImage: "/home/award-top-talent-name.png",
+    nameImageWidth: 221,
+    nameImageHeight: 35,
   },
   {
     id: "top-project",
@@ -31,8 +35,9 @@ export const AWARDS: AwardItem[] = [
     unit: "Tập thể",
     value: "15.000.000 VNĐ",
     valueNote: "cho mỗi giải thưởng",
-    // TODO: Download actual trophy image from Figma node I313:8468;214:2617 (position data missing — use placeholder)
-    image: "",
+    nameImage: "/home/award-top-project-name.png",
+    nameImageWidth: 232,
+    nameImageHeight: 35,
   },
   {
     id: "top-project-leader",
@@ -43,8 +48,9 @@ export const AWARDS: AwardItem[] = [
     unit: "Cá nhân",
     value: "7.000.000 VNĐ",
     valueNote: "cho mỗi giải thưởng",
-    // TODO: Download actual trophy image from Figma node I313:8469;214:2525 (position data missing — use placeholder)
-    image: "",
+    nameImage: "/home/award-top-project-leader-name.png",
+    nameImageWidth: 232,
+    nameImageHeight: 64,
   },
   {
     id: "best-manager",
@@ -55,8 +61,9 @@ export const AWARDS: AwardItem[] = [
     unit: "Cá nhân",
     value: "10.000.000 VNĐ",
     valueNote: "cho mỗi giải thưởng",
-    // TODO: Download actual trophy image from Figma node I313:8470;214:2617 (position data missing — use placeholder)
-    image: "",
+    nameImage: "/home/award-best-manager-name.png",
+    nameImageWidth: 232,
+    nameImageHeight: 30,
   },
   {
     id: "signature-creator",
@@ -67,8 +74,9 @@ export const AWARDS: AwardItem[] = [
     unit: "",
     value: "5.000.000 VNĐ",
     valueNote: "(cá nhân) / 8.000.000 VNĐ (tập thể)",
-    // TODO: Download actual trophy image from Figma node 313:8473 (position data missing — use placeholder)
-    image: "",
+    nameImage: "/home/award-signature-creator-name.png",
+    nameImageWidth: 232,
+    nameImageHeight: 54,
   },
   {
     id: "mvp",
@@ -79,7 +87,8 @@ export const AWARDS: AwardItem[] = [
     unit: "",
     value: "15.000.000 VNĐ",
     valueNote: "",
-    // TODO: Download actual trophy image from Figma node I313:8510;214:2617 (position data missing — use placeholder)
-    image: "",
+    nameImage: "/home/award-mvp-name.png",
+    nameImageWidth: 116,
+    nameImageHeight: 52,
   },
 ];

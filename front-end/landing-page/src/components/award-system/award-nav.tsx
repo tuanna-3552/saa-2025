@@ -7,15 +7,20 @@ export default function AwardNav() {
   const [activeId, setActiveId] = useState<string>(AWARDS[0].id);
 
   useEffect(() => {
+    // rootMargin shrinks the detection zone: top = just below sticky header (80px),
+    // bottom = -50% so only the top half of the viewport triggers a change.
+    // This gives a clean "item becomes active when it enters the top half" feel.
+    const observerOptions: IntersectionObserverInit = {
+      rootMargin: "-80px 0px -50% 0px",
+      threshold: 0,
+    };
+
     const observers = AWARDS.map((award) => {
       const el = document.getElementById(award.id);
       if (!el) return null;
-      const obs = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) setActiveId(award.id);
-        },
-        { threshold: 0.3 }
-      );
+      const obs = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) setActiveId(award.id);
+      }, observerOptions);
       obs.observe(el);
       return obs;
     });
@@ -81,33 +86,24 @@ export default function AwardNav() {
               }
             }}
           >
-            {/* Target icon prefix */}
+            {/* MM_MEDIA_Target icon — circle ring with navigation cursor inside */}
             <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
               fill="none"
               aria-hidden="true"
               style={{ flexShrink: 0 }}
             >
               <circle
-                cx="8"
-                cy="8"
-                r="6.5"
+                cx="12"
+                cy="12"
+                r="9"
                 stroke={isActive ? "#FFEA9E" : "rgba(255,255,255,0.5)"}
-                strokeWidth="1.2"
+                strokeWidth="1.5"
               />
-              <circle
-                cx="8"
-                cy="8"
-                r="3"
-                stroke={isActive ? "#FFEA9E" : "rgba(255,255,255,0.5)"}
-                strokeWidth="1.2"
-              />
-              <circle
-                cx="8"
-                cy="8"
-                r="1"
+              <path
+                d="M8.5 15.5L12 8.5L16 11L12 12.5L8.5 15.5Z"
                 fill={isActive ? "#FFEA9E" : "rgba(255,255,255,0.5)"}
               />
             </svg>

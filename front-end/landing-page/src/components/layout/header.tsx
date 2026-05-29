@@ -1,21 +1,29 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import UserMenu from "@/components/auth/user-menu";
 
 interface NavLink {
   label: string;
   href: string;
-  active?: boolean;
+  /** Route prefix used to determine active state */
+  matchPath?: string;
 }
 
 const NAV_LINKS: NavLink[] = [
-  { label: "About SAA 2025", href: "#about", active: true },
-  { label: "Award Information", href: "/award-system" },
-  { label: "Sun* Kudos", href: "#kudos" },
+  { label: "About SAA 2025", href: "/home", matchPath: "/home" },
+  { label: "Award Information", href: "/award-system", matchPath: "/award-system" },
+  { label: "Sun* Kudos", href: "/kudos", matchPath: "/kudos" },
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+
+  function isActive(link: NavLink) {
+    if (!link.matchPath) return false;
+    return pathname === link.matchPath || pathname.startsWith(link.matchPath + "/");
+  }
 
   return (
     <header
@@ -57,46 +65,49 @@ export default function Header() {
 
         {/* Nav links */}
         <nav style={{ display: "flex", alignItems: "center", gap: "24px" }}>
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                padding: "16px",
-                height: "52px",
-                textDecoration: "none",
-                fontFamily: "var(--font-montserrat), sans-serif",
-                fontSize: "14px",
-                fontWeight: 700,
-                lineHeight: "20px",
-                letterSpacing: "0.1px",
-                color: link.active ? "#FFEA9E" : "rgba(255,255,255,1)",
-                borderRadius: link.active ? undefined : "4px",
-                borderBottom: link.active ? "1px solid #FFEA9E" : "none",
-                textShadow: link.active
-                  ? "0 4px 4px rgba(0,0,0,0.25), 0 0 6px #FAE287"
-                  : "none",
-                transition: "background 0.15s ease, color 0.15s ease",
-                whiteSpace: "nowrap",
-                boxSizing: "border-box",
-              }}
-              onMouseEnter={(e) => {
-                if (!link.active) {
-                  (e.currentTarget as HTMLAnchorElement).style.background =
-                    "rgba(255,255,255,0.08)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (!link.active) {
-                  (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
-                }
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const active = isActive(link);
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  padding: "16px",
+                  height: "52px",
+                  textDecoration: "none",
+                  fontFamily: "var(--font-montserrat), sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 700,
+                  lineHeight: "20px",
+                  letterSpacing: "0.1px",
+                  color: active ? "#FFEA9E" : "rgba(255,255,255,1)",
+                  borderRadius: active ? undefined : "4px",
+                  borderBottom: active ? "1px solid #FFEA9E" : "none",
+                  textShadow: active
+                    ? "0 4px 4px rgba(0,0,0,0.25), 0 0 6px #FAE287"
+                    : "none",
+                  transition: "background 0.15s ease, color 0.15s ease",
+                  whiteSpace: "nowrap",
+                  boxSizing: "border-box",
+                }}
+                onMouseEnter={(e) => {
+                  if (!active) {
+                    (e.currentTarget as HTMLAnchorElement).style.background =
+                      "rgba(255,255,255,0.08)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!active) {
+                    (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                  }
+                }}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
       </div>
 
