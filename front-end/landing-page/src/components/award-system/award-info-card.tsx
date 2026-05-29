@@ -104,7 +104,7 @@ export default function AwardInfoCard({
             fontSize: "28px",
             fontWeight: 700,
             lineHeight: "36px",
-            color: "rgba(255,255,255,1)",
+            color: "#FFEA9E",
           }}
         >
           {label}
@@ -148,7 +148,7 @@ export default function AwardInfoCard({
             fontSize: "40px",
             fontWeight: 700,
             lineHeight: "48px",
-            color: "#FFEA9E",
+            color: "rgba(255,255,255,1)",
           }}
         >
           {qty}
@@ -194,7 +194,7 @@ export default function AwardInfoCard({
             fontSize: "48px",
             fontWeight: 700,
             lineHeight: "56px",
-            color: "#FFEA9E",
+            color: "rgba(255,255,255,1)",
           }}
         >
           {value}
