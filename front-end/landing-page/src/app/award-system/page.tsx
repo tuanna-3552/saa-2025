@@ -12,7 +12,7 @@ import WidgetButton from "@/components/home/widget-button";
 import { AWARDS } from "@/components/award-system/award-data";
 
 export const metadata = {
-  title: "Hệ thống giải thưởng | SAA 2025",
+  title: "Award System | SAA 2025",
   description:
     "Hệ thống giải thưởng Sun* Annual Awards 2025 — Top Talent, Top Project, Best Manager, MVP và các hạng mục xuất sắc.",
 };

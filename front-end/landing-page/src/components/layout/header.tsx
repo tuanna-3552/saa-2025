@@ -11,7 +11,7 @@ interface NavLink {
 
 const NAV_LINKS: NavLink[] = [
   { label: "About SAA 2025", href: "#about", active: true },
-  { label: "Award Information", href: "#awards" },
+  { label: "Award Information", href: "/award-system" },
   { label: "Sun* Kudos", href: "#kudos" },
 ];
 

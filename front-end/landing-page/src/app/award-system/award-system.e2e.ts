@@ -1,5 +1,5 @@
 /**
- * E2E tests for /he-thong-giai page.
+ * E2E tests for /award-system page.
  *
  * Requires Playwright + authenticated test session.
  * Run with: pnpm --filter landing-page test:e2e
@@ -22,18 +22,18 @@ test.beforeEach(async ({ page }) => {
   await page.waitForURL(`${BASE_URL}/home`);
 });
 
-test("ID-2: navigate to /he-thong-giai from header 'Award Information' link", async ({
+test("ID-2: navigate to /award-system from header 'Award Information' link", async ({
   page,
 }) => {
   await page.goto(`${BASE_URL}/home`);
   await page.click('a:has-text("Award Information")');
-  await expect(page).toHaveURL(`${BASE_URL}/he-thong-giai`);
+  await expect(page).toHaveURL(`${BASE_URL}/award-system`);
 });
 
 test("ID-3: overall layout — header, nav, main sections, kudos all visible", async ({
   page,
 }) => {
-  await page.goto(`${BASE_URL}/he-thong-giai`);
+  await page.goto(`${BASE_URL}/award-system`);
   await expect(page.locator("header")).toBeVisible();
   await expect(page.locator("nav[aria-label='Danh mục giải thưởng']")).toBeVisible();
   await expect(page.locator("main")).toBeVisible();
@@ -41,7 +41,7 @@ test("ID-3: overall layout — header, nav, main sections, kudos all visible", a
 });
 
 test("ID-4: title text is displayed correctly", async ({ page }) => {
-  await page.goto(`${BASE_URL}/he-thong-giai`);
+  await page.goto(`${BASE_URL}/award-system`);
   await expect(page.getByText("Sun* annual awards 2025")).toBeVisible();
   await expect(page.getByText("Hệ thống giải thưởng SAA 2025")).toBeVisible();
 });
@@ -49,7 +49,7 @@ test("ID-4: title text is displayed correctly", async ({ page }) => {
 test("ID-8: Sun* Kudos banner visible with correct content", async ({
   page,
 }) => {
-  await page.goto(`${BASE_URL}/he-thong-giai`);
+  await page.goto(`${BASE_URL}/award-system`);
   await page.locator("#kudos").scrollIntoViewIfNeeded();
   await expect(page.getByText("Sun* Kudos")).toBeVisible();
   await expect(page.getByText("Phong trào ghi nhận")).toBeVisible();
@@ -59,7 +59,7 @@ test("ID-8: Sun* Kudos banner visible with correct content", async ({
 test("ID-9: clicking nav item scrolls to corresponding award section", async ({
   page,
 }) => {
-  await page.goto(`${BASE_URL}/he-thong-giai`);
+  await page.goto(`${BASE_URL}/award-system`);
   await page.click("button:has-text('Top Project')");
   // After smooth scroll, the top-project section should be in viewport
   const section = page.locator("#top-project");
@@ -67,7 +67,7 @@ test("ID-9: clicking nav item scrolls to corresponding award section", async ({
 });
 
 test("ID-12: Chi tiết button navigates to /kudos", async ({ page }) => {
-  await page.goto(`${BASE_URL}/he-thong-giai`);
+  await page.goto(`${BASE_URL}/award-system`);
   await page.locator("#kudos").scrollIntoViewIfNeeded();
   // Note: kudos-section.tsx currently links to '#' — update href to '/kudos' to pass this test
   await page.click("a:has-text('Chi tiết')");
@@ -79,7 +79,7 @@ test("ID-13: page loads without JS errors when sections are present", async ({
 }) => {
   const errors: string[] = [];
   page.on("pageerror", (err) => errors.push(err.message));
-  await page.goto(`${BASE_URL}/he-thong-giai`);
+  await page.goto(`${BASE_URL}/award-system`);
   await page.waitForLoadState("networkidle");
   expect(errors).toHaveLength(0);
 });
