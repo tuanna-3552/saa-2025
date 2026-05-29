@@ -7,7 +7,6 @@ import AwardSystemKeyvisual from "@/components/award-system/keyvisual";
 import AwardNav from "@/components/award-system/award-nav";
 import AwardInfoCard from "@/components/award-system/award-info-card";
 import KudosSection from "@/components/home/kudos-section";
-import WidgetButton from "@/components/home/widget-button";
 import { AWARDS } from "@/components/award-system/award-data";
 
 export const metadata = {
@@ -81,7 +80,6 @@ export default function HeThongGiaiPage() {
         </main>
 
         <Footer />
-        <WidgetButton />
       </div>
     </AuthGuard>
   );

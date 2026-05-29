@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Montserrat_Alternates, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
+import WidgetButton from "@/components/home/widget-button";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 const montserratAlternates = Montserrat_Alternates({
@@ -38,6 +39,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {children}
+        <WidgetButton />
       </body>
     </html>
   );

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-// Pen icon SVG — exact path from Figma MM_MEDIA_Pen
 function PenIcon({ fill = "rgba(0,16,26,1)" }: { fill?: string }) {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
@@ -11,12 +10,33 @@ function PenIcon({ fill = "rgba(0,16,26,1)" }: { fill?: string }) {
   );
 }
 
+
+const BTN_BASE: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: "8px",
+  padding: "16px",
+  height: "64px",
+  backgroundColor: "rgba(255,234,158,1)",
+  border: "none",
+  borderRadius: "4px",
+  cursor: "pointer",
+  color: "rgba(0,16,26,1)",
+  fontFamily: "var(--font-montserrat), sans-serif",
+  fontSize: "14px",
+  fontWeight: 700,
+  lineHeight: "32px",
+  whiteSpace: "nowrap",
+  boxSizing: "border-box",
+  transition: "box-shadow 0.15s ease",
+};
+
 export default function WidgetButton() {
   const [panelOpen, setPanelOpen] = useState(false);
 
   return (
     <>
-      {/* Expanded state — B section: "× Đóng" + "✏ Viết KUDOS" action bar */}
+      {/* Expanded state: vertical stack — Thể lệ (A) / Viết KUDOS (B) / red × circle (C) */}
       {panelOpen && (
         <div
           style={{
@@ -25,11 +45,37 @@ export default function WidgetButton() {
             right: "19px",
             zIndex: 200,
             display: "flex",
-            alignItems: "center",
-            gap: "12px",
+            flexDirection: "column",
+            alignItems: "flex-end",
+            gap: "20px",
           }}
         >
-          {/* B.1: × Đóng */}
+          {/* A: Thể lệ — 149×64px */}
+          <button
+            type="button"
+            aria-label="Thể lệ"
+            style={{ ...BTN_BASE, width: "149px" }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 4px 12px rgba(0,0,0,0.25)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "none"; }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/MM_MEDIA_LOGO.svg" width={24} height={24} alt="" style={{ flexShrink: 0 }} />
+            Thể lệ
+          </button>
+
+          {/* B: Viết KUDOS — 214×64px */}
+          <button
+            type="button"
+            aria-label="Viết KUDOS"
+            style={{ ...BTN_BASE, width: "214px" }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 4px 12px rgba(0,0,0,0.25)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "none"; }}
+          >
+            <PenIcon />
+            Viết KUDOS
+          </button>
+
+          {/* C: Red circle cancel — 56×56px, rgba(212,39,29,1) */}
           <button
             type="button"
             aria-label="Đóng"
@@ -37,69 +83,24 @@ export default function WidgetButton() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "8px",
-              padding: "16px 20px",
+              justifyContent: "center",
+              width: "56px",
               height: "56px",
-              backgroundColor: "rgba(20,26,30,0.95)",
-              border: "1px solid rgba(255,255,255,0.14)",
-              borderRadius: "100px",
-              cursor: "pointer",
-              color: "rgba(255,255,255,0.9)",
-              fontFamily: "var(--font-montserrat), sans-serif",
-              fontSize: "14px",
-              fontWeight: 700,
-              lineHeight: "24px",
-              whiteSpace: "nowrap",
-              boxSizing: "border-box",
-              backdropFilter: "blur(8px)",
-              transition: "background 0.15s ease",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background = "rgba(40,46,50,0.97)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background = "rgba(20,26,30,0.95)";
-            }}
-          >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
-              <line x1="2" y1="2" x2="14" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              <line x1="14" y1="2" x2="2" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-            Đóng
-          </button>
-
-          {/* B.2: ✏ Viết KUDOS */}
-          <button
-            type="button"
-            aria-label="Viết KUDOS"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "16px 20px",
-              height: "56px",
-              backgroundColor: "rgba(255,234,158,1)",
+              backgroundColor: "rgba(212,39,29,1)",
               border: "none",
               borderRadius: "100px",
               cursor: "pointer",
-              color: "rgba(0,16,26,1)",
-              fontFamily: "var(--font-montserrat), sans-serif",
-              fontSize: "14px",
-              fontWeight: 700,
-              lineHeight: "24px",
-              whiteSpace: "nowrap",
-              boxSizing: "border-box",
-              transition: "background 0.2s ease",
+              boxShadow: "0 4px 8px rgba(0,0,0,0.3)",
+              flexShrink: 0,
+              transition: "background 0.15s ease",
             }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,222,100,1)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,234,158,1)";
-            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "rgba(170,28,20,1)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "rgba(212,39,29,1)"; }}
           >
-            <PenIcon fill="rgba(0,16,26,1)" />
-            Viết KUDOS
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <line x1="4" y1="4" x2="16" y2="16" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+              <line x1="16" y1="4" x2="4" y2="16" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+            </svg>
           </button>
         </div>
       )}

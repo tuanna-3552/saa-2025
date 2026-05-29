@@ -6,8 +6,6 @@ import HeroSection from "@/components/home/hero-section";
 import RootFurtherContent from "@/components/home/root-further-content";
 import AwardsSection from "@/components/home/awards-section";
 import KudosSection from "@/components/home/kudos-section";
-import WidgetButton from "@/components/home/widget-button";
-
 export const metadata = {
   title: "Home",
   description:
@@ -61,8 +59,6 @@ export default function HomePage() {
       {/* Footer */}
       <Footer />
 
-      {/* Fixed widget button — bottom-right pill */}
-      <WidgetButton />
     </div>
   );
 }
