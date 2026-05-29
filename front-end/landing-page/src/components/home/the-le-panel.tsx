@@ -11,28 +11,6 @@ interface TheLePanelProps {
   onClose: () => void;
 }
 
-function BadgePill({ name }: { name: string }) {
-  return (
-    <span
-      style={{
-        border: "0.579px solid #FFEA9E",
-        borderRadius: "55.579px",
-        height: "22px",
-        padding: "2px 8px",
-        fontFamily: FONT,
-        fontSize: "12px",
-        fontWeight: 700,
-        color: GOLD,
-        whiteSpace: "nowrap",
-        flexShrink: 0,
-        display: "inline-flex",
-        alignItems: "center",
-      }}
-    >
-      {name}
-    </span>
-  );
-}
 
 // eslint-disable-next-line @next/next/no-img-element
 const PenIconSmall = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}><path d="M20.8067 6.72951C21.1967 6.33951 21.1967 5.68951 20.8067 5.31951L18.4667 2.97951C18.0967 2.58951 17.4467 2.58951 17.0567 2.97951L15.2167 4.80951L18.9667 8.55951M3.09668 16.9395V20.6895H6.84668L17.9067 9.61951L14.1567 5.86951L3.09668 16.9395Z" fill="rgba(0,16,26,1)" /></svg>;
@@ -77,15 +55,16 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
           {/* Section A: Người nhận */}
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <h3 style={{ margin: 0, fontFamily: FONT, fontSize: "22px", fontWeight: 700, lineHeight: "28px", color: GOLD }}>
-              NGƯỜI NHẬN KUDOS: HUY HIỆU HERO SAA 2025
+              NGƯỜI NHẬN KUDOS: HUY HIỆU HERO CHO NHỮNG ẢNH HƯỞNG TÍCH CỰC
             </h3>
             <p style={{ margin: 0, fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px", textAlign: "justify" }}>
-              Dựa trên số lượng người đã gửi Kudos cho bạn, bạn sẽ nhận được Huy Hiệu tương ứng:
+              Dựa trên số lượng đồng đội gửi trao Kudos, bạn sẽ sở hữu Huy hiệu Hero tương ứng, được hiển thị trực tiếp cạnh tên profile
             </p>
             {HERO_BADGES.map((badge) => (
               <div key={badge.name} style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <BadgePill name={badge.name} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={badge.badgeImg} alt={badge.name} height={22} style={{ flexShrink: 0 }} />
                   <span style={{ fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px" }}>
                     {badge.condition}
                   </span>
@@ -100,10 +79,10 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
           {/* Section B: Người gửi */}
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <h3 style={{ margin: 0, fontFamily: FONT, fontSize: "22px", fontWeight: 700, lineHeight: "28px", color: GOLD }}>
-              NGƯỜI GỬI KUDOS: SƯU TẬP 6 KUDOS ICON
+              NGƯỜI GỬI KUDOS: SƯU TẬP TRỌN BỘ 6 ICON, NHẬN NGAY PHẦN QUÀ BÍ ẨN
             </h3>
             <p style={{ margin: 0, fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px", textAlign: "justify" }}>
-              Mỗi lời Kudos bạn gửi đi sẽ mang theo một Kudos Icon. Hãy sưu tập đủ 6 loại icon độc đáo!
+              Mỗi lời Kudos bạn gửi sẽ được đăng tải trên hệ thống và nhận về những lượt ❤️ từ cộng đồng Sunner. Cứ mỗi 5 lượt ❤️, bạn sẽ được mở 1 Secret Box, với cơ hội nhận về một trong 6 icon độc quyền của SAA.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
               {KUDOS_ICONS.map((icon) => (
@@ -117,7 +96,7 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
               ))}
             </div>
             <p style={{ margin: 0, fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px", textAlign: "justify" }}>
-              Những Sunner thu thập đủ cả 6 loại Kudos Icon sẽ nhận được phần thưởng đặc biệt từ SAA 2025!
+              Những Sunner thu thập trọn bộ 6 icon sẽ nhận về một phần quà bí ẩn từ SAA 2025.
             </p>
           </div>
 
@@ -127,7 +106,7 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
               KUDOS QUỐC DÂN
             </h3>
             <p style={{ margin: 0, fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px", textAlign: "justify" }}>
-              5 Kudos nhận về nhiều lượt thích nhất sẽ được vinh danh là Kudos Quốc Dân – những lời tri ân chạm đến trái tim cộng đồng Sun* nhất!
+              5 Kudos nhận về nhiều ❤️ nhất toàn Sun* sẽ chính thức trở thành Kudos Quốc Dân và được trao phần quà đặc biệt từ SAA 2025: Root Further.
             </p>
           </div>
         </div>

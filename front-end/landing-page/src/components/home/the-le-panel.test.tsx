@@ -18,12 +18,12 @@ describe("TheLePannel", () => {
     expect(screen.getByText("KUDOS QUỐC DÂN")).toBeInTheDocument();
   });
 
-  it("renders 4 hero badge tiers", () => {
+  it("renders 4 hero badge tier images", () => {
     render(<TheLePannel onClose={onClose} />);
-    expect(screen.getByText("New Hero")).toBeInTheDocument();
-    expect(screen.getByText("Rising Hero")).toBeInTheDocument();
-    expect(screen.getByText("Super Hero")).toBeInTheDocument();
-    expect(screen.getByText("Legend Hero")).toBeInTheDocument();
+    expect(screen.getByAltText("New Hero")).toBeInTheDocument();
+    expect(screen.getByAltText("Rising Hero")).toBeInTheDocument();
+    expect(screen.getByAltText("Super Hero")).toBeInTheDocument();
+    expect(screen.getByAltText("Legend Hero")).toBeInTheDocument();
   });
 
   it("renders 6 Kudos icon images", () => {
