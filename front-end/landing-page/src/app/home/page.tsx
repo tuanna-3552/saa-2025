@@ -29,11 +29,21 @@ export default function HomePage() {
       <Header />
 
       <main>
-        {/* Hero / Keyvisual — full viewport height with BG, countdown, CTAs */}
-        <HeroSection />
-
-        {/* Root Further content — decorative type + body paragraphs + quote */}
-        <div style={{ padding: "120px 0" }}>
+        {/* Keyvisual BG spans hero + root further — 1512×1392 in Figma (ratio 92.06vw).
+            Gradient layer sized to 92.06vw so it aligns exactly with the image height. */}
+        <div
+          style={{
+            backgroundImage: [
+              "linear-gradient(to bottom, transparent 65%, #00101A 95%)",
+              "url('/home/keyvisual-bg.png')",
+            ].join(", "),
+            backgroundSize: "100% 92.06vw, 100% auto",
+            backgroundPosition: "top left, top left",
+            backgroundRepeat: "no-repeat, no-repeat",
+          }}
+        >
+          <HeroSection />
+          {/* Root Further — no extra gap; internal 120px padding handles spacing */}
           <RootFurtherContent />
         </div>
 

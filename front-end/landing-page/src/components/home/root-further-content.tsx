@@ -10,7 +10,6 @@ export default function RootFurtherContent() {
       id="root-further"
       style={{
         width: "100%",
-        backgroundColor: "#00101A",
         padding: "0 144px",
         boxSizing: "border-box",
       }}
@@ -22,13 +21,12 @@ export default function RootFurtherContent() {
           maxWidth: "1152px",
           width: "100%",
           borderRadius: "8px",
-          padding: "120px 104px",
+          padding: "120px 0",
           boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           gap: "32px",
-          backgroundColor: "rgba(11,15,18,0.8)",
         }}
       >
         {/* Decorative ROOT FURTHER text — two-layer image stack */}
@@ -103,6 +101,7 @@ export default function RootFurtherContent() {
               fontFamily: "var(--font-montserrat), sans-serif",
               fontSize: "20px",
               fontWeight: 700,
+              fontStyle: "normal",
               lineHeight: "32px",
               textAlign: "center",
               color: "rgba(255,255,255,1)",

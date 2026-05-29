@@ -21,43 +21,10 @@ export default function HeroSection() {
         flexDirection: "column",
       }}
     >
-      {/* Keyvisual background */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          zIndex: 0,
-        }}
-      >
-        <img
-          src="/home/keyvisual-bg.png"
-          alt=""
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
-      </div>
-
-      {/* Cover overlay — bottom fade */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "linear-gradient(0deg, #00101A 0%, rgba(0,16,26,0.6) 40%, rgba(0,0,0,0) 70%)",
-          zIndex: 1,
-          pointerEvents: "none",
-        }}
-      />
-
       {/* Content */}
       <div
         style={{
           position: "relative",
-          zIndex: 2,
           flex: 1,
           display: "flex",
           flexDirection: "column",

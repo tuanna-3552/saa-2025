@@ -2,106 +2,186 @@
 
 import { useState } from "react";
 
+// Pen icon SVG — exact path from Figma MM_MEDIA_Pen
+function PenIcon({ fill = "rgba(0,16,26,1)" }: { fill?: string }) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+      <path d="M20.8067 6.72951C21.1967 6.33951 21.1967 5.68951 20.8067 5.31951L18.4667 2.97951C18.0967 2.58951 17.4467 2.58951 17.0567 2.97951L15.2167 4.80951L18.9667 8.55951M3.09668 16.9395V20.6895H6.84668L17.9067 9.61951L14.1567 5.86951L3.09668 16.9395Z" fill={fill} />
+    </svg>
+  );
+}
+
 export default function WidgetButton() {
   const [panelOpen, setPanelOpen] = useState(false);
 
   return (
     <>
-      {/* Slide-in panel */}
+      {/* Expanded state — B section: "× Đóng" + "✏ Viết KUDOS" action bar */}
       {panelOpen && (
         <div
           style={{
             position: "fixed",
-            bottom: "112px",
+            bottom: "32px",
             right: "19px",
-            width: "280px",
-            background: "rgba(16,20,23,0.97)",
-            border: "1px solid #2E3940",
-            borderRadius: "12px",
-            padding: "24px",
-            zIndex: 199,
-            backdropFilter: "blur(8px)",
-            boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
+            zIndex: 200,
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
           }}
         >
-          <p
+          {/* B.1: × Đóng */}
+          <button
+            type="button"
+            aria-label="Đóng"
+            onClick={() => setPanelOpen(false)}
             style={{
-              margin: 0,
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "16px 20px",
+              height: "56px",
+              backgroundColor: "rgba(20,26,30,0.95)",
+              border: "1px solid rgba(255,255,255,0.14)",
+              borderRadius: "100px",
+              cursor: "pointer",
+              color: "rgba(255,255,255,0.9)",
               fontFamily: "var(--font-montserrat), sans-serif",
               fontSize: "14px",
-              fontWeight: 600,
-              color: "rgba(255,255,255,0.7)",
-              textAlign: "center",
+              fontWeight: 700,
+              lineHeight: "24px",
+              whiteSpace: "nowrap",
+              boxSizing: "border-box",
+              backdropFilter: "blur(8px)",
+              transition: "background 0.15s ease",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.background = "rgba(40,46,50,0.97)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.background = "rgba(20,26,30,0.95)";
             }}
           >
-            {/* TODO: replace with real action panel when Kudos write flow is built */}
-            Coming soon
-          </p>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+              <line x1="2" y1="2" x2="14" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <line x1="14" y1="2" x2="2" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            Đóng
+          </button>
+
+          {/* B.2: ✏ Viết KUDOS */}
+          <button
+            type="button"
+            aria-label="Viết KUDOS"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "16px 20px",
+              height: "56px",
+              backgroundColor: "rgba(255,234,158,1)",
+              border: "none",
+              borderRadius: "100px",
+              cursor: "pointer",
+              color: "rgba(0,16,26,1)",
+              fontFamily: "var(--font-montserrat), sans-serif",
+              fontSize: "14px",
+              fontWeight: 700,
+              lineHeight: "24px",
+              whiteSpace: "nowrap",
+              boxSizing: "border-box",
+              transition: "background 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,222,100,1)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,234,158,1)";
+            }}
+          >
+            <PenIcon fill="rgba(0,16,26,1)" />
+            Viết KUDOS
+          </button>
         </div>
       )}
 
-      {/* Fixed pill bottom-right */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: "32px",
-          right: "19px",
-          zIndex: 200,
-          boxShadow: "0 4px 4px 0 rgba(0,0,0,0.25), 0 0 6px 0 #FAE287",
-          borderRadius: "100px",
-        }}
-      >
-        <button
-          type="button"
-          aria-label="Write Kudos / SAA Rules"
-          aria-expanded={panelOpen}
-          onClick={() => setPanelOpen((o) => !o)}
+      {/* Collapsed pill (A section) — shown when panel is closed */}
+      {!panelOpen && (
+        <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            padding: "16px",
-            width: "106px",
-            height: "64px",
-            backgroundColor: "rgba(255,234,158,1)",
-            border: "none",
+            position: "fixed",
+            bottom: "32px",
+            right: "19px",
+            zIndex: 200,
             borderRadius: "100px",
-            cursor: "pointer",
-            transition: "background 0.2s ease, transform 0.15s ease",
-            boxSizing: "border-box",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,222,100,1)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,234,158,1)";
-          }}
-          onMouseDown={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.96)";
-          }}
-          onMouseUp={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.transform = "scale(1)";
+            boxShadow: "0 4px 4px 0 rgba(0,0,0,0.25), 0 0 6px 0 #FAE287",
           }}
         >
-          {/* Pen + "/" separator */}
-          <div style={{ display: "flex", alignItems: "center", gap: "4px", width: "42px", height: "32px", flexShrink: 0 }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(0,16,26,1)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
-              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-            </svg>
-            <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: "24px", fontWeight: 700, lineHeight: "32px", color: "rgba(0,16,26,1)", flexShrink: 0 }}>
-              /
-            </span>
-          </div>
+          <button
+            type="button"
+            aria-label="Mở tuỳ chọn: Viết KUDOS / Thể lệ SAA"
+            aria-expanded={panelOpen}
+            onClick={() => setPanelOpen(true)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "16px",
+              width: "106px",
+              height: "64px",
+              backgroundColor: "rgba(255,234,158,1)",
+              border: "none",
+              borderRadius: "100px",
+              cursor: "pointer",
+              boxSizing: "border-box",
+              transition: "background 0.2s ease, transform 0.15s ease",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,222,100,1)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,234,158,1)";
+            }}
+            onMouseDown={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.96)";
+            }}
+            onMouseUp={(e) => {
+              (e.currentTarget as HTMLButtonElement).style.transform = "scale(1)";
+            }}
+          >
+            {/* A.1: pen icon + "/" separator — 42×32px frame */}
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", width: "42px", height: "32px", flexShrink: 0 }}>
+              <PenIcon fill="rgba(0,16,26,1)" />
+              <span
+                style={{
+                  fontFamily: "var(--font-montserrat), sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 700,
+                  lineHeight: "32px",
+                  color: "rgba(0,16,26,1)",
+                  flexShrink: 0,
+                }}
+              >
+                /
+              </span>
+            </div>
 
-          {/* Kudos star icon */}
-          <div style={{ width: "24px", height: "24px", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 1L12.5 6.5L18.5 7.3L14.2 11.4L15.4 17.3L10 14.5L4.6 17.3L5.8 11.4L1.5 7.3L7.5 6.5L10 1Z" fill="rgba(0,16,26,1)" stroke="rgba(0,16,26,1)" strokeWidth="1" strokeLinejoin="round" />
-            </svg>
-          </div>
-        </button>
-      </div>
+            {/* A.2: Sun* Kudos mark — 24×24 container, 20×18 mark */}
+            {/* Crop from kudos.png: scale 364×74 to 156×31, show left 20px = S mark */}
+            <div style={{ width: "24px", height: "24px", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div
+                style={{
+                  width: "20px",
+                  height: "18px",
+                  backgroundImage: "url(/home/kudos.png)",
+                  backgroundSize: "156px 31px",
+                  backgroundPosition: "0px -6px",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+            </div>
+          </button>
+        </div>
+      )}
     </>
   );
 }
