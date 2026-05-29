@@ -11,8 +11,8 @@ export default function AwardSystemKeyvisual() {
         height: "547px",
         overflow: "hidden",
         backgroundImage: "url('/home/keyvisual-bg.png')",
-        backgroundSize: "100% auto",
-        backgroundPosition: "top left",
+        backgroundSize: "101.245% 367.889%",
+        backgroundPosition: "-0.163px -858.967px",
         backgroundRepeat: "no-repeat",
       }}
     >
