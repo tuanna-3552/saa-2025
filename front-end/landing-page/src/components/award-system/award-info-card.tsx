@@ -96,7 +96,7 @@ export default function AwardInfoCard({
     <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
       {/* Title row */}
       <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
-        <TargetIcon color="#FFEA9E" />
+        <TargetIcon color="rgba(255,255,255,1)" />
         <h3
           style={{
             margin: 0,
@@ -131,7 +131,7 @@ export default function AwardInfoCard({
 
       {/* Quantity row */}
       <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
-        <DiamondIcon />
+        <DiamondIcon color="rgba(255,255,255,1)" />
         <span
           style={{
             fontFamily: "var(--font-montserrat), sans-serif",
@@ -175,7 +175,7 @@ export default function AwardInfoCard({
       {/* Value row */}
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <LicenseIcon />
+          <LicenseIcon color="rgba(255,255,255,1)" />
           <span
             style={{
               fontFamily: "var(--font-montserrat), sans-serif",
