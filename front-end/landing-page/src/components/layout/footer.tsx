@@ -13,7 +13,7 @@ const FOOTER_LINKS: FooterLink[] = [
   { label: "About SAA 2025", href: "/home", matchPath: "/home" },
   { label: "Award Information", href: "/award-system", matchPath: "/award-system" },
   { label: "Sun* Kudos", href: "/kudos", matchPath: "/kudos" },
-  { label: "Tiêu chuẩn chung", href: "/tieu-chuan-chung", matchPath: "/tieu-chuan-chung" },
+  { label: "Tiêu chuẩn chung", href: "/criteria", matchPath: "/criteria" },
 ];
 
 export default function Footer() {
