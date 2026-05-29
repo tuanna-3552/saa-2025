@@ -86,7 +86,7 @@ export default function AwardNav() {
               }
             }}
           >
-            {/* MM_MEDIA_Target icon — circle ring with navigation cursor inside */}
+            {/* MM_MEDIA_Target — circle ring + filled navigation cursor (near_me style) */}
             <svg
               width="20"
               height="20"
@@ -103,7 +103,7 @@ export default function AwardNav() {
                 strokeWidth="1.5"
               />
               <path
-                d="M8.5 15.5L12 8.5L16 11L12 12.5L8.5 15.5Z"
+                d="M9 15.5L12.5 8.5L16 12L12.5 13L9 15.5Z"
                 fill={isActive ? "#FFEA9E" : "rgba(255,255,255,0.5)"}
               />
             </svg>

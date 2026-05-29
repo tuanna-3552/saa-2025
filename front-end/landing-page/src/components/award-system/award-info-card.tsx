@@ -16,25 +16,13 @@ export interface AwardInfoCardProps {
   imageLeft?: boolean;
 }
 
-// MM_MEDIA_Target — circular arc with arrowhead (goal/navigation icon)
+// MM_MEDIA_Target — circle ring + filled navigation cursor pointing upper-right (near_me style)
 function TargetIcon({ color = "currentColor" }: { color?: string }) {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
-      {/* Arc: most of a circle, gap at upper-right */}
-      <path
-        d="M17.66 6.34A8 8 0 1 0 20 12"
-        stroke={color}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      {/* Arrowhead at gap end (upper-right) */}
-      <path
-        d="M20 7V12L15.5 10"
-        stroke={color}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <circle cx="12" cy="12" r="9" stroke={color} strokeWidth="1.5" />
+      {/* Filled cursor arrow pointing upper-right, centered inside circle */}
+      <path d="M9 15.5L12.5 8.5L16 12L12.5 13L9 15.5Z" fill={color} />
     </svg>
   );
 }

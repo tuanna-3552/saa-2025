@@ -79,6 +79,7 @@ export default function AwardSystemKeyvisual() {
               fontWeight: 700,
               lineHeight: "32px",
               color: "rgba(255,255,255,1)",
+              textAlign: "center",
             }}
           >
             Sun* annual awards 2025
@@ -101,6 +102,7 @@ export default function AwardSystemKeyvisual() {
               lineHeight: "64px",
               letterSpacing: "-0.25px",
               color: "#FFEA9E",
+              textAlign: "center",
             }}
           >
             Hệ thống giải thưởng SAA 2025
