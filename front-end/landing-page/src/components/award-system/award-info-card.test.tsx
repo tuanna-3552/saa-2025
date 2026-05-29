@@ -30,11 +30,9 @@ describe("AwardInfoCard", () => {
     expect(screen.getByText(TOP_TALENT.valueNote)).toBeInTheDocument();
   });
 
-  it("renders trophy image composite — bg img and name overlay (ID-7)", () => {
+  it("renders trophy bg image and name overlay (ID-7)", () => {
     render(<AwardInfoCard {...TOP_TALENT} />);
-    // Background image (award-bg.png) — aria hidden
     expect(document.querySelector('img[src="/home/award-bg.png"]')).toBeInTheDocument();
-    // Name overlay — has accessible alt text
     expect(screen.getByAltText(TOP_TALENT.label)).toBeInTheDocument();
   });
 
@@ -49,11 +47,26 @@ describe("AwardInfoCard", () => {
     expect(container.querySelector("section")).toHaveAttribute("id", TOP_TALENT.id);
   });
 
+  it("trophy appears first in DOM when imageLeft=true", () => {
+    const { container } = render(<AwardInfoCard {...TOP_TALENT} imageLeft={true} />);
+    const row = container.querySelector("section > div:last-child") as HTMLElement;
+    const firstChild = row?.firstElementChild;
+    // Trophy block has no heading; content block has h3
+    expect(firstChild?.querySelector("h3")).toBeNull();
+  });
+
+  it("content appears first in DOM when imageLeft=false (default)", () => {
+    const { container } = render(<AwardInfoCard {...TOP_TALENT} imageLeft={false} />);
+    const row = container.querySelector("section > div:last-child") as HTMLElement;
+    const firstChild = row?.firstElementChild;
+    // Content block has h3 heading
+    expect(firstChild?.querySelector("h3")).toBeInTheDocument();
+  });
+
   it("does not render unit span when unit is empty", () => {
     const award = AWARDS[4]; // signature-creator has unit=""
     render(<AwardInfoCard {...award} />);
     const qtySpan = screen.getByText(award.qty);
-    // No unit sibling span after the qty value
     expect(qtySpan.nextSibling).toBeNull();
   });
 });

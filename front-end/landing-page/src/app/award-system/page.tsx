@@ -4,7 +4,6 @@ import AuthGuard from "@/components/award-system/auth-guard";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import AwardSystemKeyvisual from "@/components/award-system/keyvisual";
-import SectionTitle from "@/components/award-system/section-title";
 import AwardNav from "@/components/award-system/award-nav";
 import AwardInfoCard from "@/components/award-system/award-info-card";
 import KudosSection from "@/components/home/kudos-section";
@@ -20,43 +19,38 @@ export const metadata = {
 export default function HeThongGiaiPage() {
   return (
     <AuthGuard>
+      {/* No overflowX:hidden here — it would break position:sticky on AwardNav */}
       <div
         style={{
           width: "100%",
           minHeight: "100vh",
           backgroundColor: "#00101A",
           fontFamily: "var(--font-montserrat), sans-serif",
-          overflowX: "hidden",
         }}
       >
         <Header />
 
         <main>
-          {/* Keyvisual banner */}
+          {/* Keyvisual banner (547px) — includes title section overlaid at bottom */}
           <AwardSystemKeyvisual />
 
-          {/* Awards section — title + sticky nav + info cards */}
+          {/* Awards section — 76px gap after keyvisual per design (y=703 - y=627) */}
           <section
             style={{
               width: "100%",
-              padding: "80px 144px 120px",
+              padding: "76px 144px 120px",
               boxSizing: "border-box",
               backgroundColor: "#00101A",
             }}
           >
             <div
               style={{
-                maxWidth: "1224px",
+                maxWidth: "1152px",
                 width: "100%",
                 margin: "0 auto",
-                display: "flex",
-                flexDirection: "column",
-                gap: "80px",
               }}
             >
-              <SectionTitle />
-
-              {/* Two-column layout: sticky nav (left) + award cards (right) */}
+              {/* Two-column layout: sticky nav (left, 240px) + award cards (right, flex-1) */}
               <div
                 style={{
                   display: "flex",
@@ -68,8 +62,12 @@ export default function HeThongGiaiPage() {
                 <AwardNav />
 
                 <div style={{ flex: 1 }}>
-                  {AWARDS.map((award) => (
-                    <AwardInfoCard key={award.id} {...award} />
+                  {AWARDS.map((award, index) => (
+                    <AwardInfoCard
+                      key={award.id}
+                      {...award}
+                      imageLeft={index % 2 === 0}
+                    />
                   ))}
                 </div>
               </div>
@@ -83,7 +81,6 @@ export default function HeThongGiaiPage() {
         </main>
 
         <Footer />
-
         <WidgetButton />
       </div>
     </AuthGuard>

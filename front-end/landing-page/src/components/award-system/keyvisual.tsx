@@ -1,3 +1,6 @@
+// AwardSystemKeyvisual — full 547px banner matching Figma mms_3_Keyvisual (node 313:8437).
+// Title section (mms_A_Title, node 313:8453) is overlaid at the bottom of the banner
+// (design positions it at y=454 within the 547px keyvisual starting at y=80).
 export default function AwardSystemKeyvisual() {
   return (
     <div
@@ -5,65 +8,104 @@ export default function AwardSystemKeyvisual() {
       style={{
         position: "relative",
         width: "100%",
-        height: "400px",
+        height: "547px",
         overflow: "hidden",
         backgroundImage: "url('/home/keyvisual-bg.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center top",
+        backgroundSize: "100% auto",
+        backgroundPosition: "top left",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Gradient fade to page background at the bottom */}
+      {/* Gradient fade to page background (#00101A) at the bottom */}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
-          height: "140px",
+          height: "200px",
           background: "linear-gradient(to bottom, transparent, #00101A)",
           pointerEvents: "none",
+          zIndex: 1,
         }}
       />
 
-      {/* Content positioned inside the banner */}
+      {/* Content positioned inside the banner — mirrors the Bìa frame layout */}
       <div
         style={{
           position: "relative",
+          zIndex: 2,
           height: "100%",
           maxWidth: "1512px",
           margin: "0 auto",
-          padding: "72px 144px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
+          padding: "0 144px",
           boxSizing: "border-box",
         }}
       >
-        {/* ROOT FURTHER logo — reuse home asset */}
-        <img
-          src="/home/root-further-logo.png"
-          alt="ROOT FURTHER"
-          style={{
-            display: "block",
-            width: "340px",
-            height: "auto",
-            objectFit: "contain",
-            objectPosition: "left center",
-          }}
-        />
+        {/* ROOT FURTHER logo — top-left, matches KV frame (313:8450) */}
+        <div style={{ paddingTop: "72px" }}>
+          <img
+            src="/home/root-further-logo.png"
+            alt="ROOT FURTHER"
+            style={{
+              display: "block",
+              width: "340px",
+              height: "auto",
+              objectFit: "contain",
+              objectPosition: "left center",
+            }}
+          />
+        </div>
 
-        <p
+        {/* mms_A_Title — overlaid at bottom of keyvisual.
+            Design: startY=454, keyvisual startY=80 → 374px from keyvisual top.
+            keyvisual height=547px → bottom offset ≈ (547-374-129)=44px from bottom. */}
+        <div
           style={{
-            margin: "20px 0 0",
-            fontFamily: "var(--font-montserrat), sans-serif",
-            fontSize: "18px",
-            fontWeight: 400,
-            lineHeight: "24px",
-            color: "rgba(255,255,255,0.7)",
+            position: "absolute",
+            bottom: "44px",
+            left: "144px",
+            right: "144px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "16px",
           }}
         >
-          Sun* Annual Award 2025
-        </p>
+          <p
+            style={{
+              margin: 0,
+              fontFamily: "var(--font-montserrat), sans-serif",
+              fontSize: "24px",
+              fontWeight: 700,
+              lineHeight: "32px",
+              color: "rgba(255,255,255,1)",
+            }}
+          >
+            Sun* annual awards 2025
+          </p>
+
+          <div
+            style={{
+              width: "100%",
+              height: "1px",
+              backgroundColor: "rgba(46,57,64,1)",
+            }}
+          />
+
+          <h2
+            style={{
+              margin: 0,
+              fontFamily: "var(--font-montserrat), sans-serif",
+              fontSize: "57px",
+              fontWeight: 700,
+              lineHeight: "64px",
+              letterSpacing: "-0.25px",
+              color: "#FFEA9E",
+            }}
+          >
+            Hệ thống giải thưởng SAA 2025
+          </h2>
+        </div>
       </div>
     </div>
   );
