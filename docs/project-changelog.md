@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-05-29 — Award System Page — Landing Page
+
+### Added — Landing Page `/he-thong-giai`
+
+- Full award system page (`src/app/he-thong-giai/page.tsx`, edge runtime) showcasing 6 SAA 2025 awards with specs: Top Talent, Top Project, Top Project Leader, Best Manager, Signature 2025 - Creator, MVP
+- `AuthGuard` client-side auth wrapper: redirects unauthenticated users to `/login`; loading state during session check prevents content flash
+- UI components: `award-info-card` (image + metadata), `award-nav` (sticky left sidebar with IntersectionObserver active tracking), `section-title` (heading + divider), `keyvisual` (decorative banner)
+- `award-data.ts`: shared AWARDS constant with qty, unit, value, valueNote per spec
+- 16 unit tests: 3 for auth-guard (session handling), 4 for award-nav (rendering + active state), 9 for award-info-card (data + image)
+- E2E test skeleton (`he-thong-giai.e2e.ts`, Playwright) with case IDs for integration testing
+- 5 award images as placeholders; 1 image extracted from Figma (TODO: extract remaining 5 via MoMorph `get_design_item_image`)
+
+---
+
 ## 2026-05-27 — Homepage — Landing Page
 
 ### Added — Landing Page `/home`
