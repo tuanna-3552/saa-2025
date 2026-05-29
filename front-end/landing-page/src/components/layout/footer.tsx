@@ -1,21 +1,29 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 interface FooterLink {
   label: string;
   href: string;
-  active?: boolean;
+  matchPath?: string;
 }
 
 const FOOTER_LINKS: FooterLink[] = [
-  { label: "About SAA 2025", href: "#about" },
-  { label: "Award Information", href: "#awards", active: true },
-  { label: "Sun* Kudos", href: "#kudos" },
-  { label: "Tiêu chuẩn chung", href: "#standards" },
+  { label: "About SAA 2025", href: "/home", matchPath: "/home" },
+  { label: "Award Information", href: "/award-system", matchPath: "/award-system" },
+  { label: "Sun* Kudos", href: "/kudos", matchPath: "/kudos" },
+  { label: "Tiêu chuẩn chung", href: "/tieu-chuan-chung", matchPath: "/tieu-chuan-chung" },
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  function isActive(link: FooterLink) {
+    if (!link.matchPath) return false;
+    return pathname === link.matchPath || pathname.startsWith(link.matchPath + "/");
+  }
+
   return (
     <footer
       style={{
@@ -50,45 +58,48 @@ export default function Footer() {
 
         {/* Nav links */}
         <nav style={{ display: "flex", alignItems: "center", gap: "48px" }}>
-          {FOOTER_LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                padding: "16px",
-                height: "56px",
-                textDecoration: "none",
-                fontFamily: "var(--font-montserrat), sans-serif",
-                fontSize: "16px",
-                fontWeight: 700,
-                lineHeight: "24px",
-                letterSpacing: "0.15px",
-                color: "rgba(255,255,255,1)",
-                backgroundColor: link.active ? "rgba(255,234,158,0.10)" : "transparent",
-                textShadow: link.active
-                  ? "0 4px 4px rgba(0,0,0,0.25), 0 0 6px #FAE287"
-                  : "none",
-                transition: "background 0.15s ease",
-                whiteSpace: "nowrap",
-                boxSizing: "border-box",
-              }}
-              onMouseEnter={(e) => {
-                if (!link.active) {
-                  (e.currentTarget as HTMLAnchorElement).style.background =
-                    "rgba(255,255,255,0.06)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = link.active
-                  ? "rgba(255,234,158,0.10)"
-                  : "transparent";
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {FOOTER_LINKS.map((link) => {
+            const active = isActive(link);
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  padding: "16px",
+                  height: "56px",
+                  textDecoration: "none",
+                  fontFamily: "var(--font-montserrat), sans-serif",
+                  fontSize: "16px",
+                  fontWeight: 700,
+                  lineHeight: "24px",
+                  letterSpacing: "0.15px",
+                  color: "rgba(255,255,255,1)",
+                  backgroundColor: active ? "rgba(255,234,158,0.10)" : "transparent",
+                  textShadow: active
+                    ? "0 4px 4px rgba(0,0,0,0.25), 0 0 6px #FAE287"
+                    : "none",
+                  transition: "background 0.15s ease",
+                  whiteSpace: "nowrap",
+                  boxSizing: "border-box",
+                }}
+                onMouseEnter={(e) => {
+                  if (!active) {
+                    (e.currentTarget as HTMLAnchorElement).style.background =
+                      "rgba(255,255,255,0.06)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.background = active
+                    ? "rgba(255,234,158,0.10)"
+                    : "transparent";
+                }}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
       </div>
 
