@@ -6,6 +6,21 @@
 
 ---
 
+## 2026-05-29 — Kudos Live Board — Landing Page
+
+### Added — Landing Page `/kudos`
+
+- Full Kudos live board page (`src/app/kudos/page.tsx`, edge runtime) with 4 sections: KV banner, Highlight carousel, Spotlight word cloud, All Kudos feed + sidebar
+- **UI Components:** 14 components created covering banner, write input, carousel with filters, spotlight board, infinite-scroll feed, sidebar with stats, cards, tooltips, labels
+- **Data Layer:** `kudos-types.ts` with 5 core interfaces (KudoPost, HighlightKudo, SpotlightRecipient, UserStats, PrizeRecipient); `kudos-api.ts` with 10 Supabase query functions (getHighlightKudos, getAllKudos, getSpotlightRecipients, toggleLike, etc.)
+- **Integration:** Real Supabase data wired via SSR + client-side state; URL search params for filter sharing (`?hashtag=x&dept=y`); optimistic like toggle; Intersection Observer infinite scroll; copy-to-clipboard link sharing; hashtag filtering across both sections
+- **Auth Guard:** AuthGuard wrapper; unauthenticated users redirected to `/login`
+- **Star System:** 4-tier star badge (0 stars < 10 kudos, 1 star ≥ 10, 2 stars ≥ 20, 3 stars ≥ 50) implemented in kudos-api
+- **Tests:** 223 Jest tests across 13 test files (12 component tests + 1 API test), all passing. Coverage: GUI layout, interaction (like/unlike, copy link, filters, tooltips), validation (spotlight search 100-char limit), API unit tests (star thresholds, pagination, likes)
+- **Build:** Passes clean, no TypeScript errors, no console warnings
+
+---
+
 ## 2026-05-29 — Award System Page — Landing Page
 
 ### Added — Landing Page `/he-thong-giai`

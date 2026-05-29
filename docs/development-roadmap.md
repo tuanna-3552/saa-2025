@@ -63,6 +63,7 @@
 | Login page (Google OAuth UI + dev stub) | ✅ Done |
 | Homepage (`/home`) — 7-section authenticated landing | ✅ Done (2026-05-27) |
 | Award System page (`/he-thong-giai`) — 6 awards + auth guard | ✅ Done (2026-05-29) |
+| Kudos Live Board (`/kudos`) — highlight carousel + spotlight + full feed | ✅ Done (2026-05-29) |
 | Nomination form (authenticated employees) | 🔲 |
 | Voting page (authenticated employees) | 🔲 |
 | Results page | 🔲 |
