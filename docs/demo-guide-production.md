@@ -8,17 +8,29 @@
 
 | App | URL |
 |-----|-----|
-| Admin panel | Provided by the deployment team |
-| Landing page | Provided by the deployment team |
+| Admin panel | https://saa-admin-35f.pages.dev/ |
+| Landing page | https://saa-landing.pages.dev/ |
 
-> Contact the project lead for the production URL and admin credentials before the demo.
+---
+
+## Credentials
+
+### Admin Panel
+
+| Field | Value |
+|-------|-------|
+| Email | `admin@test.com` |
+| Password | `Admin@123` |
+
+### Landing Page
+
+Click **LOGIN With Google** — the button auto-logs in with a pre-configured test account (no Google account required).
 
 ---
 
 ## Prerequisites
 
 - A modern browser (Chrome, Firefox, Edge — latest version)
-- Admin credentials (email + password) provided by the team
 - Stable internet connection
 
 ---
@@ -29,9 +41,9 @@
 
 1. Open the **Admin Panel URL** in your browser
 2. You are redirected to the **Login** page
-3. Enter the admin credentials provided:
-   - **Email:** *(provided by team)*
-   - **Password:** *(provided by team)*
+3. Enter the admin credentials:
+   - **Email:** `admin@test.com`
+   - **Password:** `Admin@123`
 4. Click **Sign in**
 5. You are taken to the **Overview (Dashboard)** page
 
