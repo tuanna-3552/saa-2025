@@ -1,13 +1,9 @@
-// DEV STUB — remove when real Google OAuth is configured
+// STUB — replace with real Google OAuth when ready
 export const runtime = "edge";
 
 import { createClient } from "@supabase/supabase-js";
 
 export async function POST() {
-  if (process.env.NODE_ENV !== "development") {
-    return Response.json({ error: "Not found" }, { status: 404 });
-  }
-
   const email = process.env.DEV_USER_EMAIL;
   const password = process.env.DEV_USER_PASSWORD;
 
