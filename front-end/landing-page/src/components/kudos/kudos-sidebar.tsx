@@ -166,7 +166,7 @@ export default function KudosSidebar({ stats, recentPrizeRecipients }: KudosSide
               >
                 Mở Secret Box
               </span>
-              <span style={{ fontSize: "20px" }}>🎁</span>
+              <img src="/kudos/open-gift.svg" alt="" aria-hidden width={24} height={24} />
             </button>
           </div>
         </div>

@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import WriteKudosDialog from "./write-kudos-dialog";
 
-// WriteKudosInput: pill-shaped input bar that opens a placeholder dialog.
+// WriteKudosInput: pill-shaped action bar — opens Write Kudos modal on click.
 // Design ref: Figma "Button chuc nang" — two pill buttons side by side.
-// Per clarification: placeholder dialog only — "Tính năng ghi nhận sẽ sớm ra mắt."
 
 export default function WriteKudosInput() {
   const [open, setOpen] = useState(false);
@@ -40,13 +40,7 @@ export default function WriteKudosInput() {
             boxSizing: "border-box",
           }}
         >
-          {/* Pen icon placeholder */}
-          <span
-            style={{ width: 24, height: 24, color: "#FFEA9E", flexShrink: 0 }}
-            aria-hidden
-          >
-            ✏
-          </span>
+          <img src="/kudos/pen.svg" alt="" aria-hidden width={24} height={24} style={{ flexShrink: 0 }} />
           <span
             style={{
               fontSize: "16px",
@@ -63,7 +57,6 @@ export default function WriteKudosInput() {
 
         {/* Search sunner pill button */}
         <button
-          onClick={() => setOpen(true)}
           style={{
             flex: "0 0 381px",
             height: "72px",
@@ -78,12 +71,7 @@ export default function WriteKudosInput() {
             boxSizing: "border-box",
           }}
         >
-          <span
-            style={{ width: 24, height: 24, color: "#FFEA9E", flexShrink: 0 }}
-            aria-hidden
-          >
-            🔍
-          </span>
+          <img src="/kudos/search.svg" alt="" aria-hidden width={24} height={24} style={{ flexShrink: 0 }} />
           <span
             style={{
               fontSize: "16px",
@@ -99,69 +87,7 @@ export default function WriteKudosInput() {
         </button>
       </section>
 
-      {/* Placeholder dialog */}
-      {open && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="Thông báo"
-          style={{
-            position: "fixed",
-            inset: 0,
-            zIndex: 9999,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "rgba(0,0,0,0.6)",
-          }}
-          onClick={() => setOpen(false)}
-        >
-          <div
-            style={{
-              background: "#00070C",
-              border: "1px solid #998C5F",
-              borderRadius: "17px",
-              padding: "40px 48px",
-              maxWidth: "480px",
-              width: "90%",
-              textAlign: "center",
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <p
-              style={{
-                margin: 0,
-                fontSize: "20px",
-                fontFamily:
-                  "var(--font-montserrat), Montserrat, sans-serif",
-                fontWeight: 700,
-                color: "#FFEA9E",
-                lineHeight: "32px",
-              }}
-            >
-              Tính năng ghi nhận sẽ sớm ra mắt.
-            </p>
-            <button
-              onClick={() => setOpen(false)}
-              style={{
-                marginTop: "24px",
-                padding: "12px 32px",
-                background: "#FFEA9E",
-                border: "none",
-                borderRadius: "8px",
-                fontSize: "16px",
-                fontFamily:
-                  "var(--font-montserrat), Montserrat, sans-serif",
-                fontWeight: 700,
-                color: "#00101A",
-                cursor: "pointer",
-              }}
-            >
-              Đóng
-            </button>
-          </div>
-        </div>
-      )}
+      {open && <WriteKudosDialog onClose={() => setOpen(false)} />}
     </>
   );
 }

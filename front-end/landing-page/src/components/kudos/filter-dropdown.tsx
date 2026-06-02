@@ -41,7 +41,7 @@ export default function FilterDropdown({
         style={{
           height: "56px",
           border: "1px solid #998C5F",
-          borderRadius: "68px",
+          borderRadius: "4px",
           background: "rgba(255, 234, 158, 0.10)",
           display: "flex",
           alignItems: "center",

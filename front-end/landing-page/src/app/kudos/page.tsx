@@ -8,7 +8,6 @@ import AuthGuard from "@/components/award-system/auth-guard";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import KudosBanner from "@/components/kudos/kudos-banner";
-import WriteKudosInput from "@/components/kudos/write-kudos-input";
 import HighlightSection from "@/components/kudos/highlight-section";
 import SpotlightBoard from "@/components/kudos/spotlight-board";
 import KudosFeed from "@/components/kudos/kudos-feed";
@@ -149,9 +148,6 @@ function KudosPageContent() {
       <Header />
       <main>
         <KudosBanner />
-        <section style={{ padding: "40px 0 0" }}>
-          <WriteKudosInput />
-        </section>
         {loaded && (
           <>
             <HighlightSection
@@ -166,18 +162,24 @@ function KudosPageContent() {
               onCopyLink={handleCopyLink}
             />
             <SpotlightBoard recipients={spotlight} totalCount={totalCount} />
-            <section style={{ width: "100%", padding: "40px 144px 80px", boxSizing: "border-box" }}>
-              <div style={{ maxWidth: "1152px", width: "100%", margin: "0 auto", display: "flex", flexDirection: "row", gap: "80px", alignItems: "flex-start" }}>
+            {/* C_All kudos: full-width header then 2-column layout — per Figma C.1_Header + Frame 502 */}
+            <section style={{ width: "100%", backgroundColor: "#00101A", paddingTop: "80px", boxSizing: "border-box" }}>
+              {/* C.1_Header Giải thưởng — full width, 144px horizontal padding */}
+              <div style={{ padding: "0 144px", display: "flex", flexDirection: "column", gap: "16px", marginBottom: "40px" }}>
+                <p style={{ margin: 0, fontSize: "24px", fontFamily: "var(--font-montserrat), Montserrat, sans-serif", fontWeight: 700, lineHeight: "32px", color: "#FFFFFF" }}>
+                  Sun* Annual Awards 2025
+                </p>
+                <hr style={{ border: "none", borderTop: "1px solid #2E3940", margin: 0 }} />
+                <h2 style={{ margin: 0, fontSize: "57px", fontFamily: "var(--font-montserrat), Montserrat, sans-serif", fontWeight: 700, lineHeight: "64px", letterSpacing: "-0.25px", color: "#FFEA9E" }}>
+                  ALL KUDOS
+                </h2>
+              </div>
+              {/* Frame 502 — 2-column: feed 680px + sidebar 422px, gap 80px */}
+              <div style={{ padding: "0 144px 80px", display: "flex", flexDirection: "row", gap: "80px", alignItems: "flex-start", boxSizing: "border-box" }}>
                 <KudosFeed
                   kudos={kudos}
                   hasMore={hasMore}
                   onLoadMore={handleLoadMore}
-                  hashtags={hashtags}
-                  departments={departments}
-                  activeHashtag={hashtag ?? null}
-                  activeDepartment={dept ?? null}
-                  onHashtagChange={handleHashtagChange}
-                  onDepartmentChange={handleDeptChange}
                   onLike={handleLike}
                   onCopyLink={handleCopyLink}
                   onHashtagClick={handleHashtagChange}

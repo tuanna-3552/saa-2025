@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat, Montserrat_Alternates, Share_Tech_Mono } from "next/font/google";
 import { LanguageProvider } from "@saa/shared-ui";
-import "./globals.css";
 import WidgetButton from "@/components/home/widget-button";
+import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 const montserratAlternates = Montserrat_Alternates({

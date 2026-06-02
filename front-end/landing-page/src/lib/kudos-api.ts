@@ -9,14 +9,16 @@ import type {
 } from "./kudos-types";
 import { getStarCount } from "./kudos-types";
 
-// Kudos-specific tables are not yet in the Database schema type — raw client used
+// Kudos ARE nominations — queries target the nominations table.
+// sender = nominator_id, receiver = nominee_id, content = reason.
+// Only approved nominations appear on the live board.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const raw = (): any => getSupabase();
 
 const KUDOS_SELECT = `
-  id, content, hashtags, attachment_urls, like_count, created_at,
-  sender:profiles!sender_id(id, full_name, avatar_url, kudos_received_count, departments(name)),
-  receiver:profiles!receiver_id(id, full_name, avatar_url, kudos_received_count, departments(name))
+  id, reason, hashtags, attachment_urls, like_count, created_at,
+  sender:profiles!nominator_id(id, full_name, avatar_url, kudos_received_count, departments(name)),
+  receiver:profiles!nominee_id(id, full_name, avatar_url, kudos_received_count, departments(name))
 `.trim();
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -33,17 +35,22 @@ function mapKudo(row: any): KudoPost {
     receiverAvatar: row.receiver?.avatar_url ?? "",
     receiverDepartment: row.receiver?.departments?.name ?? "",
     receiverStars: getStarCount(row.receiver?.kudos_received_count ?? 0),
-    content: row.content ?? "",
+    content: row.reason ?? "",
     hashtags: row.hashtags ?? [],
     attachmentImages: row.attachment_urls ?? [],
     likeCount: row.like_count ?? 0,
-    likedByCurrentUser: false, // set by component using getLikedKudosIds
+    likedByCurrentUser: false,
     createdAt: row.created_at ?? "",
   };
 }
 
 export async function getHighlightKudos(filters: KudosFilters = {}): Promise<HighlightKudo[]> {
-  let q = raw().from("kudos").select(KUDOS_SELECT).order("like_count", { ascending: false }).limit(5);
+  let q = raw()
+    .from("nominations")
+    .select(KUDOS_SELECT)
+    .eq("status", "approved")
+    .order("like_count", { ascending: false })
+    .limit(5);
   if (filters.hashtag) q = q.contains("hashtags", [filters.hashtag]);
   if (filters.department) q = q.eq("sender.departments.name", filters.department);
   const { data } = await q;
@@ -52,7 +59,12 @@ export async function getHighlightKudos(filters: KudosFilters = {}): Promise<Hig
 }
 
 export async function getAllKudos(filters: KudosFilters = {}, cursor?: string): Promise<KudoPost[]> {
-  let q = raw().from("kudos").select(KUDOS_SELECT).order("created_at", { ascending: false }).limit(10);
+  let q = raw()
+    .from("nominations")
+    .select(KUDOS_SELECT)
+    .eq("status", "approved")
+    .order("created_at", { ascending: false })
+    .limit(10);
   if (cursor) q = q.lt("created_at", cursor);
   if (filters.hashtag) q = q.contains("hashtags", [filters.hashtag]);
   if (filters.department) q = q.eq("sender.departments.name", filters.department);
@@ -63,15 +75,16 @@ export async function getAllKudos(filters: KudosFilters = {}, cursor?: string): 
 
 export async function getSpotlightRecipients(): Promise<SpotlightRecipient[]> {
   const { data } = await raw()
-    .from("kudos")
-    .select("receiver_id, created_at, receiver:profiles!receiver_id(full_name)");
+    .from("nominations")
+    .select("nominee_id, created_at, receiver:profiles!nominee_id(full_name)")
+    .eq("status", "approved");
   if (!data) return [];
   const map = new Map<string, { name: string; count: number; lastAt: string }>();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   for (const row of data as any[]) {
-    const existing = map.get(row.receiver_id);
+    const existing = map.get(row.nominee_id);
     if (!existing) {
-      map.set(row.receiver_id, { name: row.receiver?.full_name ?? "", count: 1, lastAt: row.created_at });
+      map.set(row.nominee_id, { name: row.receiver?.full_name ?? "", count: 1, lastAt: row.created_at });
     } else {
       existing.count += 1;
       if (row.created_at > existing.lastAt) existing.lastAt = row.created_at;
@@ -86,12 +99,18 @@ export async function getSpotlightRecipients(): Promise<SpotlightRecipient[]> {
 }
 
 export async function getTotalKudosCount(): Promise<number> {
-  const { count } = await raw().from("kudos").select("*", { count: "exact", head: true });
+  const { count } = await raw()
+    .from("nominations")
+    .select("*", { count: "exact", head: true })
+    .eq("status", "approved");
   return count ?? 0;
 }
 
 export async function getHashtags(): Promise<string[]> {
-  const { data } = await raw().from("kudos").select("hashtags");
+  const { data } = await raw()
+    .from("nominations")
+    .select("hashtags")
+    .eq("status", "approved");
   if (!data) return [];
   const set = new Set<string>();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -106,8 +125,8 @@ export async function getDepartments(): Promise<string[]> {
 
 export async function getUserStats(userId: string): Promise<UserStats> {
   const [received, sent, profile, boxes] = await Promise.all([
-    raw().from("kudos").select("*", { count: "exact", head: true }).eq("receiver_id", userId),
-    raw().from("kudos").select("*", { count: "exact", head: true }).eq("sender_id", userId),
+    raw().from("nominations").select("*", { count: "exact", head: true }).eq("nominee_id", userId).eq("status", "approved"),
+    raw().from("nominations").select("*", { count: "exact", head: true }).eq("nominator_id", userId).eq("status", "approved"),
     raw().from("profiles").select("hearts_received").eq("id", userId).single(),
     raw().from("secret_boxes").select("opened_at").eq("user_id", userId),
   ]);
@@ -146,9 +165,9 @@ export async function getLikedKudosIds(userId: string): Promise<Set<string>> {
 }
 
 /**
- * Toggle like on a kudos post.
+ * Toggle like on a kudos (nomination).
  * Delegates heart accounting and like_count updates to the DB function `toggle_kudos_like`.
- * The DB function enforces: sender cannot like own kudos, one like per user, special-day multiplier.
+ * The DB function enforces: sender cannot like own kudos, one like per user.
  */
 export async function toggleLike(
   kudosId: string,

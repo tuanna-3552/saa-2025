@@ -1,7 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import TheLePannel from "./the-le-panel";
+import WriteKudosDialog from "@/components/kudos/write-kudos-dialog";
+import { getSupabase } from "@/lib/supabase";
+
+// Pages where the floating widget must never appear.
+const HIDDEN_PATHS = ["/", "/login"];
 
 function PenIcon({ fill = "rgba(0,16,26,1)" }: { fill?: string }) {
   return (
@@ -33,12 +39,24 @@ const BTN_BASE: React.CSSProperties = {
 };
 
 export default function WidgetButton() {
+  const pathname = usePathname();
+  const [authenticated, setAuthenticated] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
   const [theLePanelOpen, setTheLePanelOpen] = useState(false);
+  const [kudosOpen, setKudosOpen] = useState(false);
+
+  useEffect(() => {
+    getSupabase()
+      .auth.getSession()
+      .then(({ data: { session } }) => setAuthenticated(!!session));
+  }, []);
+
+  if (!authenticated || HIDDEN_PATHS.includes(pathname)) return null;
 
   return (
     <>
       {theLePanelOpen && <TheLePannel onClose={() => setTheLePanelOpen(false)} />}
+      {kudosOpen && <WriteKudosDialog onClose={() => setKudosOpen(false)} />}
       {/* Expanded state: vertical stack — Thể lệ (A) / Viết KUDOS (B) / red × circle (C) */}
       {panelOpen && (
         <div
@@ -72,6 +90,7 @@ export default function WidgetButton() {
             type="button"
             aria-label="Viết KUDOS"
             style={{ ...BTN_BASE, width: "214px" }}
+            onClick={() => { setKudosOpen(true); setPanelOpen(false); }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 4px 12px rgba(0,0,0,0.25)"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "none"; }}
           >

@@ -40,34 +40,10 @@ describe("KudosFeed", () => {
     kudos: mockKudos,
     hasMore: false,
     onLoadMore: jest.fn(),
-    hashtags: ["#design"],
-    departments: ["Design", "Engineering"],
-    activeHashtag: null,
-    activeDepartment: null,
-    onHashtagChange: jest.fn(),
-    onDepartmentChange: jest.fn(),
     onLike: jest.fn(),
     onCopyLink: jest.fn(),
     onHashtagClick: jest.fn(),
   };
-
-  it("renders section label 'Sun* Annual Awards 2025'", () => {
-    render(<KudosFeed {...defaultProps} />);
-    expect(screen.getByText("Sun* Annual Awards 2025")).toBeInTheDocument();
-  });
-
-  it("renders title 'ALL KUDOS'", () => {
-    render(<KudosFeed {...defaultProps} />);
-    expect(screen.getByText("ALL KUDOS")).toBeInTheDocument();
-  });
-
-  it("renders filter buttons for Hashtag and Phòng ban", () => {
-    render(<KudosFeed {...defaultProps} />);
-    const hashtagButton = screen.getByText("Hashtag");
-    const departmentButton = screen.getByText("Phòng ban");
-    expect(hashtagButton).toBeInTheDocument();
-    expect(departmentButton).toBeInTheDocument();
-  });
 
   it("renders kudos cards for each kudo in list", () => {
     render(<KudosFeed {...defaultProps} />);
@@ -92,22 +68,14 @@ describe("KudosFeed", () => {
   });
 
   it("renders sentinel element when hasMore is true", () => {
-    const { container } = render(
-      <KudosFeed {...defaultProps} hasMore={true} />
-    );
-    const sentinel = container.querySelector("[aria-hidden='true']");
-    expect(sentinel).toBeInTheDocument();
+    render(<KudosFeed {...defaultProps} hasMore={true} />);
+    expect(screen.getByTestId("infinite-scroll-sentinel")).toBeInTheDocument();
   });
 
   it("setups IntersectionObserver when hasMore is true", async () => {
     const onLoadMore = jest.fn();
-    const { container } = render(
-      <KudosFeed {...defaultProps} hasMore={true} onLoadMore={onLoadMore} />
-    );
-
-    // Verify sentinel element exists for IntersectionObserver
-    const sentinel = container.querySelector("[aria-hidden='true']");
-    expect(sentinel).toBeInTheDocument();
+    render(<KudosFeed {...defaultProps} hasMore={true} onLoadMore={onLoadMore} />);
+    expect(screen.getByTestId("infinite-scroll-sentinel")).toBeInTheDocument();
   });
 
   it("calls onLike when like button on card is clicked", () => {
@@ -130,29 +98,6 @@ describe("KudosFeed", () => {
       fireEvent.click(copyButtons[0]);
       expect(onCopyLink).toHaveBeenCalledWith("1");
     }
-  });
-
-  it("calls onHashtagChange when hashtag filter is changed", () => {
-    const onHashtagChange = jest.fn();
-    render(<KudosFeed {...defaultProps} onHashtagChange={onHashtagChange} />);
-
-    const hashtagButton = screen.getByText("Hashtag");
-    fireEvent.click(hashtagButton);
-
-    // Options should appear
-    // Click first option
-    const options = screen.getAllByRole("option");
-    if (options.length > 1) {
-      fireEvent.click(options[1]);
-    }
-  });
-
-  it("calls onDepartmentChange when department filter is changed", () => {
-    const onDepartmentChange = jest.fn();
-    render(<KudosFeed {...defaultProps} onDepartmentChange={onDepartmentChange} />);
-
-    const deptButton = screen.getByText("Phòng ban");
-    fireEvent.click(deptButton);
   });
 
   it("renders multiple kudos in sequence", () => {
@@ -186,10 +131,7 @@ describe("KudosFeed", () => {
   });
 
   it("does not show sentinel when hasMore is false", () => {
-    const { container } = render(
-      <KudosFeed {...defaultProps} hasMore={false} />
-    );
-    const sentinel = container.querySelector("[aria-hidden='true']");
-    expect(sentinel).not.toBeInTheDocument();
+    render(<KudosFeed {...defaultProps} hasMore={false} />);
+    expect(screen.queryByTestId("infinite-scroll-sentinel")).not.toBeInTheDocument();
   });
 });

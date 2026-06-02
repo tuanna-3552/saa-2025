@@ -61,27 +61,8 @@ export default function KudosCard({ kudo, onLike, onCopyLink, onHashtagClick }: 
           profileUrl={`/profile/${kudo.senderId}`}
         />
 
-        {/* Send icon */}
-        <div
-          style={{
-            width: 32,
-            height: 32,
-            flexShrink: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path
-              d="M4 16L28 16M28 16L18 6M28 16L18 26"
-              stroke="#FFEA9E"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+        {/* Send icon — MM_MEDIA_Send */}
+        <img src="/kudos/send.svg" alt="" aria-hidden width={32} height={32} style={{ flexShrink: 0 }} />
 
         <UserInfoBlock
           avatar={kudo.receiverAvatar}
@@ -232,9 +213,8 @@ export default function KudosCard({ kudo, onLike, onCopyLink, onHashtagClick }: 
           >
             {kudo.likeCount.toLocaleString("vi-VN")}
           </span>
-          <span style={{ fontSize: "24px" }}>
-            {kudo.likedByCurrentUser ? "❤️" : "🤍"}
-          </span>
+          {/* Heart icon — MM_MEDIA_Heart */}
+          <img src="/kudos/heart.svg" alt="" aria-hidden width={32} height={32} />
         </button>
 
         {/* Copy link */}
@@ -262,22 +242,8 @@ export default function KudosCard({ kudo, onLike, onCopyLink, onHashtagClick }: 
           >
             Copy Link
           </span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-              stroke="#00101A"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-              stroke="#00101A"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          {/* Link icon — MM_MEDIA_Link */}
+          <img src="/kudos/link.svg" alt="" aria-hidden width={24} height={24} />
         </button>
       </div>
     </article>

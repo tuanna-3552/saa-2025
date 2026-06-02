@@ -69,10 +69,8 @@ export default function HighlightCard({
           profileUrl={`/profile/${kudo.senderId}`}
         />
 
-        {/* Send arrow icon */}
-        <span style={{ fontSize: "24px", color: "#FFEA9E", flexShrink: 0 }}>
-          ➤
-        </span>
+        {/* Send icon — MM_MEDIA_Send */}
+        <img src="/kudos/send.svg" alt="" aria-hidden width={32} height={32} style={{ flexShrink: 0 }} />
 
         <UserInfoBlock
           avatar={kudo.receiverAvatar}
@@ -170,9 +168,8 @@ export default function HighlightCard({
           >
             {kudo.likeCount.toLocaleString("vi-VN")}
           </span>
-          <span style={{ fontSize: "24px" }}>
-            {kudo.likedByCurrentUser ? "❤️" : "🤍"}
-          </span>
+          {/* Heart icon — MM_MEDIA_Heart */}
+          <img src="/kudos/heart.svg" alt="" aria-hidden width={32} height={32} />
         </button>
 
         {/* Copy link */}
@@ -200,7 +197,8 @@ export default function HighlightCard({
           >
             Copy Link
           </span>
-          <span style={{ fontSize: "16px" }}>🔗</span>
+          {/* Link icon — MM_MEDIA_Link */}
+          <img src="/kudos/link.svg" alt="" aria-hidden width={24} height={24} />
         </button>
       </div>
     </article>

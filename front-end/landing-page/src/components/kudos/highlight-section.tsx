@@ -170,11 +170,11 @@ export default function HighlightSection({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: "32px",
-                color: "#FFEA9E",
+                padding: "10px",
               }}
             >
-              ‹
+              {/* MM_MEDIA_Left arrow 60x60 */}
+              <img src="/kudos/arrow-left.svg" alt="" aria-hidden width={60} height={60} />
             </button>
           </div>
 
@@ -229,11 +229,11 @@ export default function HighlightSection({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: "32px",
-                color: "#FFEA9E",
+                padding: "10px",
               }}
             >
-              ›
+              {/* MM_MEDIA_Right arrow 60x60 */}
+              <img src="/kudos/arrow-right.svg" alt="" aria-hidden width={60} height={60} />
             </button>
           </div>
         </div>
@@ -258,11 +258,14 @@ export default function HighlightSection({
               border: "none",
               background: "none",
               cursor: "pointer",
-              fontSize: "24px",
-              color: "#999999",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "10px",
             }}
           >
-            ‹
+            {/* MM_MEDIA_Left small 28x28 */}
+            <img src="/kudos/arrow-left.svg" alt="" aria-hidden width={28} height={28} />
           </button>
           <span
             style={{
@@ -284,11 +287,14 @@ export default function HighlightSection({
               border: "none",
               background: "none",
               cursor: "pointer",
-              fontSize: "24px",
-              color: "#999999",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "10px",
             }}
           >
-            ›
+            {/* MM_MEDIA_Right small 28x28 */}
+            <img src="/kudos/arrow-right.svg" alt="" aria-hidden width={28} height={28} />
           </button>
         </div>
       )}
