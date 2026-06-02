@@ -3,22 +3,25 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import UserMenu from "@/components/auth/user-menu";
+import { useTranslation } from "@/hooks/use-translation";
 
 interface NavLink {
   label: string;
   href: string;
   /** Route prefix used to determine active state */
   matchPath?: string;
+  translationKey: string;
 }
 
 const NAV_LINKS: NavLink[] = [
-  { label: "About SAA 2025", href: "/home", matchPath: "/home" },
-  { label: "Award Information", href: "/award-system", matchPath: "/award-system" },
-  { label: "Sun* Kudos", href: "/kudos", matchPath: "/kudos" },
+  { label: "About SAA 2025", href: "/home", matchPath: "/home", translationKey: "header.about" },
+  { label: "Award Information", href: "/award-system", matchPath: "/award-system", translationKey: "header.awards" },
+  { label: "Sun* Kudos", href: "/kudos", matchPath: "/kudos", translationKey: "header.kudos" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
+  const { t } = useTranslation();
 
   function isActive(link: NavLink) {
     if (!link.matchPath) return false;
@@ -104,7 +107,7 @@ export default function Header() {
                   }
                 }}
               >
-                {link.label}
+                {t(link.translationKey)}
               </a>
             );
           })}

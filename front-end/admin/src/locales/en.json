@@ -1,0 +1,9 @@
+{
+  "header": {
+    "admin": "ADMIN",
+    "overview": "Overview",
+    "review": "Review content",
+    "user": "User",
+    "settings": "Settings"
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Montserrat_Alternates, Share_Tech_Mono } from "next/font/google";
+import { LanguageProvider } from "@saa/shared-ui";
 import "./globals.css";
 import WidgetButton from "@/components/home/widget-button";
 
@@ -38,8 +39,10 @@ export default function RootLayout({
         className={`${montserrat.variable} ${montserratAlternates.variable} ${shareTechMono.variable}`}
         suppressHydrationWarning
       >
-        {children}
-        <WidgetButton />
+        <LanguageProvider>
+          {children}
+          <WidgetButton />
+        </LanguageProvider>
       </body>
     </html>
   );

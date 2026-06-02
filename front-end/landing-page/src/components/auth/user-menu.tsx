@@ -67,7 +67,7 @@ export default function UserMenu(_props: UserMenuProps) {
   return (
     <div
       ref={containerRef}
-      style={{ display: "flex", alignItems: "center", gap: "8px" }}
+      style={{ display: "flex", alignItems: "center", gap: "24px" }}
     >
       {/* TODO: replace stub count=0 with real Supabase query when notifications table exists */}
       <NotificationBadge count={0} />

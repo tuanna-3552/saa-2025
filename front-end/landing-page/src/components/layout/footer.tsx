@@ -2,22 +2,25 @@
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/use-translation";
 
 interface FooterLink {
   label: string;
   href: string;
   matchPath?: string;
+  translationKey: string;
 }
 
 const FOOTER_LINKS: FooterLink[] = [
-  { label: "About SAA 2025", href: "/home", matchPath: "/home" },
-  { label: "Award Information", href: "/award-system", matchPath: "/award-system" },
-  { label: "Sun* Kudos", href: "/kudos", matchPath: "/kudos" },
-  { label: "Tiêu chuẩn chung", href: "/criteria", matchPath: "/criteria" },
+  { label: "About SAA 2025", href: "/home", matchPath: "/home", translationKey: "header.about" },
+  { label: "Award Information", href: "/award-system", matchPath: "/award-system", translationKey: "header.awards" },
+  { label: "Sun* Kudos", href: "/kudos", matchPath: "/kudos", translationKey: "header.kudos" },
+  { label: "Tiêu chuẩn chung", href: "/criteria", matchPath: "/criteria", translationKey: "header.criteria" },
 ];
 
 export default function Footer() {
   const pathname = usePathname();
+  const { t } = useTranslation();
 
   function isActive(link: FooterLink) {
     if (!link.matchPath) return false;
@@ -96,7 +99,7 @@ export default function Footer() {
                     : "transparent";
                 }}
               >
-                {link.label}
+                {t(link.translationKey)}
               </a>
             );
           })}
@@ -116,7 +119,7 @@ export default function Footer() {
           whiteSpace: "nowrap",
         }}
       >
-        Bản quyền thuộc về Sun* © 2025
+        {t("footer.copyright")}
       </p>
     </footer>
   );

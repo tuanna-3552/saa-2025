@@ -6,6 +6,8 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/hooks/use-auth";
 import { cn } from "@/lib/utils";
+import { LanguageDropdown } from "@saa/shared-ui";
+import { useTranslation } from "@/hooks/use-translation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,10 +18,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const navItems = [
-  { label: "Overview", href: "/dashboard" },
-  { label: "Review content", href: "/nominations" },
-  { label: "User", href: "/users" },
-  { label: "Settings", href: "/settings" },
+  { label: "Overview", href: "/dashboard", translationKey: "header.overview" },
+  { label: "Review content", href: "/nominations", translationKey: "header.review" },
+  { label: "User", href: "/users", translationKey: "header.user" },
+  { label: "Settings", href: "/settings", translationKey: "header.settings" },
 ];
 
 /** Gold glow shadow matching Figma: blur=6 rgba(250,226,135,1) + drop shadow */
@@ -29,6 +31,7 @@ export function AdminHeader() {
   const pathname = usePathname();
   const { profile, signOut } = useAuth();
   const [logoError, setLogoError] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <header
@@ -83,7 +86,7 @@ export function AdminHeader() {
             fontFamily: "var(--font-montserrat)",
           }}
         >
-          ADMIN
+          {t("header.admin")}
         </span>
       </div>
 
@@ -106,11 +109,11 @@ export function AdminHeader() {
               style={{
                 fontFamily: "var(--font-montserrat)",
                 ...(isActive && {
-                  textShadow: "0 0 8px rgba(250,226,135,0.95), 0 0 20px rgba(250,226,135,0.4)",
+                  textShadow: "0 0 8px rgba(255,226,135,0.95), 0 0 20px rgba(255,226,135,0.4)",
                 }),
               }}
             >
-              {item.label}
+              {t(item.translationKey)}
               {/* Glowing underline on active */}
               {isActive && (
                 <span
@@ -141,20 +144,7 @@ export function AdminHeader() {
           </svg>
         </button>
 
-        {/* Language — placeholder, implement later */}
-        <button
-          type="button"
-          title="Language (coming soon)"
-          className="flex h-9 items-center gap-1.5 rounded-full px-2 transition-colors hover:bg-white/10"
-          style={{ color: "var(--details-text-secondary-1)" }}
-        >
-          {/* Place your flag SVG at front-end/admin/public/vn-flag.svg */}
-          <img src="/vn-flag.svg" alt="VN" width={20} height={14} className="object-contain" />
-          <span className="text-sm font-medium" style={{ fontFamily: "var(--font-montserrat)" }}>VN</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
+        <LanguageDropdown />
 
         {/* Account dropdown */}
         <DropdownMenu>
