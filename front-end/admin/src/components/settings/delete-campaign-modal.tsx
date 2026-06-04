@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/hooks/use-translation";
 
 interface DeleteCampaignModalProps {
   isOpen: boolean;
@@ -15,6 +16,7 @@ export function DeleteCampaignModal({
   onConfirm,
   campaignName,
 }: DeleteCampaignModalProps) {
+  const { t } = useTranslation();
   const [deleting, setDeleting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -27,7 +29,7 @@ export function DeleteCampaignModal({
       await onConfirm();
       onClose();
     } catch (err: any) {
-      setError(err.message || "Failed to delete campaign");
+      setError(err.message || t("settings.deleteModal.failedDelete"));
       setDeleting(false);
     }
   }
@@ -50,7 +52,7 @@ export function DeleteCampaignModal({
       >
         {/* Title: Centered horizontally */}
         <h2 className="mb-6 text-center text-xl font-normal tracking-wide text-white">
-          Delete Campaign
+          {t("settings.deleteModal.title")}
         </h2>
 
         {/* Error message */}
@@ -66,7 +68,7 @@ export function DeleteCampaignModal({
         {/* Content: Left-aligned */}
         <div className="mb-8 flex flex-col gap-2.5 text-left">
           <p className="text-sm font-light text-white/80 leading-normal">
-            Bạn có chắc chắn muốn xoá campaign
+            {t("settings.deleteModal.confirm")}
           </p>
           <p
             className="text-lg font-medium leading-relaxed"
@@ -88,7 +90,7 @@ export function DeleteCampaignModal({
               borderRadius: "6px",
             }}
           >
-            {deleting ? "Deleting..." : "Delete"}
+            {deleting ? t("settings.deleteModal.deleting") : t("common.delete")}
           </button>
           <button
             type="button"
@@ -101,7 +103,7 @@ export function DeleteCampaignModal({
               borderRadius: "6px",
             }}
           >
-            Cancel
+            {t("common.cancel")}
           </button>
         </div>
       </div>

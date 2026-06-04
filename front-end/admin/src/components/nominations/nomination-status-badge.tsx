@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useTranslation } from "@/hooks/use-translation";
 
 export type NominationStatus = "pending" | "approved" | "rejected";
 
@@ -11,24 +12,21 @@ interface NominationStatusBadgeProps {
 
 const STATUS_CONFIG: Record<
   NominationStatus,
-  { label: string; bg: string; color: string; border: string; dotColor: string }
+  { bg: string; color: string; border: string; dotColor: string }
 > = {
   pending: {
-    label: "Mới tạo",
     bg: "rgba(150,150,150,0.10)",
     color: "#9CA3AF",
     border: "rgba(150,150,150,0.30)",
     dotColor: "#9CA3AF",
   },
   approved: {
-    label: "Public",
     bg: "rgba(59,130,246,0.12)",
     color: "#60A5FA",
     border: "rgba(59,130,246,0.35)",
     dotColor: "#60A5FA",
   },
   rejected: {
-    label: "Spam",
     bg: "rgba(234,179,8,0.12)",
     color: "#FCD34D",
     border: "rgba(234,179,8,0.35)",
@@ -36,10 +34,17 @@ const STATUS_CONFIG: Record<
   },
 };
 
+const STATUS_LABEL_KEY: Record<NominationStatus, string> = {
+  pending: "nominations.status.pending",
+  approved: "nominations.status.public",
+  rejected: "nominations.status.spam",
+};
+
 export function NominationStatusBadge({
   status,
   className,
 }: NominationStatusBadgeProps) {
+  const { t } = useTranslation();
   const cfg = STATUS_CONFIG[status];
 
   return (
@@ -59,7 +64,7 @@ export function NominationStatusBadge({
         className="inline-block h-1.5 w-1.5 shrink-0 rounded-full"
         style={{ backgroundColor: cfg.dotColor }}
       />
-      {cfg.label}
+      {t(STATUS_LABEL_KEY[status])}
     </span>
   );
 }

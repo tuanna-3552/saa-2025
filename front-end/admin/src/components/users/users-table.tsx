@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { SortIcon } from "@/components/ui/sort-icon";
 import type { UserRow } from "@/hooks/use-users";
 import { UserTableRow } from "./user-row";
+import { useTranslation } from "@/hooks/use-translation";
 
 export type SortCol =
   | "kudos_sent"
@@ -38,27 +39,29 @@ export function UsersTable({
   totalSentKudos,
   totalReceivedKudos,
 }: UsersTableProps) {
+  const { t } = useTranslation();
+
   if (loading) {
     return (
       <div className="flex h-48 items-center justify-center text-sm" style={{ color: "rgba(255,255,255,0.6)", ...FONT }}>
-        Loading...
+        {t("common.loading")}
       </div>
     );
   }
 
   const columns = [
-    { label: "ID",                    width: "w-[50px]" },
-    { label: "User",                  width: "w-[140px]" },
-    { label: "Email",                 width: "flex-1 min-w-[160px]" },
-    { label: `Σ sent Kudos (${totalSentKudos})`,     width: "w-[170px]", sortCol: "kudos_sent" as SortCol },
-    { label: `Σ Received Kudos (${totalReceivedKudos})`, width: "w-[210px]", sortCol: "kudos_received" as SortCol },
-    { label: "Total Heart",           width: "w-[110px]", sortCol: "total_hearts" as SortCol },
-    { label: "Level",                 width: "w-[80px]",  sortCol: "level" as SortCol },
-    { label: "Number of Badges",      width: "w-[150px]", sortCol: "badge_count" as SortCol },
-    { label: "Time to get 6 Badges",  width: "w-[180px]", sortCol: "time_to_6_badges" as SortCol },
-    { label: "Last Logged In",        width: "w-[140px]", sortCol: "last_logged_in" as SortCol },
-    { label: "Role",                  width: "w-[80px]" },
-    { label: "Actions",               width: "w-[70px]" },
+    { label: t("common.id"),                                                    width: "w-[50px]" },
+    { label: t("users.table.user"),                                             width: "w-[140px]" },
+    { label: t("users.table.email"),                                            width: "flex-1 min-w-[160px]" },
+    { label: `${t("users.table.sentKudos")} (${totalSentKudos})`,              width: "w-[170px]", sortCol: "kudos_sent" as SortCol },
+    { label: `${t("users.table.receivedKudos")} (${totalReceivedKudos})`,      width: "w-[210px]", sortCol: "kudos_received" as SortCol },
+    { label: t("users.table.totalHeart"),                                       width: "w-[110px]", sortCol: "total_hearts" as SortCol },
+    { label: t("users.table.level"),                                            width: "w-[80px]",  sortCol: "level" as SortCol },
+    { label: t("users.table.badges"),                                           width: "w-[150px]", sortCol: "badge_count" as SortCol },
+    { label: t("users.table.timeToBadges"),                                     width: "w-[180px]", sortCol: "time_to_6_badges" as SortCol },
+    { label: t("users.table.lastLoggedIn"),                                     width: "w-[140px]", sortCol: "last_logged_in" as SortCol },
+    { label: t("users.table.role"),                                             width: "w-[80px]" },
+    { label: t("common.actions"),                                               width: "w-[70px]" },
   ];
 
   return (
@@ -99,7 +102,7 @@ export function UsersTable({
             className="flex h-16 items-center justify-center text-sm"
             style={{ backgroundColor: "var(--details-container-2)", color: "rgba(255,255,255,0.6)", ...FONT }}
           >
-            No users found
+            {t("users.table.noFound")}
           </div>
         ) : (
           users.map((user, index) => (

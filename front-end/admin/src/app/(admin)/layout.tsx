@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/hooks/use-auth";
 import { AdminHeader } from "@/components/layout/admin-header";
+import { useTranslation } from "@/hooks/use-translation";
 
 function FullPageSpinner() {
   return (
@@ -28,6 +29,7 @@ export default function AdminLayout({
 }) {
   const { user, profile, loading } = useAuth();
   const router = useRouter();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (!loading && (!user || profile?.role !== "admin")) {
@@ -46,7 +48,7 @@ export default function AdminLayout({
       <AdminHeader />
       <main className="flex-1">{children}</main>
       <footer className="py-4 text-center text-sm" style={{ color: "var(--details-text-primary-1)" }}>
-        Bản quyền thuộc về Sun* © 2025
+        {t("footer.copyright")}
       </footer>
     </div>
   );

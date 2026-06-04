@@ -8,6 +8,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { useNominations, type StatusFilter, type NominationListFilters, type NominationRow } from "@/hooks/use-nominations";
 import { reviewNomination } from "@/lib/review-nomination";
 import { DateRangePicker } from "@/components/dashboard/date-range-picker";
+import { useTranslation } from "@/hooks/use-translation";
 import { NominationsTable, type HeartSort } from "@/components/nominations/nominations-table";
 import { NominationsFilterBar } from "@/components/nominations/nominations-status-filter";
 import { NominationsPagination } from "@/components/nominations/nominations-pagination";
@@ -33,6 +34,7 @@ function statusLabel(status: NominationRow["status"]): string {
 export default function NominationsPage() {
   const router = useRouter();
   const { user } = useAuth();
+  const { t, language } = useTranslation();
 
   const now = new Date();
   const [dateRange, setDateRange] = useState<DateRange | undefined>({
@@ -166,7 +168,7 @@ export default function NominationsPage() {
             fontFamily: "var(--font-montserrat)",
           }}
         >
-          Review content
+          {t("nominations.title")}
         </h1>
         <div className="flex items-center gap-4">
           <DateRangePicker value={dateRange} onChange={setDateRange} />
@@ -181,7 +183,7 @@ export default function NominationsPage() {
               fontFamily: "var(--font-montserrat)",
             }}
           >
-            Export
+            {t("common.export")}
           </button>
         </div>
       </div>
@@ -206,7 +208,7 @@ export default function NominationsPage() {
           className="self-end text-sm"
           style={{ color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-montserrat)" }}
         >
-          {nominations.length} nomination{nominations.length !== 1 ? "s" : ""}
+          {nominations.length} {nominations.length === 1 ? t("nominations.one") : t("nominations.other")}
         </span>
       )}
 

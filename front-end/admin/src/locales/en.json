@@ -5,5 +5,133 @@
     "review": "Review content",
     "user": "User",
     "settings": "Settings"
+  },
+  "common": {
+    "loading": "Loading...",
+    "export": "Export",
+    "cancel": "Cancel",
+    "actions": "Actions",
+    "id": "ID",
+    "search": "Search...",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "dashboard": {
+    "title": "Overview",
+    "table": {
+      "no": "No",
+      "unit": "Unit",
+      "totalMember": "Total member",
+      "totalSentKudos": "Total sent kudos",
+      "totalReceivedKudos": "Total received kudos",
+      "totalUserWithKudos": "Total user have at least kudos",
+      "totalReceivedSecretBox": "Total received secret box",
+      "noData": "No data available"
+    }
+  },
+  "nominations": {
+    "title": "Review content",
+    "one": "nomination",
+    "other": "nominations",
+    "table": {
+      "sender": "Sender",
+      "receiver": "Receiver",
+      "content": "Content",
+      "hashtag": "Hashtag",
+      "heart": "Heart",
+      "status": "Status",
+      "noFound": "No nominations found"
+    },
+    "filter": {
+      "sender": "Sender",
+      "receiver": "Receiver",
+      "selectSender": "Select Sender",
+      "selectReceiver": "Select Receiver",
+      "status": "Status",
+      "selectStatus": "Select Status",
+      "search": "Search..."
+    },
+    "status": {
+      "all": "Select Status",
+      "pending": "Pending",
+      "public": "Public",
+      "spam": "Spam"
+    },
+    "action": {
+      "markSpam": "Mark Spam",
+      "unSpam": "Un Spam"
+    }
+  },
+  "users": {
+    "title": "User",
+    "table": {
+      "user": "User",
+      "email": "Email",
+      "sentKudos": "Σ sent Kudos",
+      "receivedKudos": "Σ Received Kudos",
+      "totalHeart": "Total Heart",
+      "level": "Level",
+      "badges": "Number of Badges",
+      "timeToBadges": "Time to get 6 Badges",
+      "lastLoggedIn": "Last Logged In",
+      "role": "Role",
+      "noFound": "No users found"
+    },
+    "filter": {
+      "department": "Department",
+      "selectDepartment": "Select Department",
+      "level": "Level",
+      "selectLevel": "Select Level",
+      "role": "Role",
+      "selectRole": "Select Role",
+      "search": "Search..."
+    }
+  },
+  "settings": {
+    "title": "Setting",
+    "addCampaign": "Add Campaign",
+    "editCampaign": "Edit Campaign",
+    "table": {
+      "name": "Name",
+      "time": "Time",
+      "noCampaigns": "No campaigns configured yet. Click \"Add Campaign\" to create one.",
+      "notConfigured": "Not configured"
+    },
+    "modal": {
+      "campaignName": "Campaign Name",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "saving": "Saving...",
+      "saveChanges": "Save Changes",
+      "failedSave": "Failed to save campaign",
+      "validationName": "Campaign Name is required",
+      "validationStart": "Start Date is required",
+      "validationEnd": "End Date is required"
+    },
+    "deleteModal": {
+      "title": "Delete Campaign",
+      "confirm": "Are you sure you want to delete campaign",
+      "deleting": "Deleting...",
+      "failedDelete": "Failed to delete campaign"
+    }
+  },
+  "auth": {
+    "signOut": "Sign out"
+  },
+  "footer": {
+    "copyright": "Copyright belongs to Sun* © 2025"
+  },
+  "login": {
+    "title": "Admin Login",
+    "description": "SAA Award System — Admin Panel",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in…",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "errorFailed": "Authentication failed. Please try again.",
+    "errorAccessDenied": "Access denied. Admin privileges required.",
+    "errorUnexpected": "An unexpected error occurred."
   }
 }

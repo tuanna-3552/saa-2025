@@ -47,7 +47,11 @@
       "Bash(curl -sv \"https://2dd23486.saa-admin-35f.pages.dev/\")",
       "Bash(curl -sv \"https://2dd23486.saa-admin-35f.pages.dev/login\")",
       "Bash(curl -sv \"https://23968d4d.saa-admin-35f.pages.dev/\")",
-      "Bash(curl -s \"https://23968d4d.saa-admin-35f.pages.dev/\")"
+      "Bash(curl -s \"https://23968d4d.saa-admin-35f.pages.dev/\")",
+      "PowerShell(if \\(Test-Path \"e:\\\\Code2026\\\\saa-2025\\\\.env.local\"\\) { \"EXISTS: $\\(Get-Content 'e:\\\\Code2026\\\\saa-2025\\\\.env.local'\\)\" } else { \"NO .env.local at root\" })",
+      "Bash(Get-ChildItem -Path \"e:\\\\Code2026\\\\saa-2025\\\\front-end\\\\admin\" -Recurse -Filter \"*i18n*\" -o ErrorAction SilentlyContinue)",
+      "Bash(Select-Object FullName)",
+      "Bash(pnpm tsc *)"
     ]
   }
 }

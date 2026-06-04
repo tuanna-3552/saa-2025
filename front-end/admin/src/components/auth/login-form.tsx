@@ -15,9 +15,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useTranslation } from "@/hooks/use-translation";
 
 export function LoginForm() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -39,7 +41,7 @@ export function LoginForm() {
       }
 
       if (!data.user) {
-        setError("Authentication failed. Please try again.");
+        setError(t("login.errorFailed"));
         return;
       }
 
@@ -51,13 +53,13 @@ export function LoginForm() {
 
       if (profile?.role !== "admin") {
         await supabase.auth.signOut();
-        setError("Access denied. Admin privileges required.");
+        setError(t("login.errorAccessDenied"));
         return;
       }
 
       router.push("/dashboard");
     } catch {
-      setError("An unexpected error occurred.");
+      setError(t("login.errorUnexpected"));
     } finally {
       setLoading(false);
     }
@@ -66,9 +68,9 @@ export function LoginForm() {
   return (
     <Card className="w-full max-w-sm border-border">
       <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl text-foreground">Admin Login</CardTitle>
+        <CardTitle className="text-2xl text-foreground">{t("login.title")}</CardTitle>
         <CardDescription className="text-muted-foreground">
-          SAA Award System — Admin Panel
+          {t("login.description")}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -79,7 +81,7 @@ export function LoginForm() {
             </Alert>
           )}
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">{t("login.email")}</Label>
             <Input
               id="email"
               type="email"
@@ -91,7 +93,7 @@ export function LoginForm() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
+            <Label htmlFor="password">{t("login.password")}</Label>
             <div className="relative">
               <Input
                 id="password"
@@ -107,14 +109,14 @@ export function LoginForm() {
                 onClick={() => setShowPassword((v) => !v)}
                 className="absolute inset-y-0 right-0 flex items-center px-3 text-muted-foreground hover:text-foreground"
                 tabIndex={-1}
-                aria-label={showPassword ? "Hide password" : "Show password"}
+                aria-label={showPassword ? t("login.hidePassword") : t("login.showPassword")}
               >
                 {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
               </button>
             </div>
           </div>
           <Button type="submit" className="w-full" disabled={loading}>
-            {loading ? "Signing in…" : "Sign in"}
+            {loading ? t("login.signingIn") : t("login.signIn")}
           </Button>
         </form>
       </CardContent>

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslation } from "@/hooks/use-translation";
+
 // SecretBoxDialog: placeholder modal for "Mở Secret Box" CTA.
 // Per clarification: placeholder only — "Tính năng mở quà sẽ sớm ra mắt."
 
@@ -9,6 +11,7 @@ interface SecretBoxDialogProps {
 }
 
 export default function SecretBoxDialog({ open, onClose }: SecretBoxDialogProps) {
+  const { t } = useTranslation();
   if (!open) return null;
 
   return (
@@ -49,7 +52,7 @@ export default function SecretBoxDialog({ open, onClose }: SecretBoxDialogProps)
             lineHeight: "32px",
           }}
         >
-          Tính năng mở quà sẽ sớm ra mắt.
+          {t("kudos.secretBox.comingSoon")}
         </p>
         <button
           onClick={onClose}
@@ -66,7 +69,7 @@ export default function SecretBoxDialog({ open, onClose }: SecretBoxDialogProps)
             cursor: "pointer",
           }}
         >
-          Đóng
+          {t("kudos.secretBox.close")}
         </button>
       </div>
     </div>

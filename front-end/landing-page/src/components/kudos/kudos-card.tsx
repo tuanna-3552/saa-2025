@@ -3,6 +3,7 @@
 import type { KudoPost } from "@/lib/kudos-types";
 import UserInfoBlock from "@/components/kudos/user-info-block";
 import HashtagLabel from "@/components/kudos/hashtag-label";
+import { useTranslation } from "@/hooks/use-translation";
 
 // KudosCard: full kudo post card in the feed.
 // Design ref: Figma "C.3_KUDO Post" — 680px wide, bg #FFF8E1, border-radius 24px,
@@ -16,6 +17,7 @@ interface KudosCardProps {
 }
 
 export default function KudosCard({ kudo, onLike, onCopyLink, onHashtagClick }: KudosCardProps) {
+  const { t } = useTranslation();
   const formattedDate = (() => {
     try {
       const d = new Date(kudo.createdAt);
@@ -220,7 +222,7 @@ export default function KudosCard({ kudo, onLike, onCopyLink, onHashtagClick }: 
         {/* Copy link */}
         <button
           onClick={onCopyLink}
-          aria-label="Copy link"
+          aria-label={t("kudos.card.copyLinkAria")}
           style={{
             display: "flex",
             alignItems: "center",
@@ -240,7 +242,7 @@ export default function KudosCard({ kudo, onLike, onCopyLink, onHashtagClick }: 
               color: "#00101A",
             }}
           >
-            Copy Link
+            {t("kudos.card.copyLink")}
           </span>
           {/* Link icon — MM_MEDIA_Link */}
           <img src="/kudos/link.svg" alt="" aria-hidden width={24} height={24} />

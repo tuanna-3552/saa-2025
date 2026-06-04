@@ -1,10 +1,13 @@
+"use client";
+
 import AwardCard from "./award-card";
+import { useTranslation } from "@/hooks/use-translation";
 
 const AWARDS = [
   {
     id: "top-talent",
     title: "Top Talent",
-    description: "Vinh danh top cá nhân xuất sắc trên mọi phương diện",
+    descriptionKey: "awards.topTalent",
     bgImage: "/home/award-bg.png",
     nameImage: "/home/award-top-talent-name.png",
     nameImageWidth: 221,
@@ -14,7 +17,7 @@ const AWARDS = [
   {
     id: "top-project",
     title: "Top Project",
-    description: "Vinh danh dự án xuất sắc nhất trong năm",
+    descriptionKey: "awards.topProject",
     bgImage: "/home/award-bg.png",
     nameImage: "/home/award-top-project-name.png",
     nameImageWidth: 232,
@@ -24,7 +27,7 @@ const AWARDS = [
   {
     id: "top-project-leader",
     title: "Top Project Leader",
-    description: "Vinh danh người dẫn dắt dự án xuất sắc",
+    descriptionKey: "awards.topProjectLeader",
     bgImage: "/home/award-bg.png",
     nameImage: "/home/award-top-project-leader-name.png",
     nameImageWidth: 232,
@@ -34,7 +37,7 @@ const AWARDS = [
   {
     id: "best-manager",
     title: "Best Manager",
-    description: "Vinh danh nhà quản lý xuất sắc nhất",
+    descriptionKey: "awards.bestManager",
     bgImage: "/home/award-bg.png",
     nameImage: "/home/award-best-manager-name.png",
     nameImageWidth: 232,
@@ -44,7 +47,7 @@ const AWARDS = [
   {
     id: "signature-creator",
     title: "Signature 2025 Creator",
-    description: "Vinh danh những cá nhân tạo nên dấu ấn đặc biệt năm 2025",
+    descriptionKey: "awards.signatureCreator",
     bgImage: "/home/award-bg.png",
     nameImage: "/home/award-signature-creator-name.png",
     nameImageWidth: 232,
@@ -54,7 +57,7 @@ const AWARDS = [
   {
     id: "mvp",
     title: "MVP",
-    description: "Most Valuable Person — cá nhân có đóng góp giá trị nhất",
+    descriptionKey: "awards.mvp",
     bgImage: "/home/award-bg.png",
     nameImage: "/home/award-mvp-name.png",
     nameImageWidth: 116,
@@ -64,6 +67,7 @@ const AWARDS = [
 ];
 
 export default function AwardsSection() {
+  const { t } = useTranslation();
   const row1 = AWARDS.slice(0, 3);
   const row2 = AWARDS.slice(3, 6);
 
@@ -107,7 +111,7 @@ export default function AwardsSection() {
               color: "rgba(255,255,255,1)",
             }}
           >
-            Sun* annual awards 2025
+            {t("awards.label")}
           </p>
 
           {/* Divider */}
@@ -131,7 +135,7 @@ export default function AwardsSection() {
               color: "#FFEA9E",
             }}
           >
-            Hệ thống giải thưởng
+            {t("awards.heading")}
           </h2>
         </div>
 
@@ -149,7 +153,7 @@ export default function AwardsSection() {
             }}
           >
             {row1.map((award) => (
-              <AwardCard key={award.id} {...award} />
+              <AwardCard key={award.id} {...award} description={t(award.descriptionKey)} />
             ))}
           </div>
 
@@ -165,7 +169,7 @@ export default function AwardsSection() {
             }}
           >
             {row2.map((award) => (
-              <AwardCard key={award.id} {...award} />
+              <AwardCard key={award.id} {...award} description={t(award.descriptionKey)} />
             ))}
           </div>
         </div>

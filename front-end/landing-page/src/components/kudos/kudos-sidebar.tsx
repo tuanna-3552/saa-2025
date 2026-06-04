@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { UserStats, PrizeRecipient } from "@/lib/kudos-types";
 import SecretBoxDialog from "@/components/kudos/secret-box-dialog";
+import { useTranslation } from "@/hooks/use-translation";
 
 // KudosSidebar: right-column panel with stats + 10 recent prize recipients.
 // Design ref: Figma "D_Thống menu phải" — 422px wide, two cards stacked.
@@ -14,19 +15,20 @@ interface KudosSidebarProps {
   recentPrizeRecipients: PrizeRecipient[];
 }
 
-const STAT_ROWS = [
-  { key: "kudosReceived" as keyof UserStats, label: "Số Kudos bạn nhận được:" },
-  { key: "kudosSent" as keyof UserStats, label: "Số Kudos bạn đã gửi:" },
-  { key: "heartsReceived" as keyof UserStats, label: "Số tim bạn nhận được:" },
-];
-
-const SECRET_ROWS = [
-  { key: "secretBoxesOpened" as keyof UserStats, label: "Số Secret Box bạn đã mở:" },
-  { key: "secretBoxesUnopened" as keyof UserStats, label: "Số Secret Box chưa mở:" },
-];
-
 export default function KudosSidebar({ stats, recentPrizeRecipients }: KudosSidebarProps) {
+  const { t } = useTranslation();
   const [dialogOpen, setDialogOpen] = useState(false);
+
+  const STAT_ROWS = [
+    { key: "kudosReceived" as keyof UserStats, label: t("kudos.sidebar.kudosReceived") },
+    { key: "kudosSent" as keyof UserStats, label: t("kudos.sidebar.kudosSent") },
+    { key: "heartsReceived" as keyof UserStats, label: t("kudos.sidebar.heartsReceived") },
+  ];
+
+  const SECRET_ROWS = [
+    { key: "secretBoxesOpened" as keyof UserStats, label: t("kudos.sidebar.secretBoxesOpened") },
+    { key: "secretBoxesUnopened" as keyof UserStats, label: t("kudos.sidebar.secretBoxesUnopened") },
+  ];
 
   return (
     <>
@@ -164,7 +166,7 @@ export default function KudosSidebar({ stats, recentPrizeRecipients }: KudosSide
                   color: "#00101A",
                 }}
               >
-                Mở Secret Box
+                {t("kudos.sidebar.openSecretBox")}
               </span>
               <img src="/kudos/open-gift.svg" alt="" aria-hidden width={24} height={24} />
             </button>
@@ -194,7 +196,9 @@ export default function KudosSidebar({ stats, recentPrizeRecipients }: KudosSide
               textAlign: "center",
             }}
           >
-            10 SUNNER NHẬN QUÀ{"\n"}MỚI NHẤT
+            {t("kudos.sidebar.recentGiftsHeading").split("\n").map((line, i) => (
+              <span key={i} style={{ display: "block" }}>{line}</span>
+            ))}
           </h3>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginTop: "8px" }}>

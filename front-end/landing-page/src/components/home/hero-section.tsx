@@ -1,14 +1,14 @@
 "use client";
 
 import CountdownTimer from "@/components/countdown-timer";
+import { useTranslation } from "@/hooks/use-translation";
 
-// Award ceremony date — driven by NEXT_PUBLIC_EVENT_DATE env var; falls back to Figma design value
 const EVENT_DATE = process.env.NEXT_PUBLIC_EVENT_DATE ?? "2025-12-26T00:00:00";
 const EVENT_DATE_DISPLAY = "26/12/2025";
 const EVENT_LOCATION = "Âu Cơ Art Center";
-const LIVESTREAM_NOTE = "Tường thuật trực tiếp qua sóng Livestream";
 
 export default function HeroSection() {
+  const { t } = useTranslation();
   return (
     <section
       id="about"
@@ -76,7 +76,7 @@ export default function HeroSection() {
                   color: "rgba(255,255,255,1)",
                 }}
               >
-                Comming soon
+                {t("hero.comingSoon")}
               </p>
 
               {/* Countdown timer — reusing existing component */}
@@ -100,7 +100,7 @@ export default function HeroSection() {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    Thời gian:{" "}
+                    {t("hero.timeLabel")}{" "}
                   </span>
                   <span
                     style={{
@@ -128,7 +128,7 @@ export default function HeroSection() {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    Địa điểm:
+                    {t("hero.locationLabel")}
                   </span>
                   <span
                     style={{
@@ -157,7 +157,7 @@ export default function HeroSection() {
                   color: "rgba(255,255,255,1)",
                 }}
               >
-                {LIVESTREAM_NOTE}
+                {t("hero.livestreamNote")}
               </p>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function HeroSection() {
                   whiteSpace: "nowrap",
                 }}
               >
-                ABOUT AWARDS
+                {t("hero.aboutAwards")}
               </span>
               {/* Arrow icon */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -243,7 +243,7 @@ export default function HeroSection() {
                   whiteSpace: "nowrap",
                 }}
               >
-                ABOUT KUDOS
+                {t("hero.aboutKudos")}
               </span>
               {/* Arrow icon */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

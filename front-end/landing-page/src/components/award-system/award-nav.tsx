@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { AWARDS } from "@/components/award-system/award-data";
+import { useTranslation } from "@/hooks/use-translation";
 
 export default function AwardNav() {
+  const { t } = useTranslation();
   const [activeId, setActiveId] = useState<string>(AWARDS[0].id);
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export default function AwardNav() {
 
   return (
     <nav
-      aria-label="Danh mục giải thưởng"
+      aria-label={t("awardSystem.navAriaLabel")}
       style={{
         position: "sticky",
         top: "80px",

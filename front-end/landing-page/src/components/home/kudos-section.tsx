@@ -1,8 +1,9 @@
 "use client";
 
-const KUDOS_BODY = `ĐIỂM MỚI CỦA SAA 2025\nHoạt động ghi nhận và cảm ơn đồng nghiệp - lần đầu tiên được diễn ra dành cho tất cả Sunner. Hoạt động sẽ được triển khai vào tháng 11/2025, khuyến khích người Sun* chia sẻ những lời ghi nhận, cảm ơn đồng nghiệp trên hệ thống do BTC công bố. Đây sẽ là chất liệu để Hội đồng Heads tham khảo trong quá trình lựa chọn người đạt giải.`;
+import { useTranslation } from "@/hooks/use-translation";
 
 export default function KudosSection() {
+  const { t } = useTranslation();
   return (
     <section
       id="kudos"
@@ -83,7 +84,7 @@ export default function KudosSection() {
                     color: "rgba(255,255,255,1)",
                   }}
                 >
-                  Phong trào ghi nhận
+                  {t("kudos.label")}
                 </p>
 
                 {/* Title */}
@@ -115,7 +116,7 @@ export default function KudosSection() {
                     whiteSpace: "pre-line",
                   }}
                 >
-                  {KUDOS_BODY}
+                  {t("kudos.body")}
                 </p>
               </div>
 
@@ -156,7 +157,7 @@ export default function KudosSection() {
                     whiteSpace: "nowrap",
                   }}
                 >
-                  Chi tiết
+                  {t("kudos.detail")}
                 </span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.49945 18.3104L5.68945 15.5004L12.0595 9.12043H7.10945V5.69043H18.3095V16.8904H14.8895V11.9404L8.49945 18.3104Z" fill="rgba(0,16,26,1)"/>

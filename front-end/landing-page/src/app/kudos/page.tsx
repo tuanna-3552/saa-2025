@@ -3,6 +3,7 @@
 export const runtime = "edge";
 
 import { Suspense, useState, useEffect, useCallback } from "react";
+import { useTranslation } from "@/hooks/use-translation";
 import { useSearchParams, useRouter } from "next/navigation";
 import AuthGuard from "@/components/award-system/auth-guard";
 import Header from "@/components/layout/header";
@@ -37,6 +38,7 @@ function applyLiked(posts: KudoPost[], liked: Set<string>): KudoPost[] {
 }
 
 function KudosPageContent() {
+  const { t } = useTranslation();
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -167,11 +169,11 @@ function KudosPageContent() {
               {/* C.1_Header Giải thưởng — full width, 144px horizontal padding */}
               <div style={{ padding: "0 144px", display: "flex", flexDirection: "column", gap: "16px", marginBottom: "40px" }}>
                 <p style={{ margin: 0, fontSize: "24px", fontFamily: "var(--font-montserrat), Montserrat, sans-serif", fontWeight: 700, lineHeight: "32px", color: "#FFFFFF" }}>
-                  Sun* Annual Awards 2025
+                  {t("kudos.page.sectionLabel")}
                 </p>
                 <hr style={{ border: "none", borderTop: "1px solid #2E3940", margin: 0 }} />
                 <h2 style={{ margin: 0, fontSize: "57px", fontFamily: "var(--font-montserrat), Montserrat, sans-serif", fontWeight: 700, lineHeight: "64px", letterSpacing: "-0.25px", color: "#FFEA9E" }}>
-                  ALL KUDOS
+                  {t("kudos.page.allKudos")}
                 </h2>
               </div>
               {/* Frame 502 — 2-column: feed 680px + sidebar 422px, gap 80px */}

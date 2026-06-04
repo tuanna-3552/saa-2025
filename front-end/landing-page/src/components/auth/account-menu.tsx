@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { getSupabase } from "@/lib/supabase";
+import { useTranslation } from "@/hooks/use-translation";
 
 interface AccountMenuProps {
   isAdmin: boolean;
@@ -10,6 +11,7 @@ interface AccountMenuProps {
 
 export default function AccountMenu({ isAdmin, onClose }: AccountMenuProps) {
   const router = useRouter();
+  const { t } = useTranslation();
   const adminUrl = process.env.NEXT_PUBLIC_ADMIN_URL ?? "http://localhost:3001";
   if (process.env.NODE_ENV === "production" && !process.env.NEXT_PUBLIC_ADMIN_URL) {
     console.error("[AccountMenu] NEXT_PUBLIC_ADMIN_URL is not set — admin link will point to localhost");
@@ -70,7 +72,7 @@ export default function AccountMenu({ isAdmin, onClose }: AccountMenuProps) {
           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
           <circle cx="12" cy="7" r="4" />
         </svg>
-        Hồ sơ
+        {t("accountMenu.profile")}
       </a>
 
       {/* Admin Dashboard (admin only) */}
@@ -95,7 +97,7 @@ export default function AccountMenu({ isAdmin, onClose }: AccountMenuProps) {
           <polyline points="16 17 21 12 16 7" />
           <line x1="21" y1="12" x2="9" y2="12" />
         </svg>
-        Đăng xuất
+        {t("accountMenu.signOut")}
       </button>
     </div>
   );

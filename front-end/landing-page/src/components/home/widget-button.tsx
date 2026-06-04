@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import TheLePannel from "./the-le-panel";
 import WriteKudosDialog from "@/components/kudos/write-kudos-dialog";
 import { getSupabase } from "@/lib/supabase";
+import { useTranslation } from "@/hooks/use-translation";
 
 // Pages where the floating widget must never appear.
 const HIDDEN_PATHS = ["/", "/login"];
@@ -40,6 +41,7 @@ const BTN_BASE: React.CSSProperties = {
 
 export default function WidgetButton() {
   const pathname = usePathname();
+  const { t } = useTranslation();
   const [authenticated, setAuthenticated] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
   const [theLePanelOpen, setTheLePanelOpen] = useState(false);
@@ -74,7 +76,7 @@ export default function WidgetButton() {
           {/* A: Thể lệ — 149×64px */}
           <button
             type="button"
-            aria-label="Thể lệ"
+            aria-label={t("widget.theLeLabel")}
             style={{ ...BTN_BASE, width: "149px" }}
             onClick={() => { setTheLePanelOpen(true); setPanelOpen(false); }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 4px 12px rgba(0,0,0,0.25)"; }}
@@ -82,26 +84,26 @@ export default function WidgetButton() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/icons/MM_MEDIA_LOGO.svg" width={24} height={24} alt="" style={{ flexShrink: 0 }} />
-            Thể lệ
+            {t("widget.theLeLabel")}
           </button>
 
           {/* B: Viết KUDOS — 214×64px */}
           <button
             type="button"
-            aria-label="Viết KUDOS"
+            aria-label={t("widget.writeKudos")}
             style={{ ...BTN_BASE, width: "214px" }}
             onClick={() => { setKudosOpen(true); setPanelOpen(false); }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 4px 12px rgba(0,0,0,0.25)"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.boxShadow = "none"; }}
           >
             <PenIcon />
-            Viết KUDOS
+            {t("widget.writeKudos")}
           </button>
 
           {/* C: Red circle cancel — 56×56px, rgba(212,39,29,1) */}
           <button
             type="button"
-            aria-label="Đóng"
+            aria-label={t("widget.close")}
             onClick={() => setPanelOpen(false)}
             style={{
               display: "flex",
@@ -142,7 +144,7 @@ export default function WidgetButton() {
         >
           <button
             type="button"
-            aria-label="Mở tuỳ chọn: Viết KUDOS / Thể lệ SAA"
+            aria-label={t("widget.ariaOpen")}
             aria-expanded={panelOpen}
             onClick={() => setPanelOpen(true)}
             style={{

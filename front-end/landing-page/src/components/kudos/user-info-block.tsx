@@ -24,7 +24,8 @@ export default function UserInfoBlock({
     <ProfileTooltip avatar={avatar} name={name} department={department} stars={stars}>
       <div
         style={{
-          width: "235px",
+          width: "100%",
+          maxWidth: "235px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -60,14 +61,14 @@ export default function UserInfoBlock({
             flexDirection: "column",
             alignItems: "flex-start",
             gap: "2px",
-            width: "235px",
+            width: "100%",
           }}
         >
           {/* Full name */}
           <p
             style={{
               margin: 0,
-              width: "235px",
+              width: "100%",
               fontSize: "16px",
               fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
               fontWeight: 700,
@@ -91,7 +92,7 @@ export default function UserInfoBlock({
               alignItems: "center",
               justifyContent: "center",
               gap: "10px",
-              width: "235px",
+              width: "100%",
             }}
           >
             <span

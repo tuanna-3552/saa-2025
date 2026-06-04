@@ -2,12 +2,7 @@
 
 import type { StatusFilter } from "@/hooks/use-nominations";
 import { PersonPicker, type PersonOption } from "./person-picker";
-
-const STATUS_OPTIONS: { value: StatusFilter; label: string }[] = [
-  { value: "all", label: "Chọn Status" },
-  { value: "approved", label: "Public" },
-  { value: "rejected", label: "Spam" },
-];
+import { useTranslation } from "@/hooks/use-translation";
 
 const FONT = { fontFamily: "var(--font-montserrat)" };
 
@@ -52,27 +47,35 @@ export function NominationsFilterBar({
   onStatusChange,
   onSearchChange,
 }: NominationsFilterBarProps) {
+  const { t } = useTranslation();
+
+  const STATUS_OPTIONS: { value: StatusFilter; label: string }[] = [
+    { value: "all", label: t("nominations.status.all") },
+    { value: "approved", label: t("nominations.status.public") },
+    { value: "rejected", label: t("nominations.status.spam") },
+  ];
+
   return (
     <div className="flex items-end gap-3">
       <PersonPicker
-        label="Sender"
+        label={t("nominations.filter.sender")}
         value={sender}
         options={senderOptions}
-        placeholder="Chọn Sender"
+        placeholder={t("nominations.filter.selectSender")}
         onChange={onSenderChange}
       />
 
       <PersonPicker
-        label="Receiver"
+        label={t("nominations.filter.receiver")}
         value={receiver}
         options={receiverOptions}
-        placeholder="Chọn Receiver"
+        placeholder={t("nominations.filter.selectReceiver")}
         onChange={onReceiverChange}
       />
 
       {/* Status */}
       <div className="flex flex-col gap-1">
-        <span style={LABEL_STYLE}>Status</span>
+        <span style={LABEL_STYLE}>{t("nominations.filter.status")}</span>
         <div className="relative">
           <select
             value={status}
@@ -102,7 +105,7 @@ export function NominationsFilterBar({
           type="text"
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Tìm kiếm..."
+          placeholder={t("nominations.filter.search")}
           className="h-9 w-full rounded-lg px-3 pr-9 text-sm"
           style={SELECT_STYLE}
         />

@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/hooks/use-translation";
 
 // KudosBanner: full hero section combining keyvisual + tagline + KUDOS logo + pill buttons.
 // Design ref: Figma "Keyvisual" (y=0-512) + "Frame 487" (y=184) + "Button chuc nang" (y=408-480).
 // Everything overlays a single 512px background — pills are INSIDE the hero, not below it.
 
 export default function KudosBanner() {
+  const { t } = useTranslation();
   const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
@@ -67,7 +69,7 @@ export default function KudosBanner() {
               letterSpacing: 0,
             }}
           >
-            Hệ thống ghi nhận và cảm ơn
+            {t("kudos.banner.title")}
           </p>
 
           {/* MM_MEDIA_Kudos logo — 593×103px at y=238 */}
@@ -129,7 +131,7 @@ export default function KudosBanner() {
                 letterSpacing: "0.15px",
               }}
             >
-              Hôm nay, bạn muốn gửi lời cảm ơn và ghi nhận đến ai?
+              {t("kudos.banner.question")}
             </span>
           </button>
 
@@ -168,7 +170,7 @@ export default function KudosBanner() {
                 letterSpacing: "0.15px",
               }}
             >
-              Tìm kiếm profile Sunner
+              {t("kudos.banner.search")}
             </span>
           </button>
         </div>
@@ -179,7 +181,7 @@ export default function KudosBanner() {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label="Thông báo"
+          aria-label={t("kudos.banner.notificationAria")}
           style={{
             position: "fixed",
             inset: 0,
@@ -213,7 +215,7 @@ export default function KudosBanner() {
                 lineHeight: "32px",
               }}
             >
-              Tính năng ghi nhận sẽ sớm ra mắt.
+              {t("kudos.banner.comingSoon")}
             </p>
             <button
               onClick={() => setDialogOpen(false)}
@@ -230,7 +232,7 @@ export default function KudosBanner() {
                 cursor: "pointer",
               }}
             >
-              Đóng
+              {t("kudos.banner.close")}
             </button>
           </div>
         </div>

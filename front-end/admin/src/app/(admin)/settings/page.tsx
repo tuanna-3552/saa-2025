@@ -5,8 +5,10 @@ import { useSeasons, type Season } from "@/hooks/use-seasons";
 import { SettingsTable } from "@/components/settings/settings-table";
 import { CampaignModal } from "@/components/settings/campaign-modal";
 import { DeleteCampaignModal } from "@/components/settings/delete-campaign-modal";
+import { useTranslation } from "@/hooks/use-translation";
 
 export default function SettingsPage() {
+  const { t } = useTranslation();
   const {
     seasons,
     loading,
@@ -67,7 +69,7 @@ export default function SettingsPage() {
             fontFamily: "var(--font-montserrat)",
           }}
         >
-          Setting
+          {t("settings.title")}
         </h1>
         <button
           type="button"
@@ -77,10 +79,10 @@ export default function SettingsPage() {
             backgroundColor: "var(--details-text-primary-1)",
             color: "var(--details-text-primary-2)",
             fontFamily: "var(--font-montserrat)",
-            borderRadius: "2px", // Consistent sharp Brutalist edges
+            borderRadius: "2px",
           }}
         >
-          Add Campaign
+          {t("settings.addCampaign")}
         </button>
       </div>
 

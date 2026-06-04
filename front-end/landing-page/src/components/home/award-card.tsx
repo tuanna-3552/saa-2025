@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslation } from "@/hooks/use-translation";
+
 export interface AwardCardProps {
   /** Award background image path */
   bgImage: string;
@@ -25,6 +27,8 @@ export default function AwardCard({
   description,
   detailHref,
 }: AwardCardProps) {
+  const { t } = useTranslation();
+
   return (
     <div
       style={{
@@ -152,7 +156,7 @@ export default function AwardCard({
             (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,1)";
           }}
         >
-          Chi tiết
+          {t("awards.detail")}
           {/* Arrow icon */}
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.49945 18.3104L5.68945 15.5004L12.0595 9.12043H7.10945V5.69043H18.3095V16.8904H14.8895V11.9404L8.49945 18.3104Z" fill="currentColor"/>

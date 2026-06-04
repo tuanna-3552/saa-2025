@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { Season } from "@/hooks/use-seasons";
+import { useTranslation } from "@/hooks/use-translation";
 
 interface CampaignModalProps {
   isOpen: boolean;
@@ -41,6 +42,7 @@ export function CampaignModal({
   onSubmit,
   season,
 }: CampaignModalProps) {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
@@ -65,15 +67,15 @@ export function CampaignModal({
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!name.trim()) {
-      setError("Campaign Name is required");
+      setError(t("settings.modal.validationName"));
       return;
     }
     if (!startDate) {
-      setError("Start Date is required");
+      setError(t("settings.modal.validationStart"));
       return;
     }
     if (!endDate) {
-      setError("End Date is required");
+      setError(t("settings.modal.validationEnd"));
       return;
     }
 
@@ -97,7 +99,7 @@ export function CampaignModal({
       await onSubmit(data);
       onClose();
     } catch (err: any) {
-      setError(err.message || "Failed to save campaign");
+      setError(err.message || t("settings.modal.failedSave"));
     } finally {
       setSubmitting(false);
     }
@@ -121,7 +123,7 @@ export function CampaignModal({
       >
         {/* Centered Title */}
         <h2 className="mb-8 text-center text-2xl font-normal tracking-wide text-white">
-          {season ? "Edit Campaign" : "Add Campaign"}
+          {season ? t("settings.editCampaign") : t("settings.addCampaign")}
         </h2>
 
         {/* Error Alert */}
@@ -139,12 +141,12 @@ export function CampaignModal({
           {/* Campaign Name */}
           <div className="flex flex-col gap-2 text-left">
             <label className="text-sm font-semibold text-white/90">
-              Campaign Name<span className="text-[#E53E3E] ml-1 font-bold">*</span>
+              {t("settings.modal.campaignName")}<span className="text-[#E53E3E] ml-1 font-bold">*</span>
             </label>
             <input
               type="text"
               required
-              placeholder="Campaign Name"
+              placeholder={t("settings.modal.campaignName")}
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="w-full h-12 bg-white px-4 text-sm font-medium text-black placeholder-black/40 outline-none transition-colors border border-transparent focus:border-(--details-border)"
@@ -159,13 +161,13 @@ export function CampaignModal({
             {/* Start Date */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-semibold text-white/90">
-                Start Date<span className="text-[#E53E3E] ml-1 font-bold">*</span>
+                {t("settings.modal.startDate")}<span className="text-[#E53E3E] ml-1 font-bold">*</span>
               </label>
               <div className="relative">
                 <input
                   type="date"
                   required
-                  placeholder="Start Date"
+                  placeholder={t("settings.modal.startDate")}
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
                   className="w-full h-12 bg-white px-4 text-sm font-medium text-black placeholder-black/40 outline-none transition-colors border border-transparent focus:border-(--details-border) cursor-pointer"
@@ -179,13 +181,13 @@ export function CampaignModal({
             {/* End Date */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-semibold text-white/90">
-                End Date<span className="text-[#E53E3E] ml-1 font-bold">*</span>
+                {t("settings.modal.endDate")}<span className="text-[#E53E3E] ml-1 font-bold">*</span>
               </label>
               <div className="relative">
                 <input
                   type="date"
                   required
-                  placeholder="End Date"
+                  placeholder={t("settings.modal.endDate")}
                   value={endDate}
                   onChange={(e) => setEndDate(e.target.value)}
                   className="w-full h-12 bg-white px-4 text-sm font-medium text-black placeholder-black/40 outline-none transition-colors border border-transparent focus:border-(--details-border) cursor-pointer"
@@ -209,7 +211,7 @@ export function CampaignModal({
                 backgroundColor: "transparent",
               }}
             >
-              Cancel
+              {t("common.cancel")}
             </button>
             <button
               type="submit"
@@ -220,7 +222,7 @@ export function CampaignModal({
                 borderRadius: "8px",
               }}
             >
-              {submitting ? "Saving..." : season ? "Save Changes" : "Add Campaign"}
+              {submitting ? t("settings.modal.saving") : season ? t("settings.modal.saveChanges") : t("settings.addCampaign")}
             </button>
           </div>
         </form>

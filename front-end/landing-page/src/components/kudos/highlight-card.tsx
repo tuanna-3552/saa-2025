@@ -3,6 +3,7 @@
 import type { HighlightKudo } from "@/lib/kudos-types";
 import UserInfoBlock from "@/components/kudos/user-info-block";
 import HashtagLabel from "@/components/kudos/hashtag-label";
+import { useTranslation } from "@/hooks/use-translation";
 
 // HighlightCard: featured kudo post card with gold border.
 // Design ref: Figma "KUDO - Highlight" — 528px wide, border 4px solid #FFEA9E,
@@ -21,6 +22,7 @@ export default function HighlightCard({
   onLike,
   onCopyLink,
 }: HighlightCardProps) {
+  const { t } = useTranslation();
   const formattedDate = (() => {
     try {
       const d = new Date(kudo.createdAt);
@@ -57,28 +59,31 @@ export default function HighlightCard({
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "space-between",
-          gap: "24px",
+          gap: "12px",
         }}
       >
-        <UserInfoBlock
-          avatar={kudo.senderAvatar}
-          name={kudo.senderName}
-          department={kudo.senderDepartment}
-          stars={kudo.senderStars}
-          profileUrl={`/profile/${kudo.senderId}`}
-        />
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <UserInfoBlock
+            avatar={kudo.senderAvatar}
+            name={kudo.senderName}
+            department={kudo.senderDepartment}
+            stars={kudo.senderStars}
+            profileUrl={`/profile/${kudo.senderId}`}
+          />
+        </div>
 
         {/* Send icon — MM_MEDIA_Send */}
         <img src="/kudos/send.svg" alt="" aria-hidden width={32} height={32} style={{ flexShrink: 0 }} />
 
-        <UserInfoBlock
-          avatar={kudo.receiverAvatar}
-          name={kudo.receiverName}
-          department={kudo.receiverDepartment}
-          stars={kudo.receiverStars}
-          profileUrl={`/profile/${kudo.receiverId}`}
-        />
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <UserInfoBlock
+            avatar={kudo.receiverAvatar}
+            name={kudo.receiverName}
+            department={kudo.receiverDepartment}
+            stars={kudo.receiverStars}
+            profileUrl={`/profile/${kudo.receiverId}`}
+          />
+        </div>
       </div>
 
       {/* Divider */}
@@ -185,7 +190,7 @@ export default function HighlightCard({
             background: "none",
             cursor: "pointer",
           }}
-          aria-label="Copy link"
+          aria-label={t("kudos.card.copyLinkAria")}
         >
           <span
             style={{
@@ -195,7 +200,7 @@ export default function HighlightCard({
               color: "#00101A",
             }}
           >
-            Copy Link
+            {t("kudos.card.copyLink")}
           </span>
           {/* Link icon — MM_MEDIA_Link */}
           <img src="/kudos/link.svg" alt="" aria-hidden width={24} height={24} />

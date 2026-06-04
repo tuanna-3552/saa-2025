@@ -1,6 +1,5 @@
 // STUB — replace with real Google OAuth when ready
-export const runtime = "edge";
-
+// Node.js runtime required: Edge runtime cannot access non-NEXT_PUBLIC_ env vars
 import { createClient } from "@supabase/supabase-js";
 
 export async function POST() {

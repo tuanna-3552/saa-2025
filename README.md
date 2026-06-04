@@ -68,6 +68,8 @@ cp docker/.env.example docker/.env
 
 > Both files already contain the correct values for local development. No edits needed to get started.
 
+> **Dev login:** The "Login With Google" button on the landing page uses a dev-login shortcut in development that reads `DEV_USER_EMAIL` and `DEV_USER_PASSWORD` from the environment. These are pre-filled in `.env.example` — copy to `.env` and you're set.
+
 ### 3. Start local Supabase
 
 **Full stack** (API, Auth, Studio, Realtime) — recommended for app development:
@@ -133,12 +135,33 @@ For setup details, prerequisites (such as starting local Supabase stack for E2E 
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | admin, landing-page | Supabase anonymous key |
 | `NEXT_PUBLIC_SITE_URL` | landing-page | Canonical site URL for SEO/sitemap |
 | `NEXT_PUBLIC_APP_ENV` | admin, landing-page | `development` or `production` |
+| `DEV_USER_EMAIL` | landing-page | Dev-login email (bypasses Google OAuth locally) |
+| `DEV_USER_PASSWORD` | landing-page | Dev-login password |
 | `POSTGRES_PASSWORD` | docker | Local PostgreSQL password |
 | `JWT_SECRET` | docker | Local Supabase JWT signing secret |
 | `ANON_KEY` | docker | Local Supabase anonymous JWT |
 | `SERVICE_ROLE_KEY` | docker | Local Supabase service role JWT |
 
 See `.env.example` at the repo root for a consolidated reference of all variables.
+
+## Test Accounts (Development)
+
+Seeded automatically by `pnpm db:reset`. All accounts use password `password123`.
+
+| Email | Role | Name |
+|---|---|---|
+| `admin1@saa.local` | admin | Admin One |
+| `admin2@saa.local` | admin | Admin Two |
+| `emp1@saa.local` | employee | Alice Nguyen |
+| `emp2@saa.local` | employee | Bob Tran |
+| `emp3@saa.local` | employee | Carol Le |
+| `emp4@saa.local` | employee | David Pham |
+| `emp5@saa.local` | employee | Emma Vo |
+| `emp6@saa.local` | employee | Frank Nguyen |
+| `emp7@saa.local` | employee | Grace Tran |
+| `emp8@saa.local` | employee | Henry Le |
+
+`DEV_USER_EMAIL` / `DEV_USER_PASSWORD` in `.env` can point to any of the above accounts.
 
 ## Deployment
 

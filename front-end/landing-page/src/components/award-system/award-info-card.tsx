@@ -1,13 +1,14 @@
 "use client";
 
+import { useTranslation } from "@/hooks/use-translation";
+
 export interface AwardInfoCardProps {
   id: string;
+  /** Key used to look up description/unit/valueNote in awardSystem.awards.* locale */
+  awardKey: string;
   label: string;
-  description: string;
   qty: string;
-  unit: string;
   value: string;
-  valueNote: string;
   /** Award name overlay — combined with /home/award-bg.png (same pattern as home AwardCard) */
   nameImage: string;
   nameImageWidth: number;
@@ -44,17 +45,20 @@ function LicenseIcon({ color = "#FFEA9E" }: { color?: string }) {
 
 export default function AwardInfoCard({
   id,
+  awardKey,
   label,
-  description,
   qty,
-  unit,
   value,
-  valueNote,
   nameImage,
   nameImageWidth,
   nameImageHeight,
   imageLeft = false,
 }: AwardInfoCardProps) {
+  const { t } = useTranslation();
+  const description = t(`awardSystem.awards.${awardKey}.description`);
+  const unit = t(`awardSystem.awards.${awardKey}.unit`);
+  const valueNote = t(`awardSystem.awards.${awardKey}.valueNote`);
+
   const trophyBlock = (
     <div
       style={{
@@ -140,7 +144,7 @@ export default function AwardInfoCard({
             color: "#FFEA9E",
           }}
         >
-          Số lượng giải thưởng:
+          {t("awardSystem.qtyLabel")}
         </span>
         <span
           style={{
@@ -184,7 +188,7 @@ export default function AwardInfoCard({
               color: "#FFEA9E",
             }}
           >
-            Giá trị giải thưởng:
+            {t("awardSystem.valueLabel")}
           </span>
         </div>
         <p

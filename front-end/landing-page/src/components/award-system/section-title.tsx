@@ -1,4 +1,9 @@
+"use client";
+
+import { useTranslation } from "@/hooks/use-translation";
+
 export default function SectionTitle() {
+  const { t } = useTranslation();
   return (
     <div
       style={{
@@ -18,7 +23,7 @@ export default function SectionTitle() {
           color: "rgba(255,255,255,1)",
         }}
       >
-        Sun* annual awards 2025
+        {t("awards.label")}
       </p>
 
       <div
@@ -40,7 +45,7 @@ export default function SectionTitle() {
           color: "#FFEA9E",
         }}
       >
-        Hệ thống giải thưởng SAA 2025
+        {t("awardSystem.keyvisualHeading")}
       </h2>
     </div>
   );

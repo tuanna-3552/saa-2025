@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "@/hooks/use-translation";
 
 interface TimeLeft {
   days: number;
@@ -134,11 +135,13 @@ export default function CountdownTimer({ targetDate, redirectTo = "/" }: Countdo
     };
   }, [targetDate, redirectTo, router]);
 
+  const { t } = useTranslation();
+
   return (
     <div style={{ display: "flex", gap: "60px", alignItems: "center" }}>
-      <UnitGroup value={timeLeft.days} label="DAYS" />
-      <UnitGroup value={timeLeft.hours} label="HOURS" />
-      <UnitGroup value={timeLeft.minutes} label="MINUTES" />
+      <UnitGroup value={timeLeft.days} label={t("countdown.days")} />
+      <UnitGroup value={timeLeft.hours} label={t("countdown.hours")} />
+      <UnitGroup value={timeLeft.minutes} label={t("countdown.minutes")} />
     </div>
   );
 }

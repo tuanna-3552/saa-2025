@@ -6,6 +6,7 @@ import { UsersFilterBar } from "@/components/users/users-filter-bar";
 import { UsersTable, type SortCol, type SortDir } from "@/components/users/users-table";
 import { formatDateShort, formatDateTime } from "@/lib/format";
 import { UsersPagination } from "@/components/users/users-pagination";
+import { useTranslation } from "@/hooks/use-translation";
 
 const PAGE_SIZE = 10;
 
@@ -21,6 +22,7 @@ function escapeCSV(val: string | number | null | undefined): string {
 }
 
 export default function UsersPage() {
+  const { t } = useTranslation();
   const [deptFilter, setDeptFilter] = useState("");
   const [levelFilter, setLevelFilter] = useState("");
   const [roleFilter, setRoleFilter] = useState("");
@@ -120,7 +122,7 @@ export default function UsersPage() {
           className="font-normal leading-[52px]"
           style={{ fontSize: "45px", color: "var(--details-text-secondary-1)", fontFamily: "var(--font-montserrat)" }}
         >
-          User
+          {t("users.title")}
         </h1>
         <button
           type="button"
@@ -132,7 +134,7 @@ export default function UsersPage() {
             fontFamily: "var(--font-montserrat)",
           }}
         >
-          Export
+          {t("common.export")}
         </button>
       </div>
 

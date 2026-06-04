@@ -7,5 +7,191 @@
   },
   "footer": {
     "copyright": "Bản quyền thuộc về Sun* © 2025"
+  },
+  "hero": {
+    "comingSoon": "Comming soon",
+    "timeLabel": "Thời gian:",
+    "locationLabel": "Địa điểm:",
+    "livestreamNote": "Tường thuật trực tiếp qua sóng Livestream",
+    "aboutAwards": "VỀ GIẢI THƯỞNG",
+    "aboutKudos": "VỀ KUDOS"
+  },
+  "awards": {
+    "label": "Sun* annual awards 2025",
+    "heading": "Hệ thống giải thưởng",
+    "detail": "Chi tiết",
+    "topTalent": "Vinh danh top cá nhân xuất sắc trên mọi phương diện",
+    "topProject": "Vinh danh dự án xuất sắc nhất trong năm",
+    "topProjectLeader": "Vinh danh người dẫn dắt dự án xuất sắc",
+    "bestManager": "Vinh danh nhà quản lý xuất sắc nhất",
+    "signatureCreator": "Vinh danh những cá nhân tạo nên dấu ấn đặc biệt năm 2025",
+    "mvp": "Most Valuable Person — cá nhân có đóng góp giá trị nhất"
+  },
+  "kudos": {
+    "label": "Phong trào ghi nhận",
+    "body": "ĐIỂM MỚI CỦA SAA 2025\nHoạt động ghi nhận và cảm ơn đồng nghiệp - lần đầu tiên được diễn ra dành cho tất cả Sunner. Hoạt động sẽ được triển khai vào tháng 11/2025, khuyến khích người Sun* chia sẻ những lời ghi nhận, cảm ơn đồng nghiệp trên hệ thống do BTC công bố. Đây sẽ là chất liệu để Hội đồng Heads tham khảo trong quá trình lựa chọn người đạt giải.",
+    "detail": "Chi tiết",
+    "page": {
+      "sectionLabel": "Sun* Annual Awards 2025",
+      "allKudos": "ALL KUDOS"
+    },
+    "banner": {
+      "title": "Hệ thống ghi nhận và cảm ơn",
+      "question": "Hôm nay, bạn muốn gửi lời cảm ơn và ghi nhận đến ai?",
+      "search": "Tìm kiếm profile Sunner",
+      "comingSoon": "Tính năng ghi nhận sẽ sớm ra mắt.",
+      "close": "Đóng",
+      "notificationAria": "Thông báo"
+    },
+    "feed": {
+      "empty": "Hiện tại chưa có Kudos nào.",
+      "allShown": "Đã hiển thị tất cả kudo."
+    },
+    "card": {
+      "copyLink": "Copy Link",
+      "copyLinkAria": "Copy link"
+    },
+    "sidebar": {
+      "kudosReceived": "Số Kudos bạn nhận được:",
+      "kudosSent": "Số Kudos bạn đã gửi:",
+      "heartsReceived": "Số tim bạn nhận được:",
+      "secretBoxesOpened": "Số Secret Box bạn đã mở:",
+      "secretBoxesUnopened": "Số Secret Box chưa mở:",
+      "openSecretBox": "Mở Secret Box",
+      "recentGiftsHeading": "10 SUNNER NHẬN QUÀ\nMỚI NHẤT"
+    },
+    "highlight": {
+      "heading": "HIGHLIGHT KUDOS",
+      "hashtagFilter": "Hashtag",
+      "departmentFilter": "Phòng ban",
+      "prevAria": "Previous highlight",
+      "nextAria": "Next highlight",
+      "prevPageAria": "Previous page",
+      "nextPageAria": "Next page",
+      "empty": "Không có highlight nào."
+    },
+    "spotlight": {
+      "heading": "SPOTLIGHT BOARD",
+      "canvasAria": "Spotlight board — kudos recipients word cloud",
+      "tickerReceived": " đã nhận được một Kudos mới"
+    },
+    "writeDialog": {
+      "ariaLabel": "Gửi lời cám ơn và ghi nhận đến đồng đội",
+      "heading": "Gửi lời cám ơn và ghi nhận đến đồng đội",
+      "recipientLabel": "Người nhận",
+      "recipientPlaceholder": "Tìm kiếm",
+      "titleLabel": "Danh hiệu",
+      "titlePlaceholder": "Dành tặng một danh hiệu cho đồng đội",
+      "titleExample": "Ví dụ: Người truyền động lực cho tôi.",
+      "titleHint": "Danh hiệu sẽ hiển thị làm tiêu đề Kudos của bạn.",
+      "anonymous": "Gửi lời cám ơn và ghi nhận ẩn danh",
+      "nicknameLabel": "Nickname ẩn danh",
+      "nicknamePlaceholder": "Nhập nickname ẩn danh...",
+      "cancel": "Hủy",
+      "send": "Gửi"
+    },
+    "formFields": {
+      "communityStandards": "Tiêu chuẩn cộng đồng",
+      "contentPlaceholder": "Hãy gửi gắm lời cám ơn và ghi nhận đến đồng đội tại đây nhé!",
+      "mentionHint": "Bạn có thể \"@ + tên\" để nhắc tới đồng nghiệp khác",
+      "removeAlt": "xóa",
+      "hashtagPlaceholder": "Hashtag",
+      "maxFive": "Tối đa 5",
+      "image": "Image"
+    },
+    "secretBox": {
+      "comingSoon": "Tính năng mở quà sẽ sớm ra mắt.",
+      "close": "Đóng"
+    }
+  },
+  "rootFurther": {
+    "body1": "Đứng trước bối cảnh thay đổi như vũ bão của thời đại AI và yêu cầu ngày càng cao từ khách hàng, Sun* lựa chọn chiến lược đa dạng hóa năng lực để không chỉ nỗ lực trở thành tinh anh trong lĩnh vực của mình, mà còn hướng đến một cái đích cao hơn, nơi mọi Sunner đều là \"problem-solver\" - chuyên gia trong việc giải quyết mọi vấn đề, tìm lời giải cho mọi bài toán của dự án, khách hàng và xã hội.\nLấy cảm hứng từ sự đa dạng năng lực, khả năng phát triển linh hoạt cùng tinh thần đào sâu để bứt phá trong kỷ nguyên AI, \"Root Further\" đã được chọn để trở thành chủ đề chính thức của Lễ trao giải Sun* Annual Awards 2025.\nVượt ra khỏi nét nghĩa bề mặt, \"Root Further\" chính là hành trình chúng ta không ngừng vươn xa hơn, cắm rễ mạnh hơn, chạm đến những tầng \"địa chất\" ẩn sâu để tiếp tục tồn tại, vươn lên và nuôi dưỡng đam mê kiến tạo giá trị luôn cháy bỏng của người Sun*. Mượn hình ảnh bộ rễ liên tục đâm sâu vào lòng đất, mạnh mẽ len lỏi qua từng lớp \"trầm tích\" để thẩm thấu những gì tinh tuý nhất, người Sun* cũng đang \"hấp thụ\" dưỡng chất từ thời đại và những thử thách của thị trường để làm mới mình mỗi ngày, mở rộng năng lực và mạnh mẽ \"bén rễ\" vào kỷ nguyên AI - một tầng \"địa chất\" hoàn toàn mới, phức tạp và khó đoán, nhưng cũng hội tụ vô vàn tiềm năng cùng cơ hội.",
+    "quote": "\"A tree with deep roots fears no storm\"\n(Cây sâu bén rễ, bão giông chẳng nề - Ngạn ngữ Anh)",
+    "body2": "Trước giông bão, chỉ những tán cây có bộ rễ đủ mạnh mới có thể trụ vững. Một tổ chức với những cá nhân tự tin vào năng lực đa dạng, sẵn sàng kiến tạo và đón nhận thử thách, làm chủ sự thay đổi là tổ chức không chỉ vững vàng trước biến động, mà còn khai thác được mọi lợi thế, chinh phục các thách thức của thời cuộc. Không đơn thuần là tên gọi của chương mới trên hành trình phát triển tổ chức, \"Root Further\" còn như một lời cổ vũ, động viên mỗi chúng ta hãy dám tin vào bản thân, dám đào sâu, khai mở mọi tiềm năng, dám phá bỏ giới hạn, dám trở thành phiên bản đa nhiệm và xuất sắc nhất của mình. Bởi trong thời đại AI, đa dạng năng lực và tận dụng sức mạnh thời cuộc chính là điều kiện tiên quyết để trường tồn.\nKhông ai biết trước ẩn sâu trong \"lòng đất\" của ngành công nghệ và thị trường hiện đại còn biết bao tầng \"địa chất\" bí ẩn. Chỉ biết rằng khi \"Root Further\" đã trở thành tinh thần cội rễ, chúng ta sẽ không sợ hãi, mà càng thấy háo hức trước bất cứ vùng vô định nào trên hành trình tiến về phía trước. Vì ta luôn tin rằng, trong chính những miền vô tận đó, là bao điều kỳ diệu và cơ hội vươn mình đang chờ ta."
+  },
+  "theLePanel": {
+    "title": "Thể lệ",
+    "sectionAHeading": "NGƯỜI NHẬN KUDOS: HUY HIỆU HERO CHO NHỮNG ẢNH HƯỞNG TÍCH CỰC",
+    "sectionADesc": "Dựa trên số lượng đồng đội gửi trao Kudos, bạn sẽ sở hữu Huy hiệu Hero tương ứng, được hiển thị trực tiếp cạnh tên profile",
+    "sectionBHeading": "NGƯỜI GỬI KUDOS: SƯU TẬP TRỌN BỘ 6 ICON, NHẬN NGAY PHẦN QUÀ BÍ ẨN",
+    "sectionBDesc1": "Mỗi lời Kudos bạn gửi sẽ được đăng tải trên hệ thống và nhận về những lượt ❤️ từ cộng đồng Sunner. Cứ mỗi 5 lượt ❤️, bạn sẽ được mở 1 Secret Box, với cơ hội nhận về một trong 6 icon độc quyền của SAA.",
+    "sectionBDesc2": "Những Sunner thu thập trọn bộ 6 icon sẽ nhận về một phần quà bí ẩn từ SAA 2025.",
+    "sectionCHeading": "KUDOS QUỐC DÂN",
+    "sectionCDesc": "5 Kudos nhận về nhiều ❤️ nhất toàn Sun* sẽ chính thức trở thành Kudos Quốc Dân và được trao phần quà đặc biệt từ SAA 2025: Root Further.",
+    "close": "Đóng",
+    "writeKudos": "Viết KUDOS",
+    "badges": {
+      "newHero": {
+        "condition": "Có 1-4 người gửi Kudos cho bạn",
+        "description": "Hành trình lan tỏa điều tốt đẹp bắt đầu – những lời cảm ơn và ghi nhận đầu tiên đã tìm đến bạn."
+      },
+      "risingHero": {
+        "condition": "Có 5-9 người gửi Kudos cho bạn",
+        "description": "Hình ảnh bạn đang lớn dần trong trái tim đồng đội bằng sự từ tế và cống hiến của mình."
+      },
+      "superHero": {
+        "condition": "Có 10–20 người gửi Kudos cho bạn",
+        "description": "Bạn đã trở thành biểu tượng được tin tưởng và yêu quý, người luôn sẵn sàng hỗ trợ và được nhiều đồng đội nhớ đến."
+      },
+      "legendHero": {
+        "condition": "Có hơn 20 người gửi Kudos cho bạn",
+        "description": "Bạn đã trở thành huyền thoại – người để lại dấu ấn khó quên trong tập thể bằng trái tim và hành động của mình."
+      }
+    }
+  },
+  "widget": {
+    "theLeLabel": "Thể lệ",
+    "writeKudos": "Viết KUDOS",
+    "close": "Đóng",
+    "ariaOpen": "Mở tuỳ chọn: Viết KUDOS / Thể lệ SAA"
+  },
+  "countdown": {
+    "days": "NGÀY",
+    "hours": "GIỜ",
+    "minutes": "PHÚT"
+  },
+  "accountMenu": {
+    "profile": "Hồ sơ",
+    "adminDashboard": "Admin Dashboard",
+    "signOut": "Đăng xuất"
+  },
+  "awardSystem": {
+    "keyvisualHeading": "Hệ thống giải thưởng SAA 2025",
+    "navAriaLabel": "Danh mục giải thưởng",
+    "qtyLabel": "Số lượng giải thưởng:",
+    "valueLabel": "Giá trị giải thưởng:",
+    "loading": "Đang tải...",
+    "awards": {
+      "topTalent": {
+        "description": "Giải thưởng Top Talent vinh danh những cá nhân xuất sắc toàn diện – những người không ngừng khẳng định năng lực chuyên môn vững vàng, hiệu suất công việc vượt trội, luôn mang lại giá trị vượt kỳ vọng, được đánh giá cao bởi khách hàng và đồng đội. Với tinh thần sẵn sàng nhận mọi nhiệm vụ tổ chức giao phó, họ luôn là nguồn cảm hứng, thúc đẩy động lực và tạo ảnh hưởng tích cực đến cả tập thể.",
+        "unit": "Đơn vị",
+        "valueNote": "cho mỗi giải thưởng"
+      },
+      "topProject": {
+        "description": "Giải thưởng Top Project vinh danh các tập thể dự án xuất sắc với kết quả kinh doanh vượt kỳ vọng, hiệu quả vận hành tối ưu và tinh thần làm việc tận tâm. Đây là các dự án có độ phức tạp kỹ thuật cao, hiệu quả tối ưu hóa nguồn lực và chi phí tốt, đề xuất các ý tưởng có giá trị cho khách hàng, đem lại lợi nhuận vượt trội và nhận được phản hồi tích cực từ khách hàng. Các thành viên tuân thủ nghiêm ngặt các tiêu chuẩn phát triển nội bộ trong phát triển dự án, tạo nên một hình mẫu về sự xuất sắc và chuyên nghiệp.",
+        "unit": "Tập thể",
+        "valueNote": "cho mỗi giải thưởng"
+      },
+      "topProjectLeader": {
+        "description": "Giải thưởng Top Project Leader vinh danh những nhà quản lý dự án xuất sắc – những người hội tụ năng lực quản lý vững vàng, khả năng truyền cảm hứng mạnh mẽ, và tư duy \"Aim High – Be Agile\" trong mọi bài toán và bối cảnh. Dưới sự dẫn dắt của họ, các thành viên không chỉ cùng nhau vượt qua thử thách và đạt được mục tiêu đề ra, mà còn giữ vững ngọn lửa nhiệt huyết, tinh thần Wasshoi, và trưởng thành để trở thành phiên bản tinh hoa – hạnh phúc hơn của chính mình.",
+        "unit": "Cá nhân",
+        "valueNote": "cho mỗi giải thưởng"
+      },
+      "bestManager": {
+        "description": "Giải thưởng Best Manager vinh danh những nhà lãnh đạo tiêu biểu – người đã dẫn dắt đội ngũ của mình tạo ra kết quả vượt kỳ vọng, tác động nổi bật đến hiệu quả kinh doanh và sự phát triển bền vững của tổ chức. Dưới sự lãnh đạo của họ, đội ngũ luôn chinh phục và làm chủ mọi mục tiêu bằng năng lực đa nhiệm, khả năng phối hợp hiệu quả, và tư duy ứng dụng công nghệ linh hoạt trong kỷ nguyên số. Họ truyền cảm hứng để tập thể trở nên tự tin tràn đầy năng lượng, sẵn sàng đón nhận, thậm chí dẫn dắt tạo ra những thay đổi có tính cách mạng.",
+        "unit": "Cá nhân",
+        "valueNote": "cho mỗi giải thưởng"
+      },
+      "signatureCreator": {
+        "description": "Giải thưởng Signature vinh danh cá nhân hoặc tập thể thể hiện tinh thần đặc trưng mà Sun* hướng tới trong từng thời kỳ. Trong năm 2025, giải thưởng Signature vinh danh Creator - cá nhân/tập thể mang tư duy chủ động và nhạy bén, luôn nhìn thấy cơ hội trong thách thức và tiên phong trong hành động. Họ là những người nhạy bén với vấn đề, nhanh chóng nhận diện và đưa ra những giải pháp thực tiễn, mang lại giá trị rõ rệt cho dự án, khách hàng hoặc tổ chức. Với tư duy kiến tạo và tinh thần \"Creator\" đặc trưng của Sun*, họ không chỉ phản ứng tích cực trước sự thay đổi mà còn chủ động tạo ra cải tiến, góp phần định hình chuẩn mực mới cho cách mà người Sun* tạo giá trị.",
+        "unit": "",
+        "valueNote": "(cá nhân) / 8.000.000 VNĐ (tập thể)"
+      },
+      "mvp": {
+        "description": "Giải thưởng MVP vinh danh cá nhân xuất sắc nhất năm – gương mặt tiêu biểu đại diện cho toàn bộ tập thể Sun*. Họ là người đã thể hiện năng lực vượt trội, tinh thần cống hiến bền bỉ, và tầm ảnh hưởng sâu rộng, để lại dấu ấn mạnh mẽ trong hành trình của Sun* suốt năm qua. Không chỉ nổi bật bởi hiệu suất và kết quả công việc, họ còn là nguồn cảm hứng lan tỏa – thông qua suy nghĩ, hành động và ảnh hưởng tích cực của mình đối với tập thể. MVP là người hội tụ đầy đủ phẩm chất của người Sun* ưu tú, đồng thời mang trên mình trọng trách lớn lao: trở thành hình mẫu đại diện cho con người và tinh thần Sun*, góp phần dẫn dắt tập thể vươn tới những đỉnh cao mới.",
+        "unit": "",
+        "valueNote": ""
+      }
+    }
   }
 }

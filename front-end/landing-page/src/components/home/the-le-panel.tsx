@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { HERO_BADGES, KUDOS_ICONS } from "./the-le-panel-data";
+import { useTranslation } from "@/hooks/use-translation";
 
 const FONT = "var(--font-montserrat), sans-serif";
 const GOLD = "rgba(255,234,158,1)";
@@ -16,6 +17,8 @@ interface TheLePanelProps {
 const PenIconSmall = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}><path d="M20.8067 6.72951C21.1967 6.33951 21.1967 5.68951 20.8067 5.31951L18.4667 2.97951C18.0967 2.58951 17.4467 2.58951 17.0567 2.97951L15.2167 4.80951L18.9667 8.55951M3.09668 16.9395V20.6895H6.84668L17.9067 9.61951L14.1567 5.86951L3.09668 16.9395Z" fill="rgba(0,16,26,1)" /></svg>;
 
 export default function TheLePannel({ onClose }: TheLePanelProps) {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     document.addEventListener("keydown", onKey);
@@ -47,7 +50,7 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
       <div style={{ overflowY: "auto", flex: 1, display: "flex", flexDirection: "column", gap: "24px" }}>
         {/* Title */}
         <h2 id="the-le-panel-title" style={{ margin: 0, fontFamily: FONT, fontSize: "45px", fontWeight: 700, lineHeight: "52px", color: GOLD, letterSpacing: "0px" }}>
-          Thể lệ
+          {t("theLePanel.title")}
         </h2>
 
         {/* Sections */}
@@ -55,10 +58,10 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
           {/* Section A: Người nhận */}
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <h3 style={{ margin: 0, fontFamily: FONT, fontSize: "22px", fontWeight: 700, lineHeight: "28px", color: GOLD }}>
-              NGƯỜI NHẬN KUDOS: HUY HIỆU HERO CHO NHỮNG ẢNH HƯỞNG TÍCH CỰC
+              {t("theLePanel.sectionAHeading")}
             </h3>
             <p style={{ margin: 0, fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px", textAlign: "justify" }}>
-              Dựa trên số lượng đồng đội gửi trao Kudos, bạn sẽ sở hữu Huy hiệu Hero tương ứng, được hiển thị trực tiếp cạnh tên profile
+              {t("theLePanel.sectionADesc")}
             </p>
             {HERO_BADGES.map((badge) => (
               <div key={badge.name} style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
@@ -66,11 +69,11 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={badge.badgeImg} alt={badge.name} height={22} style={{ flexShrink: 0 }} />
                   <span style={{ fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px" }}>
-                    {badge.condition}
+                    {t(`theLePanel.badges.${badge.key}.condition`)}
                   </span>
                 </div>
                 <p style={{ margin: 0, fontFamily: FONT, fontSize: "14px", fontWeight: 700, lineHeight: "20px", color: WHITE, letterSpacing: "0.1px" }}>
-                  {badge.description}
+                  {t(`theLePanel.badges.${badge.key}.description`)}
                 </p>
               </div>
             ))}
@@ -79,10 +82,10 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
           {/* Section B: Người gửi */}
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <h3 style={{ margin: 0, fontFamily: FONT, fontSize: "22px", fontWeight: 700, lineHeight: "28px", color: GOLD }}>
-              NGƯỜI GỬI KUDOS: SƯU TẬP TRỌN BỘ 6 ICON, NHẬN NGAY PHẦN QUÀ BÍ ẨN
+              {t("theLePanel.sectionBHeading")}
             </h3>
             <p style={{ margin: 0, fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px", textAlign: "justify" }}>
-              Mỗi lời Kudos bạn gửi sẽ được đăng tải trên hệ thống và nhận về những lượt ❤️ từ cộng đồng Sunner. Cứ mỗi 5 lượt ❤️, bạn sẽ được mở 1 Secret Box, với cơ hội nhận về một trong 6 icon độc quyền của SAA.
+              {t("theLePanel.sectionBDesc1")}
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
               {KUDOS_ICONS.map((icon) => (
@@ -96,17 +99,17 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
               ))}
             </div>
             <p style={{ margin: 0, fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px", textAlign: "justify" }}>
-              Những Sunner thu thập trọn bộ 6 icon sẽ nhận về một phần quà bí ẩn từ SAA 2025.
+              {t("theLePanel.sectionBDesc2")}
             </p>
           </div>
 
           {/* Section C: Kudos Quốc Dân */}
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <h3 style={{ margin: 0, fontFamily: FONT, fontSize: "24px", fontWeight: 700, lineHeight: "32px", color: GOLD }}>
-              KUDOS QUỐC DÂN
+              {t("theLePanel.sectionCHeading")}
             </h3>
             <p style={{ margin: 0, fontFamily: FONT, fontSize: "16px", fontWeight: 700, lineHeight: "24px", color: WHITE, letterSpacing: "0.5px", textAlign: "justify" }}>
-              5 Kudos nhận về nhiều ❤️ nhất toàn Sun* sẽ chính thức trở thành Kudos Quốc Dân và được trao phần quà đặc biệt từ SAA 2025: Root Further.
+              {t("theLePanel.sectionCDesc")}
             </p>
           </div>
         </div>
@@ -116,7 +119,7 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
       <div style={{ display: "flex", flexDirection: "row", gap: "16px", flexShrink: 0, paddingTop: "40px" }}>
         <button
           type="button"
-          aria-label="Đóng"
+          aria-label={t("theLePanel.close")}
           onClick={onClose}
           style={{
             display: "flex",
@@ -141,11 +144,11 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
             <line x1="4" y1="4" x2="16" y2="16" stroke={GOLD} strokeWidth="2.5" strokeLinecap="round" />
             <line x1="16" y1="4" x2="4" y2="16" stroke={GOLD} strokeWidth="2.5" strokeLinecap="round" />
           </svg>
-          Đóng
+          {t("theLePanel.close")}
         </button>
         <button
           type="button"
-          aria-label="Viết KUDOS"
+          aria-label={t("theLePanel.writeKudos")}
           style={{
             display: "flex",
             alignItems: "center",
@@ -167,7 +170,7 @@ export default function TheLePannel({ onClose }: TheLePanelProps) {
           }}
         >
           <PenIconSmall />
-          Viết KUDOS
+          {t("theLePanel.writeKudos")}
         </button>
       </div>
     </div>

@@ -3,24 +3,19 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import type { NominationRow } from "@/hooks/use-nominations";
+import { useTranslation } from "@/hooks/use-translation";
 
 // Only approved and rejected have visible badges; pending shows nothing
-const STATUS_BADGE: Partial<Record<NominationRow["status"], { label: string; style: React.CSSProperties }>> = {
+const STATUS_BADGE_STYLE: Partial<Record<NominationRow["status"], React.CSSProperties>> = {
   approved: {
-    label: "Public",
-    style: {
-      backgroundColor: "rgba(59,130,246,0.15)",
-      color: "#60A5FA",
-      border: "1px solid rgba(59,130,246,0.35)",
-    },
+    backgroundColor: "rgba(59,130,246,0.15)",
+    color: "#60A5FA",
+    border: "1px solid rgba(59,130,246,0.35)",
   },
   rejected: {
-    label: "Spam",
-    style: {
-      backgroundColor: "rgba(234,179,8,0.12)",
-      color: "#FCD34D",
-      border: "1px solid rgba(234,179,8,0.35)",
-    },
+    backgroundColor: "rgba(234,179,8,0.12)",
+    color: "#FCD34D",
+    border: "1px solid rgba(234,179,8,0.35)",
   },
 };
 
@@ -93,10 +88,12 @@ interface NominationTableRowProps {
 
 export function NominationTableRow({ row, index, onClick, onAction, searchQuery = "" }: NominationTableRowProps) {
   const [busy, setBusy] = useState(false);
+  const { t } = useTranslation();
   const isEven = index % 2 === 0;
 
   const actionTarget = row.status === "approved" ? "rejected" : row.status === "rejected" ? "approved" : null;
-  const actionLabel = row.status === "approved" ? "Mark Spam" : row.status === "rejected" ? "Un Spam" : null;
+  const actionLabel = row.status === "approved" ? t("nominations.action.markSpam") : row.status === "rejected" ? t("nominations.action.unSpam") : null;
+  const statusLabel = row.status === "approved" ? t("nominations.status.public") : row.status === "rejected" ? t("nominations.status.spam") : null;
 
   async function handleAction(e: React.MouseEvent) {
     e.stopPropagation();
@@ -167,9 +164,9 @@ export function NominationTableRow({ row, index, onClick, onAction, searchQuery 
 
       {/* Status */}
       <div className={cn(CELL, "w-[100px]")} style={DIVIDER}>
-        {STATUS_BADGE[row.status] && (
-          <span className="rounded px-2 py-0.5 text-xs font-medium" style={{ ...STATUS_BADGE[row.status]!.style, ...FONT }}>
-            {STATUS_BADGE[row.status]!.label}
+        {STATUS_BADGE_STYLE[row.status] && statusLabel && (
+          <span className="rounded px-2 py-0.5 text-xs font-medium" style={{ ...STATUS_BADGE_STYLE[row.status], ...FONT }}>
+            {statusLabel}
           </span>
         )}
       </div>

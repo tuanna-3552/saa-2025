@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useTranslation } from "@/hooks/use-translation";
 
 interface SettingsRowProps {
   season: Season;
@@ -28,6 +29,7 @@ export function SettingsRow({
   onEdit,
   onDelete,
 }: SettingsRowProps) {
+  const { t } = useTranslation();
   const isEven = index % 2 === 0;
 
   return (
@@ -66,7 +68,7 @@ export function SettingsRow({
             <span>{formatDateTime(season.voting_end)}</span>
           </div>
         ) : (
-          <span className="text-white/30">Not configured</span>
+          <span className="text-white/30">{t("settings.table.notConfigured")}</span>
         )}
       </div>
 
@@ -144,7 +146,7 @@ export function SettingsRow({
                 <path d="M12 20h9" />
                 <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
               </svg>
-              Edit
+              {t("common.edit")}
             </DropdownMenuItem>
 
             {/* Delete Action */}
@@ -169,7 +171,7 @@ export function SettingsRow({
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
-              Delete
+              {t("common.delete")}
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

@@ -4,6 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import type { Season } from "@/hooks/use-seasons";
 import { SettingsRow } from "./settings-row";
+import { useTranslation } from "@/hooks/use-translation";
 
 interface SettingsTableProps {
   seasons: Season[];
@@ -22,10 +23,12 @@ export function SettingsTable({
   onEdit,
   onDelete,
 }: SettingsTableProps) {
+  const { t } = useTranslation();
+
   if (loading) {
     return (
       <div className="flex h-48 items-center justify-center text-sm" style={{ color: "rgba(255,255,255,0.6)", ...FONT }}>
-        Loading...
+        {t("common.loading")}
       </div>
     );
   }
@@ -42,10 +45,10 @@ export function SettingsTable({
   }
 
   const columns = [
-    { label: "ID",      width: "w-[80px] justify-center" },
-    { label: "Name",    width: "flex-1 min-w-[200px]" },
-    { label: "Time",    width: "w-[400px]" },
-    { label: "Actions", width: "w-[100px] justify-end pr-6" },
+    { label: t("common.id"),        width: "w-[80px] justify-center" },
+    { label: t("settings.table.name"),   width: "flex-1 min-w-[200px]" },
+    { label: t("settings.table.time"),   width: "w-[400px]" },
+    { label: t("common.actions"),   width: "w-[100px] justify-end pr-6" },
   ];
 
   return (
@@ -74,7 +77,7 @@ export function SettingsTable({
             className="flex h-16 items-center justify-center text-sm"
             style={{ backgroundColor: "var(--details-container-2)", color: "rgba(255,255,255,0.6)", ...FONT }}
           >
-            No campaigns configured yet. Click "Add Campaign" to create one.
+            {t("settings.table.noCampaigns")}
           </div>
         ) : (
           seasons.map((season, index) => (

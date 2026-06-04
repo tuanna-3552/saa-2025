@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useTranslation } from "@/hooks/use-translation";
 
 export interface DepartmentStat {
   id: string;
@@ -17,24 +18,6 @@ interface Column {
   label: string;
   width: string;
 }
-
-const columns: Column[] = [
-  { key: "no", label: "No", width: "w-[60px]" },
-  { key: "unit", label: "Unit", width: "flex-1 min-w-[140px]" },
-  { key: "totalMember", label: "Total member", width: "w-[140px]" },
-  { key: "totalSentKudos", label: "Total sent kudos", width: "w-[160px]" },
-  { key: "totalReceivedKudos", label: "Total received kudos", width: "w-[180px]" },
-  {
-    key: "totalUserWithKudos",
-    label: "Total user have at least kudos",
-    width: "w-[220px]",
-  },
-  {
-    key: "totalReceivedSecretBox",
-    label: "Total received secret box",
-    width: "w-[200px]",
-  },
-];
 
 function getCellValue(col: Column, row: DepartmentStat, index: number): string | number {
   switch (col.key) {
@@ -66,10 +49,22 @@ export function DepartmentStatsTable({
   stats,
   loading,
 }: DepartmentStatsTableProps) {
+  const { t } = useTranslation();
+
+  const columns: Column[] = [
+    { key: "no",                    label: t("dashboard.table.no"),                    width: "w-[60px]" },
+    { key: "unit",                  label: t("dashboard.table.unit"),                  width: "flex-1 min-w-[140px]" },
+    { key: "totalMember",           label: t("dashboard.table.totalMember"),           width: "w-[140px]" },
+    { key: "totalSentKudos",        label: t("dashboard.table.totalSentKudos"),        width: "w-[160px]" },
+    { key: "totalReceivedKudos",    label: t("dashboard.table.totalReceivedKudos"),    width: "w-[180px]" },
+    { key: "totalUserWithKudos",    label: t("dashboard.table.totalUserWithKudos"),    width: "w-[220px]" },
+    { key: "totalReceivedSecretBox", label: t("dashboard.table.totalReceivedSecretBox"), width: "w-[200px]" },
+  ];
+
   if (loading) {
     return (
       <div className="flex h-48 items-center justify-center text-white/60 font-[var(--font-montserrat)] text-sm">
-        Loading...
+        {t("common.loading")}
       </div>
     );
   }
@@ -132,7 +127,7 @@ export function DepartmentStatsTable({
             className="flex h-12 items-center justify-center text-sm text-white/60 font-[var(--font-montserrat)]"
             style={{ backgroundColor: "var(--details-container-2)" }}
           >
-            No data available
+            {t("dashboard.table.noData")}
           </div>
         )}
       </div>

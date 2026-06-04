@@ -2,6 +2,7 @@
 
 import { useState, useRef, type ChangeEvent } from "react";
 import { ContentEditor, HashtagField, ImageField, FM } from "./write-kudos-form-fields";
+import { useTranslation } from "@/hooks/use-translation";
 
 export interface WriteKudosDialogProps { onClose: () => void; }
 
@@ -31,6 +32,7 @@ function FieldLabel({ text, required }: { text: string; required?: boolean }) {
 }
 
 export default function WriteKudosDialog({ onClose }: WriteKudosDialogProps) {
+  const { t } = useTranslation();
   const [recipient, setRecipient] = useState("");
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -62,19 +64,19 @@ export default function WriteKudosDialog({ onClose }: WriteKudosDialogProps) {
       <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9998, background: "rgba(0,0,0,0.6)" }} />
 
       {/* Modal */}
-      <div role="dialog" aria-modal="true" aria-label="Gửi lời cám ơn và ghi nhận đến đồng đội"
+      <div role="dialog" aria-modal="true" aria-label={t("kudos.writeDialog.ariaLabel")}
         style={{ position: "fixed", zIndex: 9999, top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "752px", maxHeight: "90vh", overflowY: "auto", background: "rgba(255,248,225,1)", borderRadius: "24px", padding: "40px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "32px" }}>
 
         {/* Title */}
         <h2 style={{ margin: 0, ...FM, fontSize: "32px", lineHeight: "40px", color: TP, textAlign: "center" }}>
-          Gửi lời cám ơn và ghi nhận đến đồng đội
+          {t("kudos.writeDialog.heading")}
         </h2>
 
         {/* Người nhận — dropdown with Figma chevron icon */}
         <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "16px" }}>
-          <FieldLabel text="Người nhận" required />
+          <FieldLabel text={t("kudos.writeDialog.recipientLabel")} required />
           <div style={{ flex: 1, position: "relative" }}>
-            <input type="text" placeholder="Tìm kiếm" value={recipient} onChange={(e) => setRecipient(e.target.value)}
+            <input type="text" placeholder={t("kudos.writeDialog.recipientPlaceholder")} value={recipient} onChange={(e) => setRecipient(e.target.value)}
               style={{ ...INPUT, paddingRight: "48px" }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/kudos/icons/chevron-down.svg" alt="" aria-hidden width={24} height={24}
@@ -85,13 +87,13 @@ export default function WriteKudosDialog({ onClose }: WriteKudosDialogProps) {
         {/* Danh hiệu */}
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "16px" }}>
-            <FieldLabel text="Danh hiệu" required />
-            <input type="text" placeholder="Dành tặng một danh hiệu cho đồng đội" value={title} onChange={(e) => setTitle(e.target.value)}
+            <FieldLabel text={t("kudos.writeDialog.titleLabel")} required />
+            <input type="text" placeholder={t("kudos.writeDialog.titlePlaceholder")} value={title} onChange={(e) => setTitle(e.target.value)}
               style={{ ...INPUT, flex: 1 }} />
           </div>
           <p style={{ margin: "8px 0 0 155px", ...FM, fontSize: "16px", lineHeight: "24px", color: "#999", letterSpacing: "0.15px" }}>
-            Ví dụ: Người truyền động lực cho tôi.<br />
-            Danh hiệu sẽ hiển thị làm tiêu đề Kudos của bạn.
+            {t("kudos.writeDialog.titleExample")}<br />
+            {t("kudos.writeDialog.titleHint")}
           </p>
         </div>
 
@@ -114,12 +116,12 @@ export default function WriteKudosDialog({ onClose }: WriteKudosDialogProps) {
               style={{ width: "24px", height: "24px", border: anonymous ? BD : "1px solid #999", borderRadius: "4px", background: "#FFF", display: "flex", alignItems: "center", justifyContent: "center", padding: "4px", boxSizing: "border-box", cursor: "pointer", flexShrink: 0 }}>
               {anonymous && <div style={{ width: "16px", height: "16px", borderRadius: "2px", background: "#998C5F" }} />}
             </button>
-            <span style={{ ...FM, fontSize: "22px", lineHeight: "28px", color: "#999" }}>Gửi lời cám ơn và ghi nhận ẩn danh</span>
+            <span style={{ ...FM, fontSize: "22px", lineHeight: "28px", color: "#999" }}>{t("kudos.writeDialog.anonymous")}</span>
           </div>
           {anonymous && (
             <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "16px" }}>
-              <FieldLabel text="Nickname ẩn danh" required />
-              <input type="text" placeholder="Nhập nickname ẩn danh..." value={nickname} onChange={(e) => setNickname(e.target.value)}
+              <FieldLabel text={t("kudos.writeDialog.nicknameLabel")} required />
+              <input type="text" placeholder={t("kudos.writeDialog.nicknamePlaceholder")} value={nickname} onChange={(e) => setNickname(e.target.value)}
                 style={{ ...INPUT, flex: 1 }} />
             </div>
           )}
@@ -129,13 +131,13 @@ export default function WriteKudosDialog({ onClose }: WriteKudosDialogProps) {
         <div style={{ display: "flex", flexDirection: "row", gap: "24px", alignItems: "stretch" }}>
           <button type="button" onClick={onClose}
             style={{ border: BD, background: "rgba(255,234,158,0.10)", borderRadius: "4px", padding: "16px 40px", ...FM, fontSize: "16px", color: TP, cursor: "pointer", display: "flex", alignItems: "center", gap: "8px", whiteSpace: "nowrap" }}>
-            Hủy
+            {t("kudos.writeDialog.cancel")}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/kudos/icons/close.svg" alt="" aria-hidden width={24} height={24} />
           </button>
           <button type="button"
             style={{ flex: 1, height: "60px", background: "#FFEA9E", border: "none", borderRadius: "8px", ...FM, fontSize: "22px", lineHeight: "28px", color: TP, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px" }}>
-            Gửi
+            {t("kudos.writeDialog.send")}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/kudos/icons/send.svg" alt="" aria-hidden width={24} height={24} />
           </button>

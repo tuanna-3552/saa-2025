@@ -5,5 +5,133 @@
     "review": "Duyệt nội dung",
     "user": "Người dùng",
     "settings": "Cài đặt"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "export": "Xuất",
+    "cancel": "Hủy",
+    "actions": "Thao tác",
+    "id": "ID",
+    "search": "Tìm kiếm...",
+    "edit": "Chỉnh sửa",
+    "delete": "Xóa"
+  },
+  "dashboard": {
+    "title": "Tổng quan",
+    "table": {
+      "no": "STT",
+      "unit": "Đơn vị",
+      "totalMember": "Tổng thành viên",
+      "totalSentKudos": "Tổng kudos đã gửi",
+      "totalReceivedKudos": "Tổng kudos đã nhận",
+      "totalUserWithKudos": "Tổng user có ít nhất 1 kudos",
+      "totalReceivedSecretBox": "Tổng hộp bí mật đã nhận",
+      "noData": "Không có dữ liệu"
+    }
+  },
+  "nominations": {
+    "title": "Duyệt nội dung",
+    "one": "đề cử",
+    "other": "đề cử",
+    "table": {
+      "sender": "Người gửi",
+      "receiver": "Người nhận",
+      "content": "Nội dung",
+      "hashtag": "Hashtag",
+      "heart": "Tim",
+      "status": "Trạng thái",
+      "noFound": "Không tìm thấy đề cử"
+    },
+    "filter": {
+      "sender": "Người gửi",
+      "receiver": "Người nhận",
+      "selectSender": "Chọn Sender",
+      "selectReceiver": "Chọn Receiver",
+      "status": "Trạng thái",
+      "selectStatus": "Chọn trạng thái",
+      "search": "Tìm kiếm..."
+    },
+    "status": {
+      "all": "Chọn trạng thái",
+      "pending": "Mới tạo",
+      "public": "Công khai",
+      "spam": "Spam"
+    },
+    "action": {
+      "markSpam": "Đánh dấu Spam",
+      "unSpam": "Bỏ Spam"
+    }
+  },
+  "users": {
+    "title": "Người dùng",
+    "table": {
+      "user": "Người dùng",
+      "email": "Email",
+      "sentKudos": "Σ Kudos đã gửi",
+      "receivedKudos": "Σ Kudos đã nhận",
+      "totalHeart": "Tổng Tim",
+      "level": "Cấp độ",
+      "badges": "Số huy hiệu",
+      "timeToBadges": "Thời gian đạt 6 huy hiệu",
+      "lastLoggedIn": "Đăng nhập lần cuối",
+      "role": "Vai trò",
+      "noFound": "Không tìm thấy người dùng"
+    },
+    "filter": {
+      "department": "Phòng ban",
+      "selectDepartment": "Chọn phòng ban",
+      "level": "Cấp độ",
+      "selectLevel": "Chọn cấp độ",
+      "role": "Vai trò",
+      "selectRole": "Chọn vai trò",
+      "search": "Tìm kiếm..."
+    }
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "addCampaign": "Thêm chiến dịch",
+    "editCampaign": "Chỉnh sửa chiến dịch",
+    "table": {
+      "name": "Tên",
+      "time": "Thời gian",
+      "noCampaigns": "Chưa có chiến dịch nào. Nhấn \"Thêm chiến dịch\" để tạo mới.",
+      "notConfigured": "Chưa cấu hình"
+    },
+    "modal": {
+      "campaignName": "Tên chiến dịch",
+      "startDate": "Ngày bắt đầu",
+      "endDate": "Ngày kết thúc",
+      "saving": "Đang lưu...",
+      "saveChanges": "Lưu thay đổi",
+      "failedSave": "Không thể lưu chiến dịch",
+      "validationName": "Tên chiến dịch là bắt buộc",
+      "validationStart": "Ngày bắt đầu là bắt buộc",
+      "validationEnd": "Ngày kết thúc là bắt buộc"
+    },
+    "deleteModal": {
+      "title": "Xóa chiến dịch",
+      "confirm": "Bạn có chắc chắn muốn xoá campaign",
+      "deleting": "Đang xóa...",
+      "failedDelete": "Không thể xóa chiến dịch"
+    }
+  },
+  "auth": {
+    "signOut": "Đăng xuất"
+  },
+  "footer": {
+    "copyright": "Bản quyền thuộc về Sun* © 2025"
+  },
+  "login": {
+    "title": "Đăng nhập Quản trị",
+    "description": "Hệ thống Giải thưởng SAA — Bảng điều khiển Quản trị",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "signIn": "Đăng nhập",
+    "signingIn": "Đang đăng nhập…",
+    "showPassword": "Hiển thị mật khẩu",
+    "hidePassword": "Ẩn mật khẩu",
+    "errorFailed": "Xác thực thất bại. Vui lòng thử lại.",
+    "errorAccessDenied": "Từ chối truy cập. Yêu cầu quyền quản trị viên.",
+    "errorUnexpected": "Đã xảy ra lỗi không mong muốn."
   }
 }

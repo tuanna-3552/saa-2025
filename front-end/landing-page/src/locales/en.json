@@ -7,5 +7,191 @@
   },
   "footer": {
     "copyright": "Copyright by Sun* © 2025"
+  },
+  "hero": {
+    "comingSoon": "Coming soon",
+    "timeLabel": "Date:",
+    "locationLabel": "Location:",
+    "livestreamNote": "Live broadcast via Livestream",
+    "aboutAwards": "ABOUT AWARDS",
+    "aboutKudos": "ABOUT KUDOS"
+  },
+  "awards": {
+    "label": "Sun* annual awards 2025",
+    "heading": "Award System",
+    "detail": "Details",
+    "topTalent": "Honoring top outstanding individuals in all aspects",
+    "topProject": "Honoring the most outstanding project of the year",
+    "topProjectLeader": "Honoring excellent project leaders",
+    "bestManager": "Honoring the most outstanding manager",
+    "signatureCreator": "Honoring individuals who made a special mark in 2025",
+    "mvp": "Most Valuable Person — the individual with the most valuable contribution"
+  },
+  "kudos": {
+    "label": "Recognition Movement",
+    "body": "NEW IN SAA 2025\nA recognition and appreciation activity — happening for all Sunners for the first time. Launching in November 2025, encouraging Sun* members to share recognition and gratitude on the platform announced by the organizing committee. These will serve as reference material for the Heads Council during the award selection process.",
+    "detail": "Details",
+    "page": {
+      "sectionLabel": "Sun* Annual Awards 2025",
+      "allKudos": "ALL KUDOS"
+    },
+    "banner": {
+      "title": "Recognition & Appreciation System",
+      "question": "Who would you like to appreciate and acknowledge today?",
+      "search": "Search Sunner profile",
+      "comingSoon": "The recognition feature will be available soon.",
+      "close": "Close",
+      "notificationAria": "Notifications"
+    },
+    "feed": {
+      "empty": "No Kudos yet.",
+      "allShown": "All kudos shown."
+    },
+    "card": {
+      "copyLink": "Copy Link",
+      "copyLinkAria": "Copy link"
+    },
+    "sidebar": {
+      "kudosReceived": "Kudos received:",
+      "kudosSent": "Kudos sent:",
+      "heartsReceived": "Hearts received:",
+      "secretBoxesOpened": "Secret Boxes opened:",
+      "secretBoxesUnopened": "Secret Boxes unopened:",
+      "openSecretBox": "Open Secret Box",
+      "recentGiftsHeading": "10 LATEST\nGIFT RECIPIENTS"
+    },
+    "highlight": {
+      "heading": "HIGHLIGHT KUDOS",
+      "hashtagFilter": "Hashtag",
+      "departmentFilter": "Department",
+      "prevAria": "Previous highlight",
+      "nextAria": "Next highlight",
+      "prevPageAria": "Previous page",
+      "nextPageAria": "Next page",
+      "empty": "No highlights available."
+    },
+    "spotlight": {
+      "heading": "SPOTLIGHT BOARD",
+      "canvasAria": "Spotlight board — kudos recipients word cloud",
+      "tickerReceived": " just received a new Kudos"
+    },
+    "writeDialog": {
+      "ariaLabel": "Send appreciation and recognition to teammates",
+      "heading": "Send appreciation and recognition to teammates",
+      "recipientLabel": "Recipient",
+      "recipientPlaceholder": "Search",
+      "titleLabel": "Title",
+      "titlePlaceholder": "Give a title to your teammate",
+      "titleExample": "Example: My Motivator.",
+      "titleHint": "The title will be displayed as your Kudos heading.",
+      "anonymous": "Send appreciation and recognition anonymously",
+      "nicknameLabel": "Anonymous nickname",
+      "nicknamePlaceholder": "Enter anonymous nickname...",
+      "cancel": "Cancel",
+      "send": "Send"
+    },
+    "formFields": {
+      "communityStandards": "Community Standards",
+      "contentPlaceholder": "Share your appreciation and recognition here!",
+      "mentionHint": "You can use \"@ + name\" to mention other colleagues",
+      "removeAlt": "remove",
+      "hashtagPlaceholder": "Hashtag",
+      "maxFive": "Max 5",
+      "image": "Image"
+    },
+    "secretBox": {
+      "comingSoon": "The gift opening feature will be available soon.",
+      "close": "Close"
+    }
+  },
+  "rootFurther": {
+    "body1": "Facing the rapidly changing landscape driven by AI and ever-higher client expectations, Sun* chooses a strategy of capability diversification — not only striving to excel in its own domain, but aiming higher, where every Sunner becomes a \"problem-solver\": an expert who resolves every project, client, and societal challenge.\nInspired by diverse capabilities, flexible growth, and the spirit of deep exploration in the AI era, \"Root Further\" has been chosen as the official theme of Sun* Annual Awards 2025.\nBeyond its surface meaning, \"Root Further\" is our journey of continuous growth — planting deeper roots, reaching hidden \"geological layers\" to keep existing, rising, and nurturing the passion for creating value that burns within every Sun*. Like roots that endlessly dive into the earth, pushing through layers of \"sediment\" to absorb the purest essence, Sunners are also \"absorbing\" nourishment from the era and market challenges to reinvent themselves daily, expand their capabilities, and powerfully \"take root\" in the AI era — a brand-new, complex, and unpredictable \"geological layer,\" yet full of immense potential and opportunity.",
+    "quote": "\"A tree with deep roots fears no storm\"\n(Vietnamese Proverb: Cây sâu bén rễ, bão giông chẳng nề)",
+    "body2": "In the face of storms, only trees with strong enough roots can stand firm. An organization of individuals confident in their diverse capabilities, ready to create and embrace challenges, and masters of change — that organization not only stands strong against upheaval but also unlocks every advantage and conquers the challenges of the times. More than just a name for a new chapter in our organizational journey, \"Root Further\" is also a rallying call for each of us to believe in ourselves, to dig deeper, to unlock all potential, to break boundaries, to become our most versatile and excellent selves. Because in the AI era, diverse capabilities and leveraging the power of the times are the prerequisite for enduring success.\nNo one knows how many mysterious \"geological layers\" still lie hidden in the depths of the technology industry and modern market. What we do know is that when \"Root Further\" has become the spirit of our roots, we will not be fearful — but excited before any uncharted territory on the journey forward. Because we always believe that in those boundless spaces, countless wonders and opportunities to rise are waiting for us."
+  },
+  "theLePanel": {
+    "title": "Rules",
+    "sectionAHeading": "KUDOS RECIPIENTS: HERO BADGES FOR POSITIVE INFLUENCE",
+    "sectionADesc": "Based on the number of teammates who send you Kudos, you will earn the corresponding Hero Badge, displayed directly next to your profile name",
+    "sectionBHeading": "KUDOS SENDERS: COLLECT ALL 6 ICONS, GET A MYSTERY GIFT",
+    "sectionBDesc1": "Every Kudos you send will be posted on the system and receive ❤️ reactions from the Sunner community. For every 5 ❤️, you will unlock 1 Secret Box with a chance to receive one of 6 exclusive SAA icons.",
+    "sectionBDesc2": "Sunners who collect all 6 icons will receive a mystery gift from SAA 2025.",
+    "sectionCHeading": "NATIONAL KUDOS",
+    "sectionCDesc": "The 5 Kudos that receive the most ❤️ across Sun* will officially become National Kudos and receive a special award from SAA 2025: Root Further.",
+    "close": "Close",
+    "writeKudos": "Write KUDOS",
+    "badges": {
+      "newHero": {
+        "condition": "1–4 teammates send you Kudos",
+        "description": "Your journey of spreading goodness begins — the first words of appreciation and recognition have found their way to you."
+      },
+      "risingHero": {
+        "condition": "5–9 teammates send you Kudos",
+        "description": "Your image is growing in your teammates' hearts through your kindness and dedication."
+      },
+      "superHero": {
+        "condition": "10–20 teammates send you Kudos",
+        "description": "You've become a trusted and beloved icon — someone always ready to support, remembered by many teammates."
+      },
+      "legendHero": {
+        "condition": "More than 20 teammates send you Kudos",
+        "description": "You've become a legend — someone who leaves an unforgettable mark on the team through your heart and actions."
+      }
+    }
+  },
+  "widget": {
+    "theLeLabel": "Rules",
+    "writeKudos": "Write KUDOS",
+    "close": "Close",
+    "ariaOpen": "Open options: Write KUDOS / SAA Rules"
+  },
+  "countdown": {
+    "days": "DAYS",
+    "hours": "HOURS",
+    "minutes": "MINUTES"
+  },
+  "accountMenu": {
+    "profile": "Profile",
+    "adminDashboard": "Admin Dashboard",
+    "signOut": "Sign out"
+  },
+  "awardSystem": {
+    "keyvisualHeading": "Award System SAA 2025",
+    "navAriaLabel": "Award Categories",
+    "qtyLabel": "Number of Awards:",
+    "valueLabel": "Award Value:",
+    "loading": "Loading...",
+    "awards": {
+      "topTalent": {
+        "description": "The Top Talent Award honors well-rounded outstanding individuals — those who continuously demonstrate solid expertise, exceptional work performance, always delivering value beyond expectations, highly regarded by clients and teammates. With a spirit ready to take on any task assigned by the organization, they are always a source of inspiration, motivating and creating positive influence across the entire team.",
+        "unit": "Units",
+        "valueNote": "per award"
+      },
+      "topProject": {
+        "description": "The Top Project Award honors outstanding project teams with business results exceeding expectations, optimized operational efficiency, and dedicated work spirit. These are projects with high technical complexity, effective resource and cost optimization, valuable ideas proposed to clients, delivering outstanding profits, and receiving positive client feedback. Team members strictly adhere to internal development standards, creating a model of excellence and professionalism.",
+        "unit": "Teams",
+        "valueNote": "per award"
+      },
+      "topProjectLeader": {
+        "description": "The Top Project Leader Award honors outstanding project managers — those who combine solid management capabilities, strong inspirational ability, and an \"Aim High – Be Agile\" mindset in every challenge and context. Under their leadership, team members not only overcome challenges and achieve set goals together, but also maintain the flame of enthusiasm, the Wasshoi spirit, and grow to become their finest — happier versions of themselves.",
+        "unit": "Individuals",
+        "valueNote": "per award"
+      },
+      "bestManager": {
+        "description": "The Best Manager Award honors exemplary leaders — those who have led their teams to create results exceeding expectations, with a notable impact on business efficiency and the sustainable development of the organization. Under their leadership, the team always conquers and masters every goal with multitasking capabilities, effective coordination, and flexible technology application mindset in the digital era. They inspire the team to become confident, energetic, ready to embrace, and even lead revolutionary changes.",
+        "unit": "Individuals",
+        "valueNote": "per award"
+      },
+      "signatureCreator": {
+        "description": "The Signature Award honors individuals or teams who embody the distinctive spirit that Sun* strives for in each period. In 2025, the Signature Award honors Creator — individuals/teams with proactive and sharp thinking, always seeing opportunities in challenges and pioneering in action. They are people attuned to problems, quickly identifying and proposing practical solutions that deliver clear value to projects, clients, or the organization. With a creative mindset and the distinctive \"Creator\" spirit of Sun*, they not only respond positively to change but also proactively create improvements, contributing to shaping new standards for how Sun* people create value.",
+        "unit": "",
+        "valueNote": "(individual) / 8,000,000 VND (team)"
+      },
+      "mvp": {
+        "description": "The MVP Award honors the most outstanding individual of the year — the representative figure for the entire Sun* collective. They are someone who has demonstrated superior capabilities, persistent dedication, and broad influence, leaving a strong impression on Sun*'s journey throughout the year. Not only outstanding for work performance and results, they are also a source of spreading inspiration — through their thoughts, actions, and positive influence on the collective. MVP is someone who embodies all the qualities of an excellent Sun* person, while carrying the great responsibility of becoming the representative model of Sun* people and spirit, contributing to leading the collective toward new heights.",
+        "unit": "",
+        "valueNote": ""
+      }
+    }
   }
 }

@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { SortIcon } from "@/components/ui/sort-icon";
 import { NominationTableRow } from "./nomination-row";
 import type { NominationRow } from "@/hooks/use-nominations";
+import { useTranslation } from "@/hooks/use-translation";
 
 export type { NominationRow };
 export type HeartSort = "asc" | "desc" | null;
@@ -32,13 +33,15 @@ export function NominationsTable({
   heartSort = null,
   onHeartSortChange,
 }: NominationsTableProps) {
+  const { t } = useTranslation();
+
   if (loading) {
     return (
       <div
         className="flex h-48 items-center justify-center text-sm"
         style={{ color: "rgba(255,255,255,0.6)", ...FONT }}
       >
-        Loading...
+        {t("common.loading")}
       </div>
     );
   }
@@ -68,11 +71,11 @@ export function NominationsTable({
     <div className="w-full">
       {/* Header */}
       <div className="flex items-center" style={{ backgroundColor: "var(--details-container)" }}>
-        <HeaderCell width="w-[60px]">ID</HeaderCell>
-        <HeaderCell width="w-[150px]">Sender</HeaderCell>
-        <HeaderCell width="w-[160px]">Receiver</HeaderCell>
-        <HeaderCell width="flex-1 min-w-[200px]">Content</HeaderCell>
-        <HeaderCell width="w-[180px]">Hashtag</HeaderCell>
+        <HeaderCell width="w-[60px]">{t("common.id")}</HeaderCell>
+        <HeaderCell width="w-[150px]">{t("nominations.table.sender")}</HeaderCell>
+        <HeaderCell width="w-[160px]">{t("nominations.table.receiver")}</HeaderCell>
+        <HeaderCell width="flex-1 min-w-[200px]">{t("nominations.table.content")}</HeaderCell>
+        <HeaderCell width="w-[180px]">{t("nominations.table.hashtag")}</HeaderCell>
         <HeaderCell width="w-[100px]">
           <button
             type="button"
@@ -83,12 +86,12 @@ export function NominationsTable({
             )}
             style={heartSort ? { color: "var(--details-text-primary-1)" } : {}}
           >
-            Heart
+            {t("nominations.table.heart")}
             <SortIcon dir={heartSort} />
           </button>
         </HeaderCell>
-        <HeaderCell width="w-[100px]">Status</HeaderCell>
-        <HeaderCell width="w-[120px]">Actions</HeaderCell>
+        <HeaderCell width="w-[100px]">{t("nominations.table.status")}</HeaderCell>
+        <HeaderCell width="w-[120px]">{t("common.actions")}</HeaderCell>
       </div>
 
       {/* Rows */}
@@ -108,7 +111,7 @@ export function NominationsTable({
           className="flex h-16 items-center justify-center text-sm"
           style={{ backgroundColor: "var(--details-container-2)", color: "rgba(255,255,255,0.6)", ...FONT }}
         >
-          No nominations found
+          {t("nominations.table.noFound")}
         </div>
       )}
     </div>

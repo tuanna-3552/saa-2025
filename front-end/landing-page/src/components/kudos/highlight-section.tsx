@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslation } from "@/hooks/use-translation";
 import type { HighlightKudo } from "@/lib/kudos-types";
 import HighlightCard from "@/components/kudos/highlight-card";
 import FilterDropdown from "@/components/kudos/filter-dropdown";
@@ -32,6 +33,7 @@ export default function HighlightSection({
   onLike,
   onCopyLink,
 }: HighlightSectionProps) {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Reset to first slide whenever the kudos list changes (e.g. filter applied)
@@ -82,7 +84,7 @@ export default function HighlightSection({
             color: "#FFFFFF",
           }}
         >
-          Sun* Annual Awards 2025
+          {t("kudos.page.sectionLabel")}
         </p>
         <hr style={{ border: "none", borderTop: "1px solid #2E3940", margin: 0 }} />
 
@@ -106,18 +108,18 @@ export default function HighlightSection({
               color: "#FFEA9E",
             }}
           >
-            HIGHLIGHT KUDOS
+            {t("kudos.highlight.heading")}
           </h2>
 
           <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
             <FilterDropdown
-              label="Hashtag"
+              label={t("kudos.highlight.hashtagFilter")}
               options={hashtags}
               value={activeHashtag}
               onChange={onHashtagChange}
             />
             <FilterDropdown
-              label="Phòng ban"
+              label={t("kudos.highlight.departmentFilter")}
               options={departments}
               value={activeDepartment}
               onChange={onDepartmentChange}
@@ -137,7 +139,7 @@ export default function HighlightSection({
             fontWeight: 700,
           }}
         >
-          Không có highlight nào.
+          {t("kudos.highlight.empty")}
         </p>
       ) : (
         <div style={{ position: "relative" }}>
@@ -159,7 +161,7 @@ export default function HighlightSection({
           >
             <button
               onClick={prev}
-              aria-label="Previous highlight"
+              aria-label={t("kudos.highlight.prevAria")}
               style={{
                 width: 80,
                 height: 80,
@@ -218,7 +220,7 @@ export default function HighlightSection({
           >
             <button
               onClick={next}
-              aria-label="Next highlight"
+              aria-label={t("kudos.highlight.nextAria")}
               style={{
                 width: 80,
                 height: 80,
@@ -251,7 +253,7 @@ export default function HighlightSection({
         >
           <button
             onClick={prev}
-            aria-label="Previous page"
+            aria-label={t("kudos.highlight.prevPageAria")}
             style={{
               width: 48,
               height: 48,
@@ -280,7 +282,7 @@ export default function HighlightSection({
           </span>
           <button
             onClick={next}
-            aria-label="Next page"
+            aria-label={t("kudos.highlight.nextPageAria")}
             style={{
               width: 48,
               height: 48,

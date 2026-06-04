@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslation } from "@/hooks/use-translation";
 import type { KudoPost } from "@/lib/kudos-types";
 import KudosCard from "@/components/kudos/kudos-card";
 
@@ -25,6 +26,7 @@ export default function KudosFeed({
   onCopyLink,
   onHashtagClick,
 }: KudosFeedProps) {
+  const { t } = useTranslation();
   const sentinelRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for infinite scroll
@@ -57,7 +59,7 @@ export default function KudosFeed({
               fontWeight: 700,
             }}
           >
-            Hiện tại chưa có Kudos nào.
+            {t("kudos.feed.empty")}
           </p>
         ) : (
           kudos.map((kudo) => (
@@ -87,7 +89,7 @@ export default function KudosFeed({
               padding: "24px 0",
             }}
           >
-            Đã hiển thị tất cả kudo.
+            {t("kudos.feed.allShown")}
           </p>
         )}
       </div>

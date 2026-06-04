@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getSupabase } from "@/lib/supabase";
+import { useTranslation } from "@/hooks/use-translation";
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const router = useRouter();
+  const { t } = useTranslation();
   const [status, setStatus] = useState<"loading" | "ok">("loading");
 
   useEffect(() => {
@@ -39,7 +41,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
             fontWeight: 700,
           }}
         >
-          Loading...
+          {t("awardSystem.loading")}
         </span>
       </div>
     );

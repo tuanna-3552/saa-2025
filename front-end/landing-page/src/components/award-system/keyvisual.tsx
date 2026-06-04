@@ -1,7 +1,12 @@
+"use client";
+
+import { useTranslation } from "@/hooks/use-translation";
+
 // AwardSystemKeyvisual — full 547px banner matching Figma mms_3_Keyvisual (node 313:8437).
 // Title section (mms_A_Title, node 313:8453) is overlaid at the bottom of the banner
 // (design positions it at y=454 within the 547px keyvisual starting at y=80).
 export default function AwardSystemKeyvisual() {
+  const { t } = useTranslation();
   return (
     <div
       aria-label="Keyvisual Sun* Annual Award 2025"
@@ -82,7 +87,7 @@ export default function AwardSystemKeyvisual() {
               textAlign: "center",
             }}
           >
-            Sun* annual awards 2025
+            {t("awards.label")}
           </p>
 
           <div
@@ -105,7 +110,7 @@ export default function AwardSystemKeyvisual() {
               textAlign: "center",
             }}
           >
-            Hệ thống giải thưởng SAA 2025
+            {t("awardSystem.keyvisualHeading")}
           </h2>
         </div>
       </div>

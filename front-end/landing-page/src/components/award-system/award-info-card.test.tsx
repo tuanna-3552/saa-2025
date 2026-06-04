@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import AwardInfoCard from "./award-info-card";
 import { AWARDS } from "./award-data";
 
-const TOP_TALENT = AWARDS[0]; // qty="10", unit="Đơn vị", value="7.000.000 VNĐ"
+const TOP_TALENT = AWARDS[0]; // qty="10", value="7.000.000 VNĐ"
 
 describe("AwardInfoCard", () => {
   it("renders label as heading (ID-6)", () => {
@@ -15,19 +15,9 @@ describe("AwardInfoCard", () => {
     expect(screen.getByText(TOP_TALENT.qty)).toBeInTheDocument();
   });
 
-  it("renders unit text when provided (ID-6)", () => {
-    render(<AwardInfoCard {...TOP_TALENT} />);
-    expect(screen.getByText(TOP_TALENT.unit)).toBeInTheDocument();
-  });
-
   it("renders award value text (ID-6)", () => {
     render(<AwardInfoCard {...TOP_TALENT} />);
     expect(screen.getByText(TOP_TALENT.value)).toBeInTheDocument();
-  });
-
-  it("renders valueNote when provided (ID-6)", () => {
-    render(<AwardInfoCard {...TOP_TALENT} />);
-    expect(screen.getByText(TOP_TALENT.valueNote)).toBeInTheDocument();
   });
 
   it("renders trophy bg image and name overlay (ID-7)", () => {

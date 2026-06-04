@@ -9,6 +9,7 @@ import {
   type DepartmentStat,
 } from "@/components/dashboard/department-stats-table";
 import { DateRangePicker } from "@/components/dashboard/date-range-picker";
+import { useTranslation } from "@/hooks/use-translation";
 
 function escapeCSV(val: string | number | undefined | null): string {
   if (val === undefined || val === null) return "";
@@ -20,6 +21,7 @@ function escapeCSV(val: string | number | undefined | null): string {
 }
 
 export default function DashboardPage() {
+  const { t } = useTranslation();
   const [stats, setStats] = useState<DepartmentStat[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -195,7 +197,7 @@ export default function DashboardPage() {
             color: "var(--details-text-secondary-1)",
           }}
         >
-          Overview
+          {t("dashboard.title")}
         </h1>
         <div className="flex items-center gap-4">
           <DateRangePicker value={dateRange} onChange={setDateRange} />
@@ -210,7 +212,7 @@ export default function DashboardPage() {
               fontFamily: "var(--font-montserrat)",
             }}
           >
-            Export
+            {t("common.export")}
           </button>
         </div>
       </div>

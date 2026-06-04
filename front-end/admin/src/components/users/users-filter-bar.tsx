@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useTranslation } from "@/hooks/use-translation";
 
 const FONT: React.CSSProperties = { fontFamily: "var(--font-montserrat)" };
 
@@ -82,27 +83,29 @@ export function UsersFilterBar({
   onRoleChange,
   onSearchChange,
 }: UsersFilterBarProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="flex items-end gap-3">
       {/* Department */}
-      <SelectField label="Department" value={deptFilter} onChange={onDeptChange}>
-        <option value="">Chọn phòng ban</option>
+      <SelectField label={t("users.filter.department")} value={deptFilter} onChange={onDeptChange}>
+        <option value="">{t("users.filter.selectDepartment")}</option>
         {departments.map((d) => (
           <option key={d} value={d}>{d}</option>
         ))}
       </SelectField>
 
       {/* Level — static options (not in DB schema, UI-only filter) */}
-      <SelectField label="Level" value={levelFilter} onChange={onLevelChange}>
-        <option value="">Chọn level</option>
+      <SelectField label={t("users.filter.level")} value={levelFilter} onChange={onLevelChange}>
+        <option value="">{t("users.filter.selectLevel")}</option>
         {LEVEL_OPTIONS.map((l) => (
           <option key={l} value={l}>{l}</option>
         ))}
       </SelectField>
 
       {/* Role */}
-      <SelectField label="Role" value={roleFilter} onChange={onRoleChange}>
-        <option value="">Chọn Role</option>
+      <SelectField label={t("users.filter.role")} value={roleFilter} onChange={onRoleChange}>
+        <option value="">{t("users.filter.selectRole")}</option>
         <option value="admin">Admin</option>
         <option value="employee">User</option>
       </SelectField>
@@ -113,7 +116,7 @@ export function UsersFilterBar({
           type="text"
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Tìm kiếm..."
+          placeholder={t("users.filter.search")}
           className="h-9 w-full rounded-lg px-3 pr-9 text-sm"
           style={SELECT_STYLE}
         />

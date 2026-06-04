@@ -4,9 +4,28 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import Image from "next/image";
+import LanguageToggle from "./language-toggle";
+import { useLanguage } from "@saa/shared-ui";
+
+const TRANSLATIONS = {
+  VN: {
+    subtitle: "Bắt đầu hành trình của bạn cùng SAA 2025.\nĐăng nhập để khám phá!",
+    loginBtn: "LOGIN With Google",
+    logging: "Đang đăng nhập…",
+    copyright: "Bản quyền thuộc về Sun* © 2025",
+  },
+  EN: {
+    subtitle: "Start your journey with SAA 2025.\nLog in to explore!",
+    loginBtn: "LOGIN With Google",
+    logging: "Signing in…",
+    copyright: "Copyright © Sun* 2025",
+  },
+} as const;
 
 export default function LoginForm() {
   const router = useRouter();
+  const { language } = useLanguage();
+  const t = TRANSLATIONS[language];
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [logoError, setLogoError] = useState(false);
@@ -87,7 +106,7 @@ export default function LoginForm() {
       <header
         style={{
           position: "relative",
-          zIndex: 10,
+          zIndex: 20,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -128,58 +147,7 @@ export default function LoginForm() {
           )}
         </div>
 
-        {/* Language selector — 108×56px, border-radius 4px */}
-        <button
-          type="button"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "16px",
-            width: "108px",
-            height: "56px",
-            background: "transparent",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer",
-            color: "rgba(255,255,255,0.7)",
-            transition: "background 0.15s ease",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.08)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.background = "transparent";
-          }}
-        >
-          {/* Flag + VN label */}
-          <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-            <img src="/vn-flag.svg" alt="VN" width={24} height={24} style={{ objectFit: "cover" }} />
-            <span
-              style={{
-                fontSize: "13px",
-                fontWeight: 600,
-                fontFamily: "var(--font-montserrat), sans-serif",
-                color: "rgba(255,255,255,1)",
-              }}
-            >
-              VN
-            </span>
-          </div>
-          {/* Chevron down — 24×24 */}
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </button>
+        <LanguageToggle />
       </header>
 
       {/* Main content — padding 0 144px, vertically centered */}
@@ -226,9 +194,9 @@ export default function LoginForm() {
               color: "rgba(255,255,255,1)",
             }}
           >
-            Bắt đầu hành trình của bạn cùng SAA 2025.
-            <br />
-            Đăng nhập để khám phá!
+            {t.subtitle.split("\n").map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </p>
 
           {/* Error message */}
@@ -296,7 +264,7 @@ export default function LoginForm() {
                 whiteSpace: "nowrap",
               }}
             >
-              {loading ? "Đang đăng nhập…" : "LOGIN With Google"}
+              {loading ? t.logging : t.loginBtn}
             </span>
 
             {/* Google icon / spinner — 24×24px */}
@@ -366,7 +334,7 @@ export default function LoginForm() {
           color: "rgba(255,255,255,1)",
         }}
       >
-        Bản quyền thuộc về Sun* © 2025
+        {t.copyright}
       </footer>
 
       <style>{`

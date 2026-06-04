@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslation } from "@/hooks/use-translation";
 
 // SpotlightBoard: scattered text word-cloud matching Figma B.7_Spotlight.
 // Each recipient's name is repeated proportionally to their kudos count, then
@@ -39,6 +40,7 @@ function deterministicShuffle<T>(arr: T[]): T[] {
 }
 
 export default function SpotlightBoard({ recipients, totalCount }: SpotlightBoardProps) {
+  const { t } = useTranslation();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -113,7 +115,7 @@ export default function SpotlightBoard({ recipients, totalCount }: SpotlightBoar
             color: "#FFFFFF",
           }}
         >
-          Sun* Annual Awards 2025
+          {t("kudos.page.sectionLabel")}
         </p>
         <hr style={{ border: "none", borderTop: "1px solid #2E3940", margin: 0 }} />
         <h2
@@ -127,7 +129,7 @@ export default function SpotlightBoard({ recipients, totalCount }: SpotlightBoar
             color: "#FFEA9E",
           }}
         >
-          SPOTLIGHT BOARD
+          {t("kudos.spotlight.heading")}
         </h2>
       </div>
 
@@ -167,7 +169,7 @@ export default function SpotlightBoard({ recipients, totalCount }: SpotlightBoar
           width={CANVAS_W}
           height={CANVAS_H}
           style={{ width: "100%", height: "auto", display: "block" }}
-          aria-label="Spotlight board — kudos recipients word cloud"
+          aria-label={t("kudos.spotlight.canvasAria")}
         />
       </div>
 
@@ -188,7 +190,7 @@ export default function SpotlightBoard({ recipients, totalCount }: SpotlightBoar
             >
               <span style={{ color: "#666" }}>08:30PM </span>
               <span style={{ color: "#FFEA9E" }}>{r.name}</span>
-              <span style={{ color: "#666" }}> đã nhận được một Kudos mới</span>
+              <span style={{ color: "#666" }}>{t("kudos.spotlight.tickerReceived")}</span>
             </span>
           ))}
         </div>
