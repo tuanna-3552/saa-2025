@@ -73,7 +73,8 @@
     "spotlight": {
       "heading": "SPOTLIGHT BOARD",
       "canvasAria": "Spotlight board — kudos recipients word cloud",
-      "tickerReceived": " đã nhận được một Kudos mới"
+      "tickerReceived": " đã nhận được một Kudos mới",
+      "searchPlaceholder": "Tìm kiếm"
     },
     "writeDialog": {
       "ariaLabel": "Gửi lời cám ơn và ghi nhận đến đồng đội",

@@ -93,23 +93,6 @@ export default function KudosCard({ kudo, onLike, onCopyLink, onHashtagClick }: 
         {formattedDate}
       </p>
 
-      {/* Hashtag line (above content) */}
-      {kudo.hashtags.length > 0 && (
-        <p
-          style={{
-            margin: 0,
-            fontSize: "16px",
-            fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
-            fontWeight: 700,
-            lineHeight: "24px",
-            letterSpacing: "0.5px",
-            color: "#00101A",
-          }}
-        >
-          {kudo.hashtags.join(" ")}
-        </p>
-      )}
-
       {/* Content box */}
       <div
         style={{

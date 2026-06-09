@@ -163,7 +163,7 @@ export default function KudosSidebar({ stats, recentPrizeRecipients }: KudosSide
                   fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
                   fontWeight: 700,
                   lineHeight: "28px",
-                  color: "#00101A",
+                  color: "#000000",
                 }}
               >
                 {t("kudos.sidebar.openSecretBox")}
@@ -245,7 +245,7 @@ export default function KudosSidebar({ stats, recentPrizeRecipients }: KudosSide
                       fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
                       fontWeight: 700,
                       lineHeight: "20px",
-                      color: "#FFFFFF",
+                      color: "#FFEA9E",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
                       whiteSpace: "nowrap",
@@ -260,7 +260,7 @@ export default function KudosSidebar({ stats, recentPrizeRecipients }: KudosSide
                       fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
                       fontWeight: 400,
                       lineHeight: "16px",
-                      color: "#999",
+                      color: "#FFFFFF",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
                       whiteSpace: "nowrap",

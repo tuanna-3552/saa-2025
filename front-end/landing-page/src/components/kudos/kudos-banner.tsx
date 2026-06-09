@@ -22,26 +22,23 @@ export default function KudosBanner() {
           backgroundColor: "#00101A",
         }}
       >
-        {/* MM_MEDIA_KV Background — 1440×512, Figma: 101.245% 393.038%, position 0 -909.862px */}
+        {/* MM_MEDIA_KV Background — 1440×512 image, fill banner without stretching */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: "url('/kudos/kv-background.png')",
-            backgroundSize: "101.245% 393.038%",
-            backgroundPosition: "0px -909.862px",
+            backgroundImage: "url('/kudos/kudos_bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
           }}
         />
 
-        {/* Cover overlay — Figma: starts at y=445, linear-gradient(25deg, #00101A 14.74%, transparent 47.8%) */}
+        {/* Dark gradient overlay — covers full 512px banner so the left side darkens for text readability */}
         <div
           style={{
             position: "absolute",
-            top: 445,
-            left: 0,
-            right: 0,
-            height: "957px",
+            inset: 0,
             background:
               "linear-gradient(25deg, #00101A 14.74%, rgba(0, 19, 32, 0.00) 47.8%)",
           }}
