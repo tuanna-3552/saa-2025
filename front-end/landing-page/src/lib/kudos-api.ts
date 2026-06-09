@@ -158,6 +158,32 @@ export async function getRecentPrizeRecipients(): Promise<PrizeRecipient[]> {
   }));
 }
 
+/**
+ * Fetch paginated kudos feed for a profile page.
+ * @param userId - profile owner
+ * @param filter - 'received' (as nominee) | 'sent' (as nominator)
+ * @param cursor - ISO timestamp for cursor-based pagination
+ */
+export async function getProfileKudosFeed(
+  userId: string,
+  filter: "received" | "sent",
+  cursor?: string,
+  limit = 10
+): Promise<KudoPost[]> {
+  const field = filter === "received" ? "nominee_id" : "nominator_id";
+  let q = raw()
+    .from("nominations")
+    .select(KUDOS_SELECT)
+    .eq("status", "approved")
+    .eq(field, userId)
+    .order("created_at", { ascending: false })
+    .limit(limit);
+  if (cursor) q = q.lt("created_at", cursor);
+  const { data } = await q;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (data ?? []).map((r: any) => mapKudo(r));
+}
+
 export async function getLikedKudosIds(userId: string): Promise<Set<string>> {
   const { data } = await raw().from("kudos_likes").select("kudos_id").eq("user_id", userId);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

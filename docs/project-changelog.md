@@ -6,6 +6,17 @@
 
 ---
 
+## 2026-06-09 — Profile Page — Landing Page
+
+### Added — Landing Page `/profile` + `/profile/[userId]`
+
+- Own-profile route (`src/app/profile/page.tsx`) and others' profile route (`src/app/profile/[userId]/page.tsx`)
+- **UI Components:** `profile-hero` (keyvisual BG, avatar, name, badge collection), `profile-stats` (kudos received/sent, hearts, secret box counts), `profile-feed-section` (KUDOS header + received/sent filter + kudos feed), `profile-feed-filter` (extracted filter dropdown), `profile-page-content` (client-side orchestrator)
+- **Data Layer:** `kudos-api.ts` extended with `getProfileKudosFeed(userId, filter, cursor?, limit?)` for paginated profile feed queries
+- **Tests:** 57 unit tests across 3 test files (profile-hero, profile-stats, profile-feed-section), all passing
+
+---
+
 ## 2026-05-29 — Kudos Live Board — Landing Page
 
 ### Added — Landing Page `/kudos`
