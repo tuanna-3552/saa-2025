@@ -25,15 +25,18 @@ export default function ProfileHero({ avatarUrl, fullName }: ProfileHeroProps) {
         gap: "32px",
       }}
     >
-      {/* Keyvisual background — same as homepage */}
+      {/* Keyvisual background with bottom fade-to-dark gradient — matches homepage pattern */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: "url(/home/keyvisual-bg.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundImage: [
+            "linear-gradient(to bottom, transparent 60%, #00101A 100%)",
+            "url(/home/keyvisual-bg.png)",
+          ].join(", "),
+          backgroundSize: "cover, cover",
+          backgroundPosition: "center, center",
+          backgroundRepeat: "no-repeat, no-repeat",
           zIndex: 0,
         }}
         aria-hidden="true"

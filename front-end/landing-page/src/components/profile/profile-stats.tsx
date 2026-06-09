@@ -144,8 +144,9 @@ export default function ProfileStats({ stats, isOwn }: ProfileStatsProps) {
                   letterSpacing: "0px",
                 }}
               >
-                Mở Secret Box 🎁
+                Mở Secret Box
               </span>
+              <img src="/kudos/open-gift.svg" alt="" aria-hidden width={24} height={24} />
             </button>
           )}
         </div>
