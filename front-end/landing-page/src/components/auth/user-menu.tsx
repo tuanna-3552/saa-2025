@@ -13,7 +13,6 @@ export interface UserMenuProps {
 
 export default function UserMenu(_props: UserMenuProps) {
   const [session, setSession] = useState<Session | null>(null);
-  const [isAdmin, setIsAdmin] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -29,15 +28,7 @@ export default function UserMenu(_props: UserMenuProps) {
           data: { session: s },
         } = await supabase.auth.getSession();
         if (cancelled || !s) return;
-        setSession(s);
-
-        const { data: profile } = await supabase
-          .from("profiles")
-          .select("role")
-          .eq("id", s.user.id)
-          .single();
-
-        if (!cancelled) setIsAdmin(profile?.role === "admin");
+        if (!cancelled) setSession(s);
       } catch {
         // browser-only client — swallow errors during SSR or missing env
       }
@@ -117,7 +108,7 @@ export default function UserMenu(_props: UserMenuProps) {
         </button>
 
         {accountOpen && (
-          <AccountMenu isAdmin={isAdmin} onClose={() => setAccountOpen(false)} />
+          <AccountMenu onClose={() => setAccountOpen(false)} />
         )}
       </div>
     </div>
